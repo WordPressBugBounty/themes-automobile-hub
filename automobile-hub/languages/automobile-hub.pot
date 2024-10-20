@@ -1,0 +1,1275 @@
+# Copyright (C) 2024 ThemesPride
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Automobile Hub 8.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/automobile-hub\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-09-05T14:24:04+05:30\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: automobile-hub\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Automobile Hub"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+#: functions.php:484
+msgid "https://www.themespride.com/products/free-automobile-wordpress-theme"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Automobile Hub is a stylish, modern, dynamic, resourceful and feature-rich automobile WordPress theme for car and bike showrooms, automobile garage, car dealership, cab services, car rentals, ATV bikes, RV bikes and cycles, car wash, farming vehicles, wheels, clunker, Food Truck, Jet Ski Rental Services, rustbucket, electric vehicle, off road vehicles, wheel dealers, auto parts dealer, tyre repair services, Battery Reconditioning, Taxi, Bus Shuttle Services, Dump Truck, Tow Trucking Service, Spare Parts Distribution, Wheel allignment services, car booking, Oil Change Service Business, Service Station, Panel Beating Services, Tire Store, Heavy Vehicle rental, aircrafts manufacturing company, helicopter services, car lifters, cargo hubs, auto, mechanic, autoparts, driving school, Auto Wash, buses, car service, truck, Car AMC automobile, booking, business, car, car rental rent, rental, travel, vacation, van, vehicle car washing centres and all the websites dealing in automobile industry. It is a responsive theme with 100% fluid layout and cross-browser compatible to load seamlessly on all browsers. It is multilingual to give services in all international languages and retina ready to show sharp and crisp images of automobiles to make the website look beautiful. This automobile WordPress theme is optimized for search engines and all its pages load with super-fast speed. It is compatible with the latest WordPress version and many customization options are provided which eliminates the need for any professional coder. There are so many social media icons embedded that your website and its content are sure to reach target audience easily. The interface of this automobile theme is extremely easy to use; sliders are provided for smooth navigation. It has a gallery where you can post gorgeous pictures of cars, bikes and other vehicles to allure visitors and testimonial section is to get customers’ feedback to improve services."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "ThemesPride"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://www.themespride.com/"
+msgstr ""
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:17
+#: inc/customizer.php:1331
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: archive.php:54
+#: archive.php:92
+#: archive.php:129
+#: archive.php:166
+#: archive.php:205
+#: archive.php:244
+#: archive.php:282
+#: index.php:45
+#: index.php:83
+#: index.php:120
+#: index.php:157
+#: index.php:196
+#: index.php:235
+#: index.php:273
+#: search.php:54
+#: search.php:94
+#: search.php:133
+#: search.php:172
+#: search.php:212
+#: search.php:253
+#: search.php:291
+#: single.php:44
+#: single.php:69
+#: single.php:93
+#: single.php:116
+msgid "Previous page"
+msgstr ""
+
+#: archive.php:55
+#: archive.php:93
+#: archive.php:130
+#: archive.php:167
+#: archive.php:206
+#: archive.php:245
+#: archive.php:283
+#: index.php:46
+#: index.php:84
+#: index.php:121
+#: index.php:158
+#: index.php:197
+#: index.php:236
+#: index.php:274
+#: search.php:55
+#: search.php:95
+#: search.php:134
+#: search.php:173
+#: search.php:213
+#: search.php:254
+#: search.php:292
+#: single.php:45
+#: single.php:70
+#: single.php:94
+#: single.php:117
+msgid "Next page"
+msgstr ""
+
+#: archive.php:56
+#: archive.php:94
+#: archive.php:131
+#: archive.php:168
+#: archive.php:207
+#: archive.php:246
+#: archive.php:284
+#: index.php:47
+#: index.php:85
+#: index.php:122
+#: index.php:159
+#: index.php:198
+#: index.php:237
+#: index.php:275
+#: search.php:56
+#: search.php:96
+#: search.php:135
+#: search.php:174
+#: search.php:214
+#: search.php:255
+#: search.php:293
+#: single.php:46
+#: single.php:71
+#: single.php:95
+#: single.php:118
+msgid "Page"
+msgstr ""
+
+#: comments.php:30
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr ""
+
+#: comments.php:37
+msgctxt "comments title"
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:63
+#: template-parts/home/slider.php:58
+msgid "Previous"
+msgstr ""
+
+#: comments.php:64
+#: template-parts/home/slider.php:62
+msgid "Next"
+msgstr ""
+
+#: comments.php:72
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:27
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:189
+#: sidebar.php:9
+msgid "Blog Sidebar"
+msgstr ""
+
+#: functions.php:191
+#: functions.php:211
+msgid "Add widgets here to appear in your sidebar on blog posts and archive pages."
+msgstr ""
+
+#: functions.php:199
+msgid "Page Sidebar"
+msgstr ""
+
+#: functions.php:201
+msgid "Add widgets here to appear in your sidebar on pages."
+msgstr ""
+
+#: functions.php:209
+msgid "Sidebar 3"
+msgstr ""
+
+#: functions.php:219
+msgid "Footer 1"
+msgstr ""
+
+#: functions.php:221
+#: functions.php:231
+#: functions.php:241
+#: functions.php:251
+msgid "Add widgets here to appear in your footer."
+msgstr ""
+
+#: functions.php:229
+msgid "Footer 2"
+msgstr ""
+
+#: functions.php:239
+msgid "Footer 3"
+msgstr ""
+
+#: functions.php:249
+msgid "Footer 4"
+msgstr ""
+
+#: functions.php:487
+msgid "Automobile WordPress Theme"
+msgstr ""
+
+#. translators: 1: welcome page link starting html tag, 2: welcome page link ending html tag.
+#: functions.php:514
+msgid "Welcome! Thank you for choosing %1$s!"
+msgstr ""
+
+#: functions.php:518
+msgid "Click here to get started with the theme set-up."
+msgstr ""
+
+#: functions.php:520
+#: inc/about-theme.php:41
+#: inc/about-theme.php:164
+msgid "Begin Installation - Import Demo"
+msgstr ""
+
+#: header.php:39
+msgid "Skip to content"
+msgstr ""
+
+#: inc/about-theme.php:41
+msgid "About Theme"
+msgstr ""
+
+#: inc/about-theme.php:68
+msgid "Theme Info"
+msgstr ""
+
+#: inc/about-theme.php:70
+msgid "View Demo"
+msgstr ""
+
+#: inc/about-theme.php:72
+msgid "Theme Instructions"
+msgstr ""
+
+#: inc/about-theme.php:74
+msgid "Rate this theme"
+msgstr ""
+
+#: inc/about-theme.php:76
+msgid "Upgrade to pro"
+msgstr ""
+
+#: inc/about-theme.php:86
+msgid "Secondary menu"
+msgstr ""
+
+#: inc/about-theme.php:88
+msgid "One Click Demo Import"
+msgstr ""
+
+#: inc/about-theme.php:90
+msgid "About"
+msgstr ""
+
+#: inc/about-theme.php:92
+msgid "Compare free Vs Pro"
+msgstr ""
+
+#: inc/about-theme.php:94
+msgid "Changelog"
+msgstr ""
+
+#: inc/about-theme.php:96
+#: inc/about-theme.php:377
+msgid "Get WordPress Theme Bundle"
+msgstr ""
+
+#: inc/about-theme.php:116
+msgid "Return to Updates"
+msgstr ""
+
+#: inc/about-theme.php:116
+msgid "Return to Dashboard &rarr; Updates"
+msgstr ""
+
+#: inc/about-theme.php:119
+msgid "Go to Dashboard &rarr; Home"
+msgstr ""
+
+#: inc/about-theme.php:119
+msgid "Go to Dashboard"
+msgstr ""
+
+#: inc/about-theme.php:149
+msgid "Imported Successfully"
+msgstr ""
+
+#: inc/about-theme.php:151
+msgid "Go to Customizer"
+msgstr ""
+
+#: inc/about-theme.php:161
+msgid "Demo Importer"
+msgstr ""
+
+#: inc/about-theme.php:162
+msgid "This theme supports importing demo content with a single click. Use the button below to quickly set up your site. You can easily customize or deactivate the imported content later through the Customizer."
+msgstr ""
+
+#: inc/about-theme.php:191
+msgid "Theme Customizer"
+msgstr ""
+
+#: inc/about-theme.php:192
+msgid "All Theme Options are available via Customize screen."
+msgstr ""
+
+#: inc/about-theme.php:193
+msgid "Customize"
+msgstr ""
+
+#: inc/about-theme.php:197
+msgid "Got theme support question?"
+msgstr ""
+
+#: inc/about-theme.php:198
+msgid "Get genuine support from genuine people. Whether it's customization or compatibility, our seasoned developers deliver tailored solutions to your queries."
+msgstr ""
+
+#: inc/about-theme.php:199
+msgid "Support Forum"
+msgstr ""
+
+#: inc/about-theme.php:203
+msgid "Upgrade To Premium With Straight 20% OFF."
+msgstr ""
+
+#: inc/about-theme.php:204
+msgid "Get our amazing WordPress theme with exclusive 20% off use the coupon"
+msgstr ""
+
+#: inc/about-theme.php:205
+msgid "GETPro20"
+msgstr ""
+
+#: inc/about-theme.php:221
+msgid "View changelog below:"
+msgstr ""
+
+#: inc/about-theme.php:289
+msgid "View Free vs Pro Table below:"
+msgstr ""
+
+#: inc/about-theme.php:294
+msgid "Free Theme"
+msgstr ""
+
+#: inc/about-theme.php:295
+msgid "Pro Theme"
+msgstr ""
+
+#: inc/about-theme.php:300
+msgid "Theme Demo Set Up"
+msgstr ""
+
+#: inc/about-theme.php:305
+msgid "Additional Templates, Color options and Fonts"
+msgstr ""
+
+#: inc/about-theme.php:310
+msgid "Included Demo Content"
+msgstr ""
+
+#: inc/about-theme.php:315
+msgid "Section Ordering"
+msgstr ""
+
+#: inc/about-theme.php:320
+msgid "Multiple Sections"
+msgstr ""
+
+#: inc/about-theme.php:325
+msgid "Additional Plugins"
+msgstr ""
+
+#: inc/about-theme.php:330
+msgid "Premium Technical Support"
+msgstr ""
+
+#: inc/about-theme.php:335
+msgid "Access to Support Forums"
+msgstr ""
+
+#: inc/about-theme.php:340
+msgid "Free updates"
+msgstr ""
+
+#: inc/about-theme.php:345
+msgid "Unlimited Domains"
+msgstr ""
+
+#: inc/about-theme.php:350
+msgid "Responsive Design"
+msgstr ""
+
+#: inc/about-theme.php:355
+msgid "Live Customizer"
+msgstr ""
+
+#: inc/about-theme.php:362
+msgid "Go For Premium"
+msgstr ""
+
+#: inc/about-theme.php:379
+msgid " WordPress Theme Bundle of 90+ Themes At 15% Discount. "
+msgstr ""
+
+#: inc/about-theme.php:380
+msgid "Spring Offer Is To Get WP Bundle of 90+ Themes At 15% Discount use the coupon"
+msgstr ""
+
+#: inc/about-theme.php:381
+msgid "Theme Bundle"
+msgstr ""
+
+#: inc/controls/icon-changer.php:24
+msgctxt "placeholder"
+msgid "Search Icon"
+msgstr ""
+
+#: inc/customizer.php:31
+msgid "Custom Home page"
+msgstr ""
+
+#: inc/customizer.php:32
+msgid "Description of what this panel does."
+msgstr ""
+
+#: inc/customizer.php:37
+msgid "TP General Option"
+msgstr ""
+
+#: inc/customizer.php:47
+msgid "Body Layout Setting"
+msgstr ""
+
+#: inc/customizer.php:48
+msgid "This option work for complete body, if you want to set the complete website in container."
+msgstr ""
+
+#: inc/customizer.php:51
+#: inc/customizer.php:68
+#: inc/customizer.php:88
+#: inc/customizer.php:105
+msgid "Full"
+msgstr ""
+
+#: inc/customizer.php:52
+msgid "Container"
+msgstr ""
+
+#: inc/customizer.php:53
+msgid "Container Fluid"
+msgstr ""
+
+#: inc/customizer.php:64
+msgid "Post Sidebar Position"
+msgstr ""
+
+#: inc/customizer.php:65
+msgid "This option work for blog page, blog single page, archive page and search page."
+msgstr ""
+
+#: inc/customizer.php:69
+#: inc/customizer.php:89
+#: inc/customizer.php:106
+#: inc/customizer.php:1153
+#: inc/customizer.php:1288
+msgid "Left"
+msgstr ""
+
+#: inc/customizer.php:70
+#: inc/customizer.php:90
+#: inc/customizer.php:107
+#: inc/customizer.php:1152
+#: inc/customizer.php:1289
+msgid "Right"
+msgstr ""
+
+#: inc/customizer.php:71
+msgid "Three Columns"
+msgstr ""
+
+#: inc/customizer.php:72
+msgid "Four Columns"
+msgstr ""
+
+#: inc/customizer.php:73
+msgid "Grid Layout"
+msgstr ""
+
+#: inc/customizer.php:84
+msgid "Single Post Sidebar Position"
+msgstr ""
+
+#: inc/customizer.php:85
+msgid "This option work for single blog page"
+msgstr ""
+
+#: inc/customizer.php:101
+msgid "Page Sidebar Position"
+msgstr ""
+
+#: inc/customizer.php:102
+msgid "This option work for pages."
+msgstr ""
+
+#: inc/customizer.php:116
+msgid "Show Sticky Header"
+msgstr ""
+
+#: inc/customizer.php:218
+msgid "TP Typography Option"
+msgstr ""
+
+#: inc/customizer.php:230
+msgid "heading Fonts"
+msgstr ""
+
+#: inc/customizer.php:242
+msgid "Body Fonts"
+msgstr ""
+
+#: inc/customizer.php:249
+msgid "TP Preloader Option"
+msgstr ""
+
+#: inc/customizer.php:259
+msgid "Show / Hide Preloader Option"
+msgstr ""
+
+#: inc/customizer.php:269
+msgid "Preloader First Ring Color"
+msgstr ""
+
+#: inc/customizer.php:270
+msgid "It will change the complete theme preloader ring 1 color in one click."
+msgstr ""
+
+#: inc/customizer.php:279
+msgid "Preloader Second Ring Color"
+msgstr ""
+
+#: inc/customizer.php:280
+msgid "It will change the complete theme preloader ring 2 color in one click."
+msgstr ""
+
+#: inc/customizer.php:289
+msgid "Preloader Background Color"
+msgstr ""
+
+#: inc/customizer.php:290
+msgid "It will change the complete theme preloader bg color in one click."
+msgstr ""
+
+#: inc/customizer.php:297
+msgid "TP Color Option"
+msgstr ""
+
+#: inc/customizer.php:306
+msgid "Theme First Color"
+msgstr ""
+
+#: inc/customizer.php:307
+#: inc/customizer.php:317
+msgid "It will change the complete theme color in one click."
+msgstr ""
+
+#: inc/customizer.php:316
+msgid "Theme Second Color"
+msgstr ""
+
+#: inc/customizer.php:324
+msgid "TP Blog Option"
+msgstr ""
+
+#: inc/customizer.php:334
+msgid "Meta Order"
+msgstr ""
+
+#: inc/customizer.php:335
+msgid "Drag & Drop post items to re-arrange the order and also hide and show items as per the need by clicking on the eye icon."
+msgstr ""
+
+#: inc/customizer.php:338
+msgid "date"
+msgstr ""
+
+#: inc/customizer.php:339
+msgid "author"
+msgstr ""
+
+#: inc/customizer.php:340
+msgid "comment"
+msgstr ""
+
+#: inc/customizer.php:341
+msgid "category"
+msgstr ""
+
+#: inc/customizer.php:352
+msgid "Edit Excerpt Limit"
+msgstr ""
+
+#: inc/customizer.php:362
+#: template-parts/post/content-audio.php:55
+#: template-parts/post/content-audio.php:102
+#: template-parts/post/content-audio.php:127
+#: template-parts/post/content-gallery.php:52
+#: template-parts/post/content-gallery.php:105
+#: template-parts/post/content-gallery.php:130
+#: template-parts/post/content-grid.php:37
+#: template-parts/post/content-image.php:49
+#: template-parts/post/content-image.php:99
+#: template-parts/post/content-image.php:124
+#: template-parts/post/content-video.php:56
+#: template-parts/post/content-video.php:103
+#: template-parts/post/content-video.php:128
+#: template-parts/post/content.php:42
+#: template-parts/post/content.php:80
+#: template-parts/post/content.php:106
+#: template-parts/post/content.php:135
+#: template-parts/post/related-post.php:41
+msgid "Read More"
+msgstr ""
+
+#: inc/customizer.php:366
+msgid "Edit Button Text"
+msgstr ""
+
+#: inc/customizer.php:376
+msgid "Show / Hide Read More Button"
+msgstr ""
+
+#: inc/customizer.php:391
+msgid "Show / Hide Tags Option"
+msgstr ""
+
+#: inc/customizer.php:402
+msgid "Show / Hide Category Option"
+msgstr ""
+
+#: inc/customizer.php:418
+msgid "Show / Hide Comment Form"
+msgstr ""
+
+#: inc/customizer.php:431
+#: inc/customizer.php:1135
+msgid "Show / Hide Related Post"
+msgstr ""
+
+#: inc/customizer.php:437
+#: template-parts/post/related-post.php:25
+msgid "Related Posts"
+msgstr ""
+
+#: inc/customizer.php:441
+msgid "Edit Section Title"
+msgstr ""
+
+#: inc/customizer.php:453
+msgid "Related Post Per Page"
+msgstr ""
+
+#: inc/customizer.php:470
+msgid "Related Post Per Row"
+msgstr ""
+
+#: inc/customizer.php:485
+msgid "Post Layout"
+msgstr ""
+
+#: inc/customizer.php:488
+msgid "Media-Content"
+msgstr ""
+
+#: inc/customizer.php:489
+msgid "Content-Media"
+msgstr ""
+
+#: inc/customizer.php:495
+msgid "Menu Typography"
+msgstr ""
+
+#: inc/customizer.php:507
+msgid "Menu Fonts"
+msgstr ""
+
+#: inc/customizer.php:518
+msgid "Font Weight"
+msgstr ""
+
+#: inc/customizer.php:522
+msgid "100"
+msgstr ""
+
+#: inc/customizer.php:523
+msgid "200"
+msgstr ""
+
+#: inc/customizer.php:524
+msgid "300"
+msgstr ""
+
+#: inc/customizer.php:525
+msgid "400"
+msgstr ""
+
+#: inc/customizer.php:526
+msgid "500"
+msgstr ""
+
+#: inc/customizer.php:527
+msgid "600"
+msgstr ""
+
+#: inc/customizer.php:528
+msgid "700"
+msgstr ""
+
+#: inc/customizer.php:529
+msgid "800"
+msgstr ""
+
+#: inc/customizer.php:530
+msgid "900"
+msgstr ""
+
+#: inc/customizer.php:540
+msgid "Menu Text Transform"
+msgstr ""
+
+#: inc/customizer.php:543
+msgid "Uppercase"
+msgstr ""
+
+#: inc/customizer.php:544
+msgid "Lowercase"
+msgstr ""
+
+#: inc/customizer.php:545
+msgid "Capitalize"
+msgstr ""
+
+#: inc/customizer.php:554
+msgid "Font Size"
+msgstr ""
+
+#: inc/customizer.php:564
+msgid "Contact Details"
+msgstr ""
+
+#: inc/customizer.php:566
+msgid "Add your contact details"
+msgstr ""
+
+#: inc/customizer.php:574
+msgid "Add Email Text"
+msgstr ""
+
+#: inc/customizer.php:583
+msgid "Add Mail Address"
+msgstr ""
+
+#: inc/customizer.php:593
+msgid "Mail Icon"
+msgstr ""
+
+#: inc/customizer.php:603
+msgid "Add Call Text"
+msgstr ""
+
+#: inc/customizer.php:617
+msgid "Add Phone Number"
+msgstr ""
+
+#: inc/customizer.php:627
+msgid "Call Icon"
+msgstr ""
+
+#: inc/customizer.php:638
+msgid "Show / Hide Search Option"
+msgstr ""
+
+#: inc/customizer.php:654
+msgid "Show / Hide Cart Option"
+msgstr ""
+
+#: inc/customizer.php:666
+msgid "Cart Icon"
+msgstr ""
+
+#: inc/customizer.php:680
+msgid "Social Media Links"
+msgstr ""
+
+#: inc/customizer.php:682
+msgid "Add your Social Links"
+msgstr ""
+
+#: inc/customizer.php:692
+#: inc/customizer.php:729
+#: inc/customizer.php:763
+#: inc/customizer.php:796
+#: inc/customizer.php:830
+msgid "Open in new tab"
+msgstr ""
+
+#: inc/customizer.php:707
+msgid "Facebook Link"
+msgstr ""
+
+#: inc/customizer.php:717
+msgid "Facebook Icon"
+msgstr ""
+
+#: inc/customizer.php:740
+msgid "Twitter Link"
+msgstr ""
+
+#: inc/customizer.php:751
+msgid "Twitter Icon"
+msgstr ""
+
+#: inc/customizer.php:774
+msgid "Instagram Link"
+msgstr ""
+
+#: inc/customizer.php:784
+#: inc/customizer.php:852
+msgid "Instagram Icon"
+msgstr ""
+
+#: inc/customizer.php:807
+msgid "YouTube Link"
+msgstr ""
+
+#: inc/customizer.php:818
+msgid "Youtube Icon"
+msgstr ""
+
+#: inc/customizer.php:841
+msgid "Pinterest Link"
+msgstr ""
+
+#: inc/customizer.php:863
+msgid "Social Icons Font Size in PX"
+msgstr ""
+
+#: inc/customizer.php:875
+msgid "Slider Section"
+msgstr ""
+
+#: inc/customizer.php:886
+msgid "Show / Hide Slider"
+msgstr ""
+
+#: inc/customizer.php:899
+msgid "Add Slider Top Text"
+msgstr ""
+
+#: inc/customizer.php:916
+msgid "Select Slide Image Page"
+msgstr ""
+
+#: inc/customizer.php:930
+#: inc/customizer.php:1124
+msgid "Show / Hide Slider Button"
+msgstr ""
+
+#: inc/customizer.php:942
+msgid "Readmore Icon"
+msgstr ""
+
+#: inc/customizer.php:955
+msgid "Slider Content Layout"
+msgstr ""
+
+#: inc/customizer.php:958
+msgid "LEFT-ALIGN"
+msgstr ""
+
+#: inc/customizer.php:959
+msgid "CENTER-ALIGN"
+msgstr ""
+
+#: inc/customizer.php:960
+msgid "RIGHT-ALIGN"
+msgstr ""
+
+#: inc/customizer.php:966
+msgid "About Section"
+msgstr ""
+
+#: inc/customizer.php:977
+msgid "Show / Hide About Section"
+msgstr ""
+
+#: inc/customizer.php:989
+msgid "About Title"
+msgstr ""
+
+#: inc/customizer.php:1005
+msgid "Select About Page"
+msgstr ""
+
+#: inc/customizer.php:1017
+msgid "About Icon"
+msgstr ""
+
+#: inc/customizer.php:1025
+msgid "Footer Text"
+msgstr ""
+
+#: inc/customizer.php:1026
+msgid "Add copyright text."
+msgstr ""
+
+#: inc/customizer.php:1035
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/customizer.php:1045
+msgid "Footer Widget Columns"
+msgstr ""
+
+#: inc/customizer.php:1060
+msgid "Footer Widget Background Color"
+msgstr ""
+
+#: inc/customizer.php:1061
+msgid "It will change the complete footer widget backgorund color."
+msgstr ""
+
+#: inc/customizer.php:1070
+msgid "Footer Widget Background Image"
+msgstr ""
+
+#: inc/customizer.php:1083
+#: inc/customizer.php:1113
+msgid "Show / Hide Return to header"
+msgstr ""
+
+#: inc/customizer.php:1094
+msgid "Return to header Icon"
+msgstr ""
+
+#: inc/customizer.php:1102
+msgid "Mobile Responsive media"
+msgstr ""
+
+#: inc/customizer.php:1103
+msgid "Control will not function if the toggle in the main settings is off."
+msgstr ""
+
+#: inc/customizer.php:1148
+msgid "Scroll to top Position"
+msgstr ""
+
+#: inc/customizer.php:1149
+msgid "This option work for scroll to top"
+msgstr ""
+
+#: inc/customizer.php:1154
+msgid "Center"
+msgstr ""
+
+#: inc/customizer.php:1175
+msgid "Show / Hide Site Title"
+msgstr ""
+
+#: inc/customizer.php:1187
+msgid "Site Title Font Size in PX"
+msgstr ""
+
+#: inc/customizer.php:1203
+msgid "Show / Hide Site Tagline"
+msgstr ""
+
+#: inc/customizer.php:1215
+msgid "Site Tagline Font Size in PX"
+msgstr ""
+
+#: inc/customizer.php:1230
+msgid "Here You Can Customize Your Logo Size"
+msgstr ""
+
+#: inc/customizer.php:1240
+msgid "Logo Layout Settings"
+msgstr ""
+
+#: inc/customizer.php:1241
+msgid "Here you have two options 1. Logo and Site tite in differnt line. 2. Logo and Site title in same line."
+msgstr ""
+
+#: inc/customizer.php:1244
+msgid "Different Line"
+msgstr ""
+
+#: inc/customizer.php:1245
+msgid "Same Line"
+msgstr ""
+
+#: inc/customizer.php:1253
+msgid "Product Per Row"
+msgstr ""
+
+#: inc/customizer.php:1262
+msgid "Product Per Page"
+msgstr ""
+
+#: inc/customizer.php:1273
+msgid "Show / Hide Shop Page Sidebar"
+msgstr ""
+
+#: inc/customizer.php:1284
+msgid "Sale Badge Position"
+msgstr ""
+
+#: inc/customizer.php:1285
+msgid "This option work for Archieve Products"
+msgstr ""
+
+#: inc/customizer.php:1298
+msgid "Show / Hide Product Page Sidebar"
+msgstr ""
+
+#: inc/customizer.php:1310
+msgid "Show / Hide related product"
+msgstr ""
+
+#: inc/customizer.php:1318
+msgid "404 Page"
+msgstr ""
+
+#: inc/customizer.php:1322
+msgid "Oops! That page cant be found."
+msgstr ""
+
+#: inc/customizer.php:1326
+msgid "Edit Title"
+msgstr ""
+
+#: inc/customizer.php:1335
+msgid "Edit Text"
+msgstr ""
+
+#: inc/customizer.php:1370
+msgid "Automobile Pro Theme"
+msgstr ""
+
+#: inc/customizer.php:1380
+msgid "Click to View Site"
+msgstr ""
+
+#: inc/customizer.php:1458
+msgid "Upgrade Pro"
+msgstr ""
+
+#: inc/customizer.php:1471
+msgid "Theme Documentation"
+msgstr ""
+
+#: inc/customizer.php:1472
+msgid "Click Here"
+msgstr ""
+
+#: inc/customizer.php:1486
+msgid "View Site"
+msgstr ""
+
+#: inc/whizzie.php:47
+msgid "Home"
+msgstr ""
+
+#: inc/whizzie.php:77
+msgid "About Us"
+msgstr ""
+
+#: inc/whizzie.php:107
+msgid "Services"
+msgstr ""
+
+#: inc/whizzie.php:132
+msgid "Pages"
+msgstr ""
+
+#: inc/whizzie.php:162
+msgid "Contact"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Custom Home Page"
+msgstr ""
+
+#: page.php:38
+#: page.php:59
+#: page.php:79
+msgid "Pages:"
+msgstr ""
+
+#. translators: %s: search term
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:18
+#: template-parts/post/content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: search.php:43
+#: search.php:83
+#: search.php:122
+#: search.php:161
+#: search.php:202
+#: search.php:242
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: searchform.php:13
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:14
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: sidebar.php:12
+msgid "Search"
+msgstr ""
+
+#: sidebar.php:17
+msgid "Meta"
+msgstr ""
+
+#: sidebar.php:26
+msgid "Archives"
+msgstr ""
+
+#: sidebar.php:33
+msgid "Tag Cloud"
+msgstr ""
+
+#: template-parts/footer/footer-widgets.php:21
+msgid "Footer"
+msgstr ""
+
+#: template-parts/footer/site-info.php:12
+msgid "By Themespride"
+msgstr ""
+
+#: template-parts/header/site-branding.php:87
+msgid "shopping cart"
+msgstr ""
+
+#: template-parts/header/site-branding.php:93
+msgid "CART ITEM"
+msgstr ""
+
+#: template-parts/home/about.php:36
+msgid "READ MORE"
+msgstr ""
+
+#: template-parts/home/slider.php:44
+msgid "BOOK NOW"
+msgstr ""
+
+#: template-parts/navigation/site-nav.php:19
+msgid "Open Button"
+msgstr ""
+
+#: template-parts/navigation/site-nav.php:22
+msgid "Top Menu"
+msgstr ""
+
+#: template-parts/navigation/site-nav.php:32
+msgid "Close Button"
+msgstr ""
+
+#: template-parts/navigation/site-nav.php:47
+msgid "FOLLOW US:"
+msgstr ""
+
+#: template-parts/navigation/site-nav.php:72
+msgid "CLOSE"
+msgstr ""
+
+#: template-parts/post/content-audio.php:46
+#: template-parts/post/content-audio.php:93
+#: template-parts/post/content-audio.php:118
+#: template-parts/post/content-gallery.php:43
+#: template-parts/post/content-gallery.php:96
+#: template-parts/post/content-gallery.php:121
+#: template-parts/post/content-grid.php:28
+#: template-parts/post/content-image.php:40
+#: template-parts/post/content-image.php:90
+#: template-parts/post/content-image.php:115
+#: template-parts/post/content-video.php:47
+#: template-parts/post/content-video.php:94
+#: template-parts/post/content-video.php:119
+#: template-parts/post/content.php:33
+#: template-parts/post/content.php:71
+#: template-parts/post/content.php:97
+#: template-parts/post/content.php:126
+#: template-parts/post/single-post.php:19
+msgid "0 Comments"
+msgstr ""
+
+#: template-parts/post/content-audio.php:46
+#: template-parts/post/content-audio.php:93
+#: template-parts/post/content-audio.php:118
+#: template-parts/post/content-gallery.php:43
+#: template-parts/post/content-gallery.php:96
+#: template-parts/post/content-gallery.php:121
+#: template-parts/post/content-grid.php:28
+#: template-parts/post/content-image.php:40
+#: template-parts/post/content-image.php:90
+#: template-parts/post/content-image.php:115
+#: template-parts/post/content-video.php:47
+#: template-parts/post/content-video.php:94
+#: template-parts/post/content-video.php:119
+#: template-parts/post/content.php:33
+#: template-parts/post/content.php:71
+#: template-parts/post/content.php:97
+#: template-parts/post/content.php:126
+#: template-parts/post/single-post.php:19
+msgid "% Comments"
+msgstr ""
+
+#. translators: %s: Post editor URL.
+#: template-parts/post/content-none.php:22
+msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/post/content-none.php:28
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: template-parts/post/single-post.php:49
+msgctxt "Parent post link"
+msgid "<span class=\"meta-nav\">Published in</span><span class=\"post-title\">%title</span>"
+msgstr ""
+
+#: template-parts/post/single-post.php:54
+msgid "Next:"
+msgstr ""
+
+#: template-parts/post/single-post.php:56
+msgid "Previous:"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:26
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:52
+msgid "Your order"
+msgstr ""
