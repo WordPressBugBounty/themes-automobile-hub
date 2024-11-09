@@ -4,7 +4,7 @@ Tags: wide-blocks, block-styles, one-column, two-columns, right-sidebar, left-si
 Requires at least: 5.0
 Tested up to: 6.6
 Requires PHP: 5.6
-Stable tag: 8.3
+Stable tag: 8.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -401,6 +401,22 @@ Installation
     * Updated a global color option.
     * Updated typography.
     * Updated the POT file.
+
+= 8.4 =
+    * Added option to set border-radius for post images.
+    * Added option to adjust post image height.
+    * Added option to adjust post image width.
+    * Fixed header image display issue on mobile devices.
+    * Added CSS for balanced text wrapping in content and headings.
+    * Added option to customize logo title color.
+    * Added settings to customize the 404 page title.
+    * Added settings to customize the 404 page text.
+    * Resolved CSS issues on the 404 page and the "no results found" search page.
+    * Added a color setting for the site tagline.
+    * Added settings to customize the title on the "no results found" search page.
+    * Added settings to customize the text on the "no results found" search page.
+    * Resolved CSS issues on the 404 page and the "no results found" search page.
+    * Updated the POT file for translation.
 
 == Resources ==
 

@@ -216,3 +216,25 @@ $automobile_hub_tp_theme_css .='.main-navigation a{';
     $automobile_hub_tp_theme_css .='font-weight: 900;';
 $automobile_hub_tp_theme_css .='}';
 }
+
+/*------------- Blog Page------------------*/
+$automobile_hub_post_image_round = get_theme_mod('automobile_hub_post_image_round', 0);
+if($automobile_hub_post_image_round != false){
+    $automobile_hub_tp_theme_css .='.blog .box-image img{';
+        $automobile_hub_tp_theme_css .='border-radius: '.esc_attr($automobile_hub_post_image_round).'px;';
+    $automobile_hub_tp_theme_css .='}';
+}
+
+$automobile_hub_post_image_width = get_theme_mod('automobile_hub_post_image_width', '');
+if($automobile_hub_post_image_width != false){
+    $automobile_hub_tp_theme_css .='.blog .box-image img{';
+        $automobile_hub_tp_theme_css .='Width: '.esc_attr($automobile_hub_post_image_width).'px;';
+    $automobile_hub_tp_theme_css .='}';
+}
+
+$automobile_hub_post_image_length = get_theme_mod('automobile_hub_post_image_length', '');
+if($automobile_hub_post_image_length != false){
+    $automobile_hub_tp_theme_css .='.blog .box-image img{';
+        $automobile_hub_tp_theme_css .='height: '.esc_attr($automobile_hub_post_image_length).'px;';
+    $automobile_hub_tp_theme_css .='}';
+}

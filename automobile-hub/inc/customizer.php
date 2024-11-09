@@ -369,6 +369,49 @@ function automobile_hub_customize_register( $wp_customize ) {
 		'section'=> 'automobile_hub_blog_option',
 		'type'=> 'text'
 	));
+
+	$wp_customize->add_setting('automobile_hub_post_image_round', array(
+	  'default' => '0',
+      'sanitize_callback' => 'automobile_hub_sanitize_number_range',
+	));
+	$wp_customize->add_control(new automobile_hub_Range_Slider($wp_customize, 'automobile_hub_post_image_round', array(
+       'section' => 'automobile_hub_blog_option',
+      'label' => esc_html__('Edit Post Image Border Radius', 'automobile-hub'),
+      'input_attrs' => array(
+        'min' => 0,
+        'max' => 180,
+        'step' => 1
+    )
+	)));
+
+	$wp_customize->add_setting('automobile_hub_post_image_width', array(
+	  'default' => '',
+      'sanitize_callback' => 'automobile_hub_sanitize_number_range',
+	));
+	$wp_customize->add_control(new automobile_hub_Range_Slider($wp_customize, 'automobile_hub_post_image_width', array(
+       'section' => 'automobile_hub_blog_option',
+      'label' => esc_html__('Edit Post Image Width', 'automobile-hub'),
+      'input_attrs' => array(
+        'min' => 0,
+        'max' => 367,
+        'step' => 1
+    )
+	)));
+
+	$wp_customize->add_setting('automobile_hub_post_image_length', array(
+	  'default' => '',
+      'sanitize_callback' => 'automobile_hub_sanitize_number_range',
+	));
+	$wp_customize->add_control(new automobile_hub_Range_Slider($wp_customize, 'automobile_hub_post_image_length', array(
+       'section' => 'automobile_hub_blog_option',
+      'label' => esc_html__('Edit Post Image height', 'automobile-hub'),
+      'input_attrs' => array(
+        'min' => 0,
+        'max' => 900,
+        'step' => 1
+    )
+	)));
+	
 	$wp_customize->add_setting( 'automobile_hub_remove_read_button', array(
 		'default'           => true,
 		'transport'         => 'refresh',
@@ -1196,6 +1239,17 @@ function automobile_hub_customize_register( $wp_customize ) {
 			'max'              => 30,
 			),
 	));
+
+	$wp_customize->add_setting( 'automobile_hub_site_tagline_color', array(
+	    'default' => '',
+	    'sanitize_callback' => 'sanitize_hex_color'
+  	));
+  	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'automobile_hub_site_tagline_color', array(
+			'label'     => __('Change Site Title Color', 'automobile-hub'),
+	    'section' => 'title_tagline',
+	    'settings' => 'automobile_hub_site_tagline_color',
+  	)));
+
 	$wp_customize->add_setting( 'automobile_hub_site_tagline', array(
 		'default'           => false,
 		'transport'         => 'refresh',
@@ -1224,6 +1278,17 @@ function automobile_hub_customize_register( $wp_customize ) {
 			'max'              => 30,
 		),
 	));
+
+	$wp_customize->add_setting( 'automobile_hub_logo_tagline_color', array(
+	    'default' => '',
+	    'sanitize_callback' => 'sanitize_hex_color'
+  	));
+  	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'automobile_hub_logo_tagline_color', array(
+			'label'     => __('Change Site Tagline Color', 'automobile-hub'),
+	    'section' => 'title_tagline',
+	    'settings' => 'automobile_hub_logo_tagline_color',
+  	)));
+
     $wp_customize->add_setting('automobile_hub_logo_width',array(
 	   'default' => 80,
 	   'sanitize_callback'	=> 'automobile_hub_sanitize_number_absint'
@@ -1315,31 +1380,69 @@ function automobile_hub_customize_register( $wp_customize ) {
 		'settings'    => 'automobile_hub_related_product',
 	) ) );
 
+	
+	//Page template settings
+	$wp_customize->add_panel( 'automobile_hub_page_panel_id', array(
+	    'priority' => 10,
+	    'capability' => 'edit_theme_options',
+	    'theme_supports' => '',
+	    'title' => __( 'Page Template Settings', 'automobile-hub' ),
+	    'description' => __( 'Description of what this panel does.', 'automobile-hub' ),
+	) );
+
 	// 404 PAGE
 	$wp_customize->add_section('automobile_hub_404_page_section',array(
 		'title'         => __('404 Page', 'automobile-hub'),
 		'description'   => 'Here you can customize 404 Page content.',
+		'panel' => 'automobile_hub_page_panel_id'
 	) );
-	$wp_customize->add_setting('automobile_hub_not_found_title',array(
+
+	$wp_customize->add_setting('automobile_hub_edit_404_title',array(
 		'default'=> __('Oops! That page cant be found.','automobile-hub'),
 		'sanitize_callback'	=> 'sanitize_text_field',
 	));
-	$wp_customize->add_control('automobile_hub_not_found_title',array(
+	$wp_customize->add_control('automobile_hub_edit_404_title',array(
 		'label'	=> __('Edit Title','automobile-hub'),
 		'section'=> 'automobile_hub_404_page_section',
 		'type'=> 'text',
 	));
-	$wp_customize->add_setting('automobile_hub_not_found_text',array(
+
+	$wp_customize->add_setting('automobile_hub_edit_404_text',array(
 		'default'=> __('It looks like nothing was found at this location. Maybe try a search?','automobile-hub'),
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
-	$wp_customize->add_control('automobile_hub_not_found_text',array(
+	$wp_customize->add_control('automobile_hub_edit_404_text',array(
 		'label'	=> __('Edit Text','automobile-hub'),
 		'section'=> 'automobile_hub_404_page_section',
 		'type'=> 'text'
 	));
 
-	
+	// Search Results
+	$wp_customize->add_section('automobile_hub_no_result_section',array(
+		'title'         => __('Search Results', 'automobile-hub'),
+		'description'   => 'Here you can customize Search Result content.',
+		'panel' => 'automobile_hub_page_panel_id'
+	) );
+
+	$wp_customize->add_setting('automobile_hub_edit_no_result_title',array(
+		'default'=> __('Nothing Found','automobile-hub'),
+		'sanitize_callback'	=> 'sanitize_text_field',
+	));
+	$wp_customize->add_control('automobile_hub_edit_no_result_title',array(
+		'label'	=> __('Edit Title','automobile-hub'),
+		'section'=> 'automobile_hub_no_result_section',
+		'type'=> 'text',
+	));
+
+	$wp_customize->add_setting('automobile_hub_edit_no_result_text',array(
+		'default'=> __('Sorry, but nothing matched your search terms. Please try again with some different keywords.','automobile-hub'),
+		'sanitize_callback'	=> 'sanitize_text_field'
+	));
+	$wp_customize->add_control('automobile_hub_edit_no_result_text',array(
+		'label'	=> __('Edit Text','automobile-hub'),
+		'section'=> 'automobile_hub_no_result_section',
+		'type'=> 'text'
+	));
 
 }
 add_action( 'customize_register', 'automobile_hub_customize_register' );

@@ -317,7 +317,6 @@ add_action( 'wp_enqueue_scripts', 'automobile_hub_scripts' );
 //Admin Enqueue for Admin
 function automobile_hub_admin_enqueue_scripts(){
 	wp_enqueue_style('automobile-hub-admin-style', get_template_directory_uri() . '/assets/css/admin.css');
-	wp_enqueue_script( 'automobile-hub-custom-scripts', get_template_directory_uri(). '/assets/js/automobile-hub-custom.js', array('jquery'), true);
 	wp_register_script( 'automobile-hub-admin-script', get_template_directory_uri() . '/assets/js/automobile-hub-admin.js', array( 'jquery' ), '', true );
 
 	wp_localize_script(
@@ -481,6 +480,7 @@ function automobile_hub_front_page_template( $template ) {
 }
 add_filter( 'frontpage_template','automobile_hub_front_page_template' );
 
+// footer link
 define('AUTOMOBILE_HUB_CREDIT',__('https://www.themespride.com/products/free-automobile-wordpress-theme','automobile-hub') );
 if ( ! function_exists( 'automobile_hub_credit' ) ) {
 	function automobile_hub_credit(){
@@ -488,6 +488,7 @@ if ( ! function_exists( 'automobile_hub_credit' ) ) {
 	}
 }
 
+// get started
 add_action( 'wp_ajax_automobile_hub_dismissed_notice_handler', 'automobile_hub_ajax_notice_handler' );
 
 function automobile_hub_ajax_notice_handler() {
@@ -532,7 +533,6 @@ function automobile_hub_activation_notice() {
 <?php }
 
 }
-
 add_action( 'admin_notices', 'automobile_hub_activation_notice' );
 
 add_action('after_switch_theme', 'automobile_hub_setup_options');
@@ -540,8 +540,7 @@ function automobile_hub_setup_options () {
     update_option('dismissed-get_started', FALSE );
 }
 
-
-
+// logo
 function automobile_hub_logo_width(){
 
 	$automobile_hub_logo_width   = get_theme_mod( 'automobile_hub_logo_width', 80 );

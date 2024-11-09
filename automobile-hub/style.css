@@ -4,7 +4,7 @@ Theme URI: https://www.themespride.com/products/free-automobile-wordpress-theme
 Author: ThemesPride
 Author URI: https://www.themespride.com/
 Description: Automobile Hub is a stylish, modern, dynamic, resourceful and feature-rich automobile WordPress theme for car and bike showrooms, automobile garage, car dealership, cab services, car rentals, ATV bikes, RV bikes and cycles, car wash, farming vehicles, wheels, clunker, Food Truck, Jet Ski Rental Services, rustbucket, electric vehicle, off road vehicles, wheel dealers, auto parts dealer, tyre repair services, Battery Reconditioning, Taxi, Bus Shuttle Services, Dump Truck, Tow Trucking Service, Spare Parts Distribution, Wheel allignment services, car booking, Oil Change Service Business, Service Station, Panel Beating Services, Tire Store, Heavy Vehicle rental, aircrafts manufacturing company, helicopter services, car lifters, cargo hubs, auto, mechanic, autoparts, driving school, Auto Wash, buses, car service, truck, Car AMC automobile, booking, business, car, car rental rent, rental, travel, vacation, van, vehicle car washing centres and all the websites dealing in automobile industry. It is a responsive theme with 100% fluid layout and cross-browser compatible to load seamlessly on all browsers. It is multilingual to give services in all international languages and retina ready to show sharp and crisp images of automobiles to make the website look beautiful. This automobile WordPress theme is optimized for search engines and all its pages load with super-fast speed. It is compatible with the latest WordPress version and many customization options are provided which eliminates the need for any professional coder. There are so many social media icons embedded that your website and its content are sure to reach target audience easily. The interface of this automobile theme is extremely easy to use; sliders are provided for smooth navigation. It has a gallery where you can post gorgeous pictures of cars, bikes and other vehicles to allure visitors and testimonial section is to get customers’ feedback to improve services.
-Version: 8.3
+Version: 8.4
 Tested up to: 6.6
 Requires PHP: 5.6
 Requires at least: 5.0
@@ -40,10 +40,12 @@ body.custom-background{
 h1,h2,h3,h4,h5,h6{
   color: #151515;
   font-family: 'Oswald', sans-serif;
+  text-wrap:balance;
 }
 p{
   font-size: 15px;
   letter-spacing: 1px;
+  text-wrap:balance;
 }
 a{
   text-decoration:none;
@@ -61,8 +63,9 @@ input[type="search"] {
 button[type="submit"] {
   padding: 11px;
   background: #e43315;
-  border: none;
   cursor: pointer;
+  color: #fff;
+  border: 1px solid #e43315;
 }
 img {
   height: auto;
@@ -524,14 +527,14 @@ body.admin-bar .search-close{
 button.search-close:focus{
   outline:2px solid #000;
 }
-button.search-submit {
+.search-outer button.search-submit {
  border: 0;
  background: transparent;
 }
 .inner_searchbox button[type="submit"]{
     background:none;
 }
-input.search-field {
+.search-outer input.search-field {
  border: none;
  padding: 4px 0;
  background: transparent;
@@ -614,14 +617,14 @@ Post Pages
   position: relative;
   text-align: center;
   margin-top: 0;
-  height: 500px;
+  height: 400px;
   margin-bottom: 0;
   background: #000;
 }
 .external-div .box-image img{
   object-fit: cover;
   position: absolute;
-  height: 500px;
+  height: 400px;
   width: 100%;
   left: 0;
   right: 0;
@@ -908,6 +911,9 @@ h2.woocommerce-loop-product__title,
 .col-1,.col-2 {
   max-width: 100%;
 }
+.woocommerce p a{
+  text-decoration: underline;
+}
 nav.woocommerce-MyAccount-navigation ul {
   list-style: none;
   padding: 0;
@@ -1081,7 +1087,7 @@ p.cart-value.simplep{
 .error-404 [type="submit"] {
   padding: 10px;
   background: #e43315;
-  border: solid 1px #1c1c1c;
+  border: solid 1px #e43315;
   cursor: pointer;
   font-weight: 500;
 }
@@ -1639,6 +1645,11 @@ Media Queries
   }
 }
 @media screen and (max-width: 1000px){
+  .box-text{
+    top: 50%;
+    left: 5%;
+    right: 5%;
+  }
   .nav-links {
     padding-bottom: 21px;
   }

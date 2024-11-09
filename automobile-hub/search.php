@@ -15,7 +15,7 @@ get_header(); ?>
 				<?php if ( have_posts() ) : ?>
 					<h1 class="page-title"><?php /* translators: %s: search term */ printf( esc_html__( 'Search Results for: %s', 'automobile-hub' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				<?php else : ?>
-					<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'automobile-hub' ); ?></h1>
+					<h1 class="page-title"><?php echo esc_html(get_theme_mod('automobile_hub_edit_no_result_title',__('Nothing Found','automobile-hub')));?></h1>
 				<?php endif; ?>
 			</div>		
 			<?php
@@ -40,7 +40,7 @@ get_header(); ?>
 
 							else : ?>
 
-								<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'automobile-hub' ); ?></p>
+								<p><?php echo esc_html(get_theme_mod('automobile_hub_edit_no_result_text',__('Sorry, but nothing matched your search terms. Please try again with some different keywords.','automobile-hub')));?></p>
 								<?php
 									get_search_form();
 
@@ -80,7 +80,7 @@ get_header(); ?>
 
 							else : ?>
 
-								<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'automobile-hub' ); ?></p>
+								<p><?php echo esc_html(get_theme_mod('automobile_hub_edit_no_result_text',__('Sorry, but nothing matched your search terms. Please try again with some different keywords.','automobile-hub')));?></p>
 								<?php
 									get_search_form();
 
@@ -119,7 +119,7 @@ get_header(); ?>
 
 						else : ?>
 
-							<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'automobile-hub' ); ?></p>
+							<p><?php echo esc_html(get_theme_mod('automobile_hub_edit_no_result_text',__('Sorry, but nothing matched your search terms. Please try again with some different keywords.','automobile-hub')));?></p>
 							<?php
 								get_search_form();
 
@@ -158,7 +158,7 @@ get_header(); ?>
 
 							else : ?>
 
-								<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'automobile-hub' ); ?></p>
+								<p><?php echo esc_html(get_theme_mod('automobile_hub_edit_no_result_text',__('Sorry, but nothing matched your search terms. Please try again with some different keywords.','automobile-hub')));?></p>
 								<?php
 									get_search_form();
 
@@ -199,7 +199,7 @@ get_header(); ?>
 
 							else : ?>
 
-								<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'automobile-hub' ); ?></p>
+								<p><?php echo esc_html(get_theme_mod('automobile_hub_edit_no_result_text',__('Sorry, but nothing matched your search terms. Please try again with some different keywords.','automobile-hub')));?></p>
 								<?php
 									get_search_form();
 
@@ -239,7 +239,7 @@ get_header(); ?>
 
 								else : ?>
 
-									<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'automobile-hub' ); ?></p>
+									<p><?php echo esc_html(get_theme_mod('automobile_hub_edit_no_result_text',__('Sorry, but nothing matched your search terms. Please try again with some different keywords.','automobile-hub')));?></p>
 									<?php
 										get_search_form();
 
