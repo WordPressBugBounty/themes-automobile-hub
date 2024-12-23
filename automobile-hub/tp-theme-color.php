@@ -112,3 +112,19 @@ $automobile_hub_tp_theme_css .='p.site-description{';
 $automobile_hub_tp_theme_css .='color: '.esc_attr($automobile_hub_logo_tagline_color).';';
 $automobile_hub_tp_theme_css .='}';
 }
+
+// footer widget title color
+$automobile_hub_footer_widget_title_color = get_theme_mod('automobile_hub_footer_widget_title_color');
+if($automobile_hub_footer_widget_title_color != false){
+$automobile_hub_tp_theme_css .='#footer h3{';
+$automobile_hub_tp_theme_css .='color: '.esc_attr($automobile_hub_footer_widget_title_color).';';
+$automobile_hub_tp_theme_css .='}';
+}
+
+// copyright text color
+$automobile_hub_footer_copyright_text_color = get_theme_mod('automobile_hub_footer_copyright_text_color');
+if($automobile_hub_footer_copyright_text_color != false){
+$automobile_hub_tp_theme_css .='#footer .site-info p, #footer .site-info a {';
+$automobile_hub_tp_theme_css .='color: '.esc_attr($automobile_hub_footer_copyright_text_color).'!important;';
+$automobile_hub_tp_theme_css .='}';
+}

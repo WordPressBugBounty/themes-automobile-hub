@@ -1072,6 +1072,7 @@ function automobile_hub_customize_register( $wp_customize ) {
 		'panel' => 'automobile_hub_panel_id',
 		'priority' => 4,
 	));
+
 	$wp_customize->add_setting('automobile_hub_footer_text',array(
 		'default'	=> '',
 		'sanitize_callback'	=> 'sanitize_text_field'
@@ -1080,6 +1081,49 @@ function automobile_hub_customize_register( $wp_customize ) {
 		'label'	=> __('Copyright Text','automobile-hub'),
 		'section'	=> 'automobile_hub_footer_section',
 		'type'		=> 'text'
+	));
+
+	//footer widget title font size
+	$wp_customize->add_setting('automobile_hub_footer_copyright_font_size',array(
+		'default'	=> '',
+		'sanitize_callback'	=> 'automobile_hub_sanitize_number_absint'
+	));
+	$wp_customize->add_control('automobile_hub_footer_copyright_font_size',array(
+		'label'	=> __('Change Footer Copyright Font Size in PX','automobile-hub'),
+		'section'	=> 'automobile_hub_footer_section',
+	    'setting'	=> 'automobile_hub_footer_copyright_font_size',
+		'type'	=> 'number',
+		'input_attrs' => array(
+			'step'             => 1,
+			'min'              => 0,
+			'max'              => 50,
+		),
+	));
+
+	$wp_customize->add_setting( 'automobile_hub_footer_copyright_text_color', array(
+	    'default' => '',
+	    'sanitize_callback' => 'sanitize_hex_color'
+  	));
+  	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'automobile_hub_footer_copyright_text_color', array(
+			'label'     => __('Change Footer Copyright Text Color', 'automobile-hub'),
+	    'section' => 'automobile_hub_footer_section',
+	    'settings' => 'automobile_hub_footer_copyright_text_color',
+  	)));
+
+  	$wp_customize->add_setting('automobile_hub_footer_copyright_top_bottom_padding',array(
+		'default'	=> '',
+		'sanitize_callback'	=> 'automobile_hub_sanitize_number_absint'
+	));
+	$wp_customize->add_control('automobile_hub_footer_copyright_top_bottom_padding',array(
+		'label'	=> __('Change Footer Copyright Padding in PX','automobile-hub'),
+		'section'	=> 'automobile_hub_footer_section',
+	    'setting'	=> 'automobile_hub_footer_copyright_top_bottom_padding',
+		'type'	=> 'number',
+		'input_attrs' => array(
+			'step'             => 1,
+			'min'              => 0,
+			'max'              => 50,
+		),
 	));
 	// footer columns
 	$wp_customize->add_setting('automobile_hub_footer_columns',array(
@@ -1119,6 +1163,34 @@ function automobile_hub_customize_register( $wp_customize ) {
 		'selector' => '#footer p',
 		'render_callback' => 'automobile_hub_customize_partial_automobile_hub_footer_text',
 	) );
+
+	//footer widget title font size
+	$wp_customize->add_setting('automobile_hub_footer_widget_title_font_size',array(
+		'default'	=> '',
+		'sanitize_callback'	=> 'automobile_hub_sanitize_number_absint'
+	));
+	$wp_customize->add_control('automobile_hub_footer_widget_title_font_size',array(
+		'label'	=> __('Change Footer Widget Title Font Size in PX','automobile-hub'),
+		'section'	=> 'automobile_hub_footer_section',
+	    'setting'	=> 'automobile_hub_footer_widget_title_font_size',
+		'type'	=> 'number',
+		'input_attrs' => array(
+			'step'             => 1,
+			'min'              => 0,
+			'max'              => 50,
+		),
+	));
+
+	$wp_customize->add_setting( 'automobile_hub_footer_widget_title_color', array(
+	    'default' => '',
+	    'sanitize_callback' => 'sanitize_hex_color'
+  	));
+  	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'automobile_hub_footer_widget_title_color', array(
+			'label'     => __('Change Footer Widget Title Color', 'automobile-hub'),
+	    'section' => 'automobile_hub_footer_section',
+	    'settings' => 'automobile_hub_footer_widget_title_color',
+  	)));
+  	
 	$wp_customize->add_setting( 'automobile_hub_return_to_header', array(
 		'default'           => true,
 		'transport'         => 'refresh',

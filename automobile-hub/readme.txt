@@ -2,9 +2,9 @@
 Contributors: ThemesPride
 Tags: wide-blocks, block-styles, one-column, two-columns, right-sidebar, left-sidebar, three-columns, four-columns, grid-layout, custom-colors, custom-header, custom-background, custom-menu, custom-logo, editor-style, featured-images, footer-widgets,featured-image-header, full-width-template, rtl-language-support, sticky-post, theme-options, post-formats, threaded-comments, translation-ready, flexible-header, blog, e-commerce, portfolio
 Requires at least: 5.0
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 5.6
-Stable tag: 8.4
+Stable tag: 8.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -417,6 +417,15 @@ Installation
     * Added settings to customize the text on the "no results found" search page.
     * Resolved CSS issues on the 404 page and the "no results found" search page.
     * Updated the POT file for translation.
+
+= 8.5 =
+    * Added a setting to customize the footer widget title font size.
+    * Added a setting to customize the footer widget title color.
+    * Added a setting to adjust the footer copyright padding.
+    * Added a setting to customize the footer copyright font size.
+    * Added a setting to customize the footer copyright text color.
+    * Fixed an issue with the Customizer buttons.
+    * Updated the POT file to include the latest strings for translation.
 
 == Resources ==
 

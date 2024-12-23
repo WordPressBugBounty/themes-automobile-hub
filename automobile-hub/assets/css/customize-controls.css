@@ -8,6 +8,10 @@
     border-right: none !important;
     line-height: 2;
 }
+#accordion-section-automobile_hub_section_pro .accordion-section-title::after,
+#accordion-section-automobile_hub_section_pro_demo .accordion-section-title::after{
+  content: none;
+}
 #accordion-section-automobile_hub_section_pro .control-section-automobile-hub h3.accordion-section-title {
     color: #e43315 !important;
 }
