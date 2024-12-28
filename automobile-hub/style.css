@@ -4,7 +4,7 @@ Theme URI: https://www.themespride.com/products/free-automobile-wordpress-theme
 Author: ThemesPride
 Author URI: https://www.themespride.com/
 Description: Automobile Hub is a stylish, modern, dynamic, resourceful and feature-rich automobile WordPress theme for car and bike showrooms, automobile garage, car dealership, cab services, car rentals, ATV bikes, RV bikes and cycles, car wash, farming vehicles, wheels, clunker, Food Truck, Jet Ski Rental Services, rustbucket, electric vehicle, off road vehicles, wheel dealers, auto parts dealer, tyre repair services, Battery Reconditioning, Taxi, Bus Shuttle Services, Dump Truck, Tow Trucking Service, Spare Parts Distribution, Wheel allignment services, car booking, Oil Change Service Business, Service Station, Panel Beating Services, Tire Store, Heavy Vehicle rental, aircrafts manufacturing company, helicopter services, car lifters, cargo hubs, auto, mechanic, autoparts, driving school, Auto Wash, buses, car service, truck, Car AMC automobile, booking, business, car, car rental rent, rental, travel, vacation, van, vehicle car washing centres and all the websites dealing in automobile industry. It is a responsive theme with 100% fluid layout and cross-browser compatible to load seamlessly on all browsers. It is multilingual to give services in all international languages and retina ready to show sharp and crisp images of automobiles to make the website look beautiful. This automobile WordPress theme is optimized for search engines and all its pages load with super-fast speed. It is compatible with the latest WordPress version and many customization options are provided which eliminates the need for any professional coder. There are so many social media icons embedded that your website and its content are sure to reach target audience easily. The interface of this automobile theme is extremely easy to use; sliders are provided for smooth navigation. It has a gallery where you can post gorgeous pictures of cars, bikes and other vehicles to allure visitors and testimonial section is to get customers’ feedback to improve services.
-Version: 8.5
+Version: 8.6
 Tested up to: 6.7
 Requires PHP: 5.6
 Requires at least: 5.0
@@ -210,7 +210,7 @@ Accessibility CSS
 Header
 --------------------------------------------------------------*/
 .social-media i {
-  color: #a2a2a2;
+  color: #8f8787;
   font-size: 14px;
   margin: 0 10px;
 }
@@ -274,6 +274,7 @@ p.simplep a:hover, #slider .inner_carousel h1 a:hover, .more-btn a:hover, #about
 }
 .logo h1 a, .logo p.site-title a{
     color: #fff;
+    text-decoration: none;
 }
 .logo h1 a:hover, .logo p.site-title a:hover{
     color: #e43315;
@@ -303,7 +304,7 @@ Menu bar
   right: 0;
   transform: translateY(-50%);
   top: 50%;
-  color: #a2a2a2;
+  color: #8f8787;
   font-size: 15px;
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
@@ -346,7 +347,7 @@ ul.list_nav {
 }
 .main-navigation a{
   display: block;
-  color: #a2a2a2;
+  color: #8f8787;
   padding: 0;
   font-size: 12px;
   font-weight: 500;
@@ -591,6 +592,33 @@ body.admin-bar .closepop{
   top:30px;
 }
 
+/*block widget for footer*/
+#footer .wp-block-details summary{
+  color: #fff;
+}
+#footer .widget.widget_block.widget_text a{
+  text-decoration: underline;
+}
+#footer .wp-calendar-table th{
+  background-color: #e43315;
+  color: #fff;
+  border-color: #e43315;
+}
+#footer .tagcloud a, #footer p.wp-block-tag-cloud a{
+  text-decoration: none;
+}
+/*block widget for sidebar*/
+#secondary .wp-calendar-table th{
+  background-color: #e43315;
+  color: #fff;
+  border-color: #e43315;
+}
+#secondary .widget.widget_block.widget_text p a{
+  text-decoration: underline;
+}
+#secondary li a,#secondary .widget.widget_block.widget_tag_cloud a, #theme-sidebar li a{
+  text-decoration: none;
+}
 
 /*--------------------------------------------------------------
 Post Pages
@@ -600,13 +628,16 @@ Post Pages
   border: 3px solid #ebebeb;
   padding: 20px;
   margin-bottom: 30px;
-  box-shadow: -3px 3px 0 0 #151515;
   border-bottom: 3px solid #e43315;
   border-left: 3px solid #e43315;
   text-align: center;
 }
 #category-post .entry-video, #category-post .entry-audio{
   padding-bottom: 7px;
+}
+.box-image{
+  position: relative;
+  z-index: 99;
 }
 .box-image img,
 .box-content img {
@@ -617,18 +648,17 @@ Post Pages
   position: relative;
   text-align: center;
   margin-top: 0;
-  height: 400px;
+  height: 350px;
   margin-bottom: 0;
   background: #000;
 }
 .external-div .box-image img{
   object-fit: cover;
   position: absolute;
-  height: 400px;
+  height: 350px;
   width: 100%;
   left: 0;
   right: 0;
-  opacity: 0.5;
   background-size:cover;
 }
 .box-text{
@@ -654,13 +684,13 @@ Post Pages
 .box-info {
   padding: 5px 0;
 }
-.box-info span {
+.content-area .box-info a {
   margin-right: 10px;
-  color: #a2a2a2;
-  font-size: 12px;
+  color: #8f8787;
+  font-size: 15px;
 }
 .page-box p {
-  color: #a2a2a2;
+  color: #8f8787;
   font-size: 15px;
   margin: 15px 0;
 }
@@ -819,9 +849,6 @@ ABOUT US
 /*--------------------------------------------------------------
 WOOCOMMERCE CSS
 --------------------------------------------------------------*/
-.woocommerce-page .external-div{
-  display: none;
-}
 .woocommerce nav.woocommerce-pagination ul li {
   border-right: none;
 }
@@ -1103,7 +1130,6 @@ Sidebar
   background: #fff;
   border-bottom: 3px solid #e43315;
   border-left: 3px solid #e43315;
-  box-shadow: -3px 3px 0 0 #151515;
 }
 #theme-sidebar .wp-block-search .wp-block-search__label,#theme-sidebar h3, #theme-sidebar h1.wp-block-heading, #theme-sidebar h2.wp-block-heading, #theme-sidebar h3.wp-block-heading,#theme-sidebar h4.wp-block-heading, #theme-sidebar h5.wp-block-heading, #theme-sidebar h6.wp-block-heading {
   border-bottom: 1px solid #ebebeb;
@@ -1140,7 +1166,7 @@ Sidebar
 }
 #theme-sidebar li {
   border-bottom: 1px dashed #ebebeb;
-  color: #a2a2a2;
+  color: #8f8787;
   line-height: 20px;
   padding: 10px 5px;
   margin-left: 10px;
@@ -1150,8 +1176,8 @@ Sidebar
   color: #e43315;
 }
 #theme-sidebar a,#theme-sidebar .wp-block-latest-comments__comment-author, #theme-sidebar .wp-block-latest-comments__comment-link {
-  color: #a2a2a2;
-  font-size: 13px;
+  color: #8f8787;
+  font-size: 15px;
 }
 #footer .wp-block-latest-comments article,
 #theme-sidebar .wp-block-latest-comments article {
@@ -1175,11 +1201,11 @@ Sidebar
   background: transparent;
   font-size: 14px;
   width: 100%;
-  color: #a2a2a2;
+  color: #8f8787;
 }
 #theme-sidebar .tagcloud a, #sidebar p.wp-block-tag-cloud a ,.post_tag a, #theme-sidebar .widget_tag_cloud a {
   border: 1px solid #ebebeb;
-  color: #a2a2a2 !important;
+  color: #8f8787 !important;
   line-height: 20px;
   padding: 5px 10px;
   font-size: 12px !important;
@@ -1466,7 +1492,7 @@ Footer
   padding-bottom: 10px;
 }
 #footer .textwidget {
-  color: #a2a2a2;
+  color: #8f8787;
 }
 #footer .tagcloud a,#footer p.wp-block-tag-cloud a {
   border: 1px dashed #fff;

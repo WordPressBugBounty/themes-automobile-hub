@@ -188,7 +188,7 @@ Accessibility CSS
 Header
 --------------------------------------------------------------*/
 .social-media i {
-  color: #a2a2a2;
+  color: #8f8787;
   font-size: 14px;
   margin: 0 10px;
 }
@@ -280,7 +280,7 @@ Menu bar
   position: absolute;
   left: 2px;
   top: 19px;
-  color: #a2a2a2;
+  color: #8f8787;
   font-size: 15px;
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
@@ -323,7 +323,7 @@ ul.list_nav {
 }
 .main-navigation a{
   display: block;
-  color: #a2a2a2;
+  color: #8f8787;
   padding: 0;
   font-size: 12px;
   font-weight: 500;
@@ -633,11 +633,11 @@ Post Pages
 }
 .box-info span {
   margin-left: 10px;
-  color: #a2a2a2;
+  color: #8f8787;
   font-size: 12px;
 }
 .page-box p {
-  color: #a2a2a2;
+  color: #8f8787;
   font-size: 15px;
   margin: 15px 0;
 }
@@ -1112,7 +1112,7 @@ Sidebar
 }
 #theme-sidebar li {
   border-bottom: 1px dashed #ebebeb;
-  color: #a2a2a2;
+  color: #8f8787;
   line-height: 20px;
   padding: 10px 5px;
   margin-right: 10px;
@@ -1122,7 +1122,7 @@ Sidebar
   color: #e43315;
 }
 #theme-sidebar a,#theme-sidebar .wp-block-latest-comments__comment-author, #theme-sidebar .wp-block-latest-comments__comment-link {
-  color: #a2a2a2;
+  color: #8f8787;
   font-size: 13px;
 }
 #footer .wp-block-latest-comments article,
@@ -1147,11 +1147,11 @@ Sidebar
   background: transparent;
   font-size: 14px;
   width: 100%;
-  color: #a2a2a2;
+  color: #8f8787;
 }
 #theme-sidebar .tagcloud a, #sidebar p.wp-block-tag-cloud a ,.post_tag a, #theme-sidebar .widget_tag_cloud a {
   border: 1px solid #ebebeb;
-  color: #a2a2a2 !important;
+  color: #8f8787 !important;
   line-height: 20px;
   padding: 5px 10px;
   font-size: 12px !important;
@@ -1438,7 +1438,7 @@ Footer
   padding-bottom: 10px;
 }
 #footer .textwidget {
-  color: #a2a2a2;
+  color: #8f8787;
 }
 #footer .tagcloud a,#footer p.wp-block-tag-cloud a {
   border: 1px dashed #fff;

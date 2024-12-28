@@ -8,6 +8,13 @@
 
 get_header(); ?>
 
+<div class="box-image">
+  	<div class="single-page-img"></div>
+  	 <div class="box-text">
+    	<h2><?php the_title();?></h2>  
+    </div> 
+</div>
+
 <div class="container">
 	<main id="tp_content" role="main">
 		<div id="primary" class="content-area">

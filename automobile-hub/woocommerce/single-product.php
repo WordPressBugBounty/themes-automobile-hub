@@ -22,6 +22,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( 'shop' ); ?>
 
+<div class="box-image">
+  	<div class="single-page-img"></div>
+  	 <div class="box-text">
+    	<h2><?php the_title();?></h2>  
+    </div> 
+</div>
+
 <main id="tp_content" role="main">
 	<div class="container">
 		<div class="row">

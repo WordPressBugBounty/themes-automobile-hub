@@ -596,4 +596,9 @@ require get_parent_theme_file_path( '/inc/controls/customize-control-toggle.php'
  */
 require get_parent_theme_file_path( '/inc/controls/sortable-control.php' );
 
+/**
+ * TGM Recommendation
+ */
+require get_parent_theme_file_path( '/inc/TGM/tgm.php' );
+
 add_filter( 'woocommerce_prevent_automatic_wizard_redirect', '__return_true' );

@@ -116,7 +116,7 @@ $automobile_hub_tp_theme_css .='}';
 // footer widget title color
 $automobile_hub_footer_widget_title_color = get_theme_mod('automobile_hub_footer_widget_title_color');
 if($automobile_hub_footer_widget_title_color != false){
-$automobile_hub_tp_theme_css .='#footer h3{';
+$automobile_hub_tp_theme_css .='#footer h3, #footer h2.wp-block-heading{';
 $automobile_hub_tp_theme_css .='color: '.esc_attr($automobile_hub_footer_widget_title_color).';';
 $automobile_hub_tp_theme_css .='}';
 }

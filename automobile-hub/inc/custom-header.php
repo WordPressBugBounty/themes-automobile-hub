@@ -17,13 +17,13 @@ function automobile_hub_custom_header_setup() {
 		'flex-width'    		 => true,
 		'flex-height'    		 => true,
 		'wp-head-callback'       => 'automobile_hub_header_style',
-		'default-image'          => get_parent_theme_file_uri( '/assets/images/header_img.png' ),
+		'default-image'          => get_parent_theme_file_uri( '/assets/images/sliderimage.png' ),
 	) ) );
 
 	register_default_headers( array(
 		'default-image' => array(
-			'url'           => '%s/assets/images/header_img.png',
-			'thumbnail_url' => '%s/assets/images/header_img.png',
+			'url'           => '%s/assets/images/sliderimage.png',
+			'thumbnail_url' => '%s/assets/images/sliderimage.png',
 			'description'   => __( 'Default Header Image', 'automobile-hub' ),
 		),
 	) );
@@ -35,14 +35,7 @@ add_action( 'wp_enqueue_scripts', 'automobile_hub_header_style' );
 function automobile_hub_header_style() {
     if ( get_header_image() ) :
     $automobile_hub_custom_css = "
-        .header-img {
-            background-image: url('".esc_url(get_header_image())."') !important;
-            background-position: center top !important;
-            height: 350px;
-            background-size: cover !important;
-            display: block;
-        }
-        .single-page-img {
+        .header-img, .single-page-img, .external-div .box-image img {
             background-image: url('".esc_url(get_header_image())."') !important;
             background-position: center top !important;
             background-size: cover !important;

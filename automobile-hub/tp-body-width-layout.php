@@ -241,7 +241,7 @@ if($automobile_hub_post_image_length != false){
 
 // footer widget title font size
 $automobile_hub_footer_widget_title_font_size = get_theme_mod('automobile_hub_footer_widget_title_font_size', '');{
-$automobile_hub_tp_theme_css .='#footer h3{';
+$automobile_hub_tp_theme_css .='#footer h3, #footer h2.wp-block-heading{';
     $automobile_hub_tp_theme_css .='font-size: '.esc_attr($automobile_hub_footer_widget_title_font_size).'px;';
 $automobile_hub_tp_theme_css .='}';
 }

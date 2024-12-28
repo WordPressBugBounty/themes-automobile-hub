@@ -8,21 +8,23 @@
 
 get_header(); ?>
 <?php $automobile_hub_static_image = get_stylesheet_directory_uri() . '/assets/images/sliderimage.png'; ?>
+
+	<?php while ( have_posts() ) : the_post(); ?>
+		<div id="post-<?php the_ID(); ?>" class="external-div">
+	        <div class="box-image">
+	          	<?php if(has_post_thumbnail()){ 
+	            	the_post_thumbnail();
+		        }else { ?>
+		            <div class="single-page-img"></div>
+		        <?php } ?>
+	        </div> 
+	        <div class="box-text">
+	        	<h2><?php the_title();?></h2>  
+	        </div> 
+		</div>
+	<?php endwhile; ?>
+	
 	<main id="tp_content" role="main">
-		<?php while ( have_posts() ) : the_post(); ?>
-			<div id="post-<?php the_ID(); ?>" class="external-div">
-		        <div class="box-image">
-		          	<?php if(has_post_thumbnail()){ 
-		            	the_post_thumbnail();
-			        }else { ?>
-			            <img src="<?php echo esc_url($automobile_hub_static_image); ?>">
-			        <?php } ?>
-		        </div>
-		        <div class="box-text">
-		        	<h2><?php the_title();?></h2>  
-		        </div> 
-			</div>
-		<?php endwhile; ?>
 		<div class="container">
 			<div id="primary" class="content-area">
 				<?php

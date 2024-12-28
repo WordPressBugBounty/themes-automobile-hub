@@ -4,7 +4,7 @@ Tags: wide-blocks, block-styles, one-column, two-columns, right-sidebar, left-si
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 5.6
-Stable tag: 8.5
+Stable tag: 8.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -427,6 +427,14 @@ Installation
     * Fixed an issue with the Customizer buttons.
     * Updated the POT file to include the latest strings for translation.
 
+= 8.6 =
+    * Changed header banner image.
+    * Made the post date, author, category, and comment clickable, linking to their respective archive pages.
+    * Removed the border from the single post page and single page.
+    * Removed the double border from the blog post and sidebar.
+    * Added CSS styling for block widgets in the footer and sidebar.
+    * Changed theme bundle count in Get Started.
+
 == Resources ==
 
 Automobile Hub WordPress Theme, Copyright 2022 ThemesPride
@@ -468,6 +476,10 @@ Source: https://github.com/googlefonts/OswaldFont
 Webfont-Loader
 License: https://github.com/WPTT/webfont-loader/blob/master/LICENSE
 Source: https://github.com/WPTT/webfont-loader
+
+TGMPA, GaryJones Copyright (C) 1989, 1991
+License: GNU General Public License v2.0
+Source: https://github.com/TGMPA/TGM-Plugin-Activation/blob/develop/LICENSE.md
 
 Stocksnap Images
 License: CC0 1.0 Universal (CC0 1.0)

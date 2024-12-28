@@ -8,6 +8,20 @@
 
 get_header(); ?>
 
+<div class="box-image">
+  	<div class="single-page-img"></div>
+  	 <div class="box-text">
+    	<?php if ( have_posts() ) : ?>
+			<div class="page-header">
+				<?php
+					the_archive_title( '<h2 class="page-title">', '</h2>' );
+					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+				?>
+			</div>
+		<?php endif; ?>  
+    </div> 
+</div>
+
 <div class="container">
 	<main id="tp_content" role="main">
 		<div id="primary" class="content-area">
