@@ -9,13 +9,21 @@
     line-height: 2;
 }
 #accordion-section-automobile_hub_section_pro .accordion-section-title::after,
-#accordion-section-automobile_hub_section_pro_demo .accordion-section-title::after{
+#accordion-section-automobile_hub_section_pro_demo .accordion-section-title::after,
+#accordion-section-automobile_hub_documentation .accordion-section-title::after{
   content: none;
+}
+#accordion-section-automobile_hub_section_pro h3,
+#accordion-section-automobile_hub_section_pro_demo h3,
+#accordion-section-automobile_hub_documentation h3{
+  font-size: 15px;
+  font-weight: 700;
 }
 #accordion-section-automobile_hub_section_pro .control-section-automobile-hub h3.accordion-section-title {
     color: #e43315 !important;
 }
-#accordion-section-automobile_hub_section_pro a.button.button-secondary.alignright{
+#accordion-section-automobile_hub_section_pro a.button.button-secondary.alignright,
+#accordion-section-automobile_hub_documentation a.button.button-secondary.alignright{
     background: #e43315;
 }
 a.button.button-secondary.alignright {

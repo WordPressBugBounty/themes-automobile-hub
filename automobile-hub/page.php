@@ -7,7 +7,7 @@
  */
 
 get_header(); ?>
-<?php $automobile_hub_static_image = get_stylesheet_directory_uri() . '/assets/images/sliderimage.png'; ?>
+<?php $automobile_hub_static_image = get_template_directory_uri() . '/assets/images/sliderimage.png'; ?>
 	<main id="tp_content" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<div id="post-<?php the_ID(); ?>" class="external-div">

@@ -1550,7 +1550,7 @@ if ( ! defined( 'AUTOMOBILE_HUB_PRO_THEME_URL' ) ) {
 	define( 'AUTOMOBILE_HUB_PRO_THEME_URL', esc_url('https://www.themespride.com/products/automobile-wordpress-theme'));
 }
 if ( ! defined( 'AUTOMOBILE_HUB_DOCS_URL' ) ) {
-	define( 'AUTOMOBILE_HUB_DOCS_URL', esc_url('https://page.themespride.com/demo/docs/automobile-hub/'));
+	define( 'AUTOMOBILE_HUB_DOCS_URL', esc_url('https://page.themespride.com/demo/docs/automobile-hub-lite/'));
 }
 
 if ( ! defined( 'AUTOMOBILE_HUB_DEMO_TITLE' ) ) {

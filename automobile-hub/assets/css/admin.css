@@ -260,3 +260,20 @@ pre.changelog {
 .wp-core-ui .button-primary.demo:hover{
     background-color: #4f8429;
 }
+a.wp-bundle.nav-tab:after {
+    content: "Offer";
+    color: white;
+    padding: 3px;
+    font-size: 12PX;
+    margin-left: 15px;
+    background: red;
+    position: absolute;
+    text-transform: uppercase;
+    top: -15px;
+    right: -20px;
+    border-radius: 4px;
+}
+a.wp-bundle.nav-tab{
+    position: relative;
+    z-index: 999;
+}

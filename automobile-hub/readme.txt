@@ -4,7 +4,7 @@ Tags: wide-blocks, block-styles, one-column, two-columns, right-sidebar, left-si
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 5.6
-Stable tag: 8.6
+Stable tag: 8.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -428,12 +428,18 @@ Installation
     * Updated the POT file to include the latest strings for translation.
 
 = 8.6 =
+    * Updated wocommerce templates files.
     * Changed header banner image.
     * Made the post date, author, category, and comment clickable, linking to their respective archive pages.
     * Removed the border from the single post page and single page.
     * Removed the double border from the blog post and sidebar.
     * Added CSS styling for block widgets in the footer and sidebar.
     * Changed theme bundle count in Get Started.
+
+= 8.7 =
+    * Fixed errors related to Customizer buttons.
+    * Fixed errors in single post meta fields.
+    * Fixed errors in link functionality.
 
 == Resources ==
 
