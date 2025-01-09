@@ -4,7 +4,7 @@ Tags: wide-blocks, block-styles, one-column, two-columns, right-sidebar, left-si
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 5.6
-Stable tag: 8.7
+Stable tag: 8.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -440,6 +440,9 @@ Installation
     * Fixed errors related to Customizer buttons.
     * Fixed errors in single post meta fields.
     * Fixed errors in link functionality.
+
+= 8.8 =
+    * Resolve errors from customizer.php file.
 
 == Resources ==
 

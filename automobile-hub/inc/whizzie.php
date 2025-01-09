@@ -228,14 +228,14 @@ if (!$automobile_hub_menu_exists) {
                 'post_type'     => 'page',
             );
 
-            // Insert the post into the database
+            /// Insert the post into the database
             $post_id = wp_insert_post($my_post);
 
             if ($post_id) {
                 // Set the theme mod for the slider page
                 set_theme_mod('automobile_hub_slider_page' . $i, $post_id);
 
-                $image_url = get_template_directory_uri() . '/assets/images/slider-img' . $i . '.png';
+                $image_url = get_template_directory_uri() . '/assets/images/slider-img.png';
                 $image_id = media_sideload_image($image_url, $post_id, null, 'id');
 
                 if (!is_wp_error($image_id)) {
