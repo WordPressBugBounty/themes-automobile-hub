@@ -1,20 +1,6 @@
 <?php 
 if (isset($_GET['import-demo']) && $_GET['import-demo'] == true) {
 
-    function automobile_hub_import_demo_content() {
-    // Path to the WooCommerce plugin file
-    $plugin = 'woocommerce/woocommerce.php';
-    
-    // Check if WooCommerce is installed and not already active
-    if (file_exists(WP_PLUGIN_DIR . '/' . $plugin) && !is_plugin_active($plugin)) {
-        activate_plugin($plugin);
-    }
-
-     }
-
-    // Call the import function
-    automobile_hub_import_demo_content();
-
     // ------- Create Nav Menu --------
 $automobile_hub_menuname = 'Main Menus';
 $automobile_hub_bpmenulocation = 'primary-menu';
@@ -279,9 +265,7 @@ if (!$automobile_hub_menu_exists) {
             }
         }
 
+
+
     }
-
-
-
-
 ?>

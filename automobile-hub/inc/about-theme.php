@@ -376,8 +376,8 @@ function automobile_hub_get_bundle() {
 
 			<p class="about-description"><?php esc_html_e( 'Get WordPress Theme Bundle', 'automobile-hub' ); ?></p>
 			<div class="col card">
-				<h2 class="title"><?php esc_html_e( ' WordPress Theme Bundle of 95+ Themes At 15% Discount. ', 'automobile-hub' ); ?></h2>
-				<p><?php esc_html_e( 'Spring Offer Is To Get WP Bundle of 95+ Themes At 15% Discount use the coupon', 'automobile-hub' ) ?>"<input type="text" value=" TPRIDE15 "  id="myInput">".</p>
+				<h2 class="title"><?php esc_html_e( ' WordPress Theme Bundle of 100+ Themes At 15% Discount. ', 'automobile-hub' ); ?></h2>
+				<p><?php esc_html_e( 'Spring Offer Is To Get WP Bundle of 100+ Themes At 15% Discount use the coupon', 'automobile-hub' ) ?>"<input type="text" value=" TPRIDE15 "  id="myInput">".</p>
 				<p><a target="_blank" href="<?php echo esc_url( AUTOMOBILE_HUB_THEME_BUNDLE ); ?>" class="button button-primary"><?php esc_html_e( 'Theme Bundle', 'automobile-hub' ); ?></a></p>
 			</div>
 		</div>

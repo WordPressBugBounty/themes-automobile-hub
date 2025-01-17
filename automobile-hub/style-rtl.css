@@ -28,11 +28,11 @@ p{
 }
 a{
   text-decoration:none;
-  color:#e43315;
+  color:var(--color-primary1);
 }
 a:hover{
   text-decoration:none;
-  color:#b91b00;
+  color:var(--color-primary1);
 }
 input[type="search"] {
   padding: 10px;
@@ -41,7 +41,7 @@ input[type="search"] {
 }
 button[type="submit"] {
   padding: 11px;
-  background: #e43315;
+  background: var(--color-primary1);
   border: none;
   cursor: pointer;
 }
@@ -60,7 +60,7 @@ textarea{
 .entry-summary a,
 #main-content p a{
   text-decoration: underline;
-  color: #e43315;
+  color: var(--color-primary1);
 }
 
 a.page-numbers{
@@ -124,15 +124,15 @@ Accessibility CSS
 .center1{
   width: 200px;
   height: 200px;
-  border-right-color: #e43315;
-  border-top-color: #e43315;
+  border-right-color: var(--color-primary1);
+  border-top-color: var(--color-primary1);
   animation: animateCenter1 2s infinite linear;
 }
 .center2{
   width: 100px;
   height: 100px;
-  border-right-color: #e43315;
-  border-top-color: #e43315;
+  border-right-color: var(--color-primary1);
+  border-top-color: var(--color-primary1);
   animation: animateCenter2 2s infinite linear;
 }
 .ring{
@@ -162,10 +162,10 @@ Accessibility CSS
   border-radius: 50%;
 }
 .center1 .ring::before {
-  background: #e43315;
+  background: var(--color-primary1);
 }
 .center2 .ring::before{
-  background: #e43315;
+  background: var(--color-primary1);
 }
 @keyframes animateCenter1{
   0%{
@@ -196,7 +196,7 @@ Header
   padding: 14px 0;
 }
 .social-media i:hover{
-  color: #e43315;
+  color: var(--color-primary1);
 }
 .headerbox {
   padding: 15px 0;
@@ -207,7 +207,7 @@ Header
   color: #fff;
   border-radius: 50%;
   padding: 18px;
-  background: #e43315;
+  background: var(--color-primary1);
   position:relative;
 }
 .headerbox i:after{
@@ -215,7 +215,7 @@ Header
   display: block;
   width: 10px;
   height: 10px;
-  background: #e43315;
+  background: var(--color-primary1);
   margin: auto 0;
   position: absolute;
   top: -3px;
@@ -227,10 +227,10 @@ Header
 .headerbox i:hover,
 .headerbox i:hover:after {
   background: #fff;
-  color: #e43315;
+  color: var(--color-primary1);
 }
 p.infotext {
-  color: #e43315;
+  color: var(--color-primary1);
   font-size: 12px;
   letter-spacing: 1px;
   font-weight: 900;
@@ -243,7 +243,7 @@ p.simplep a{
   letter-spacing: 0;
 }
 p.simplep a:hover, #slider .inner_carousel h1 a:hover, .more-btn a:hover, #about h3 a:hover, #about .more-btn a:hover{
-  color: #e43315;
+  color: var(--color-primary1);
 }
 .logo h1, .logo p.site-title {
   font-weight: bold;
@@ -254,7 +254,7 @@ p.simplep a:hover, #slider .inner_carousel h1 a:hover, .more-btn a:hover, #about
     color: #fff;
 }
 .logo h1 a:hover, .logo p.site-title a:hover{
-    color: #e43315;
+    color: var(--color-primary1);
 }
 .logo p {
   margin-bottom: 0;
@@ -331,7 +331,7 @@ ul.list_nav {
   letter-spacing: 1px;
 }
 .main-navigation a:hover{
-  color: #e43315;
+  color: var(--color-primary1);
 }
 .main-navigation ul ul{
   opacity: 0;
@@ -370,10 +370,10 @@ ul.list_nav {
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a{
-  color: #e43315;
+  color: var(--color-primary1);
 }
 .main-navigation .menu > ul > li.highlight{
-  background-color: #e43315;
+  background-color: var(--color-primary1);
 }
 .main-navigation .menu > ul > li.highlight:hover{
   background: transparent;
@@ -387,7 +387,7 @@ ul.list_nav {
   background: transparent !important;
 }
 .main-navigation ul ul li:hover > a{
-  color: #e43315;
+  color: var(--color-primary1);
 }
 .toggle-nav, a.closebtn{
   display: none;
@@ -519,7 +519,7 @@ input.search-field {
 }
 .search-bar i {
   font-size: 22px;
-  color: #e43315;
+  color: var(--color-primary1);
   border-radius: 0;
   display: inline-block;
   text-align: center;
@@ -529,7 +529,7 @@ input.search-field {
   border:none;
 }
 .inner_searchbox button[type="submit"]{
-  background-color: #e43315;
+  background-color: var(--color-primary1);
   color: #fff;
   padding: 12px 24px;
   text-align: center;
@@ -578,8 +578,8 @@ Post Pages
   padding: 20px;
   margin-bottom: 30px;
   box-shadow: 3px 3px 0 0 #151515;
-  border-bottom: 3px solid #e43315;
-  border-right: 3px solid #e43315;
+  border-bottom: 3px solid var(--color-primary1);
+  border-right: 3px solid var(--color-primary1);
   text-align: center;
 }
 #category-post .entry-video, #category-post .entry-audio{
@@ -625,7 +625,7 @@ Post Pages
 }
 .box-info i {
   margin-left: 5px;
-  color: #e43315;
+  color: var(--color-primary1);
   font-size: 14px;
 }
 .box-info {
@@ -655,12 +655,12 @@ Post Pages
   text-decoration: none;
 }
 .readmore-btn a {
-  border: 1px solid #e43315;
+  border: 1px solid var(--color-primary1);
   font-weight: 600;
   padding: 5px;
   letter-spacing: 1px;
   font-size: 15px;
-  color: #e43315
+  color: var(--color-primary1)
 }
 /*--------------------------------------------------------------
 SLIDER
@@ -691,7 +691,7 @@ SLIDER
   font-weight: 800;
   letter-spacing: 1px;
   padding: 15px 22px;
-  background: #e43315;
+  background: var(--color-primary1);
   color: #fff;
   border-radius: 50%;
 }
@@ -732,7 +732,7 @@ SLIDER
   border-radius: 50%;
   padding: 18px;
   font-size: 18px;
-  background: #e43315
+  background: var(--color-primary1)
 }
 .more-btn a {
   color: #fff;
@@ -752,7 +752,7 @@ SLIDER
     display: block;
     width: 10px;
     height: 10px;
-    background: #e43315;
+    background: var(--color-primary1);
     margin: auto 0;
     position: absolute;
     top: -3px;
@@ -776,7 +776,7 @@ ABOUT US
 }
 #about h2 {
   padding: 0;
-  color: #e43315;
+  color: var(--color-primary1);
   font-size: 15px;
   letter-spacing: 1px;
 }
@@ -828,7 +828,7 @@ a.checkout-button.button.alt.wc-forward {
   margin: 0 auto 10px !important;
 }
 .woocommerce ul.products li.product .onsale,.woocommerce span.onsale{
-  background: #e43315;
+  background: var(--color-primary1);
   padding: 0;
   top: 25px !important;
   left: 25px !important;
@@ -845,7 +845,7 @@ a.checkout-button.button.alt.wc-forward {
 a.added_to_cart.wc-forward{
    padding: 15px;
    background: none;
-   color: #e43315;
+   color: var(--color-primary1);
 }
 h2.woocommerce-loop-product__title,
 .woocommerce div.product .product_title {
@@ -864,7 +864,7 @@ h2.woocommerce-loop-product__title,
   font-size: 15px
 }
 .wc-block-checkout__actions_row .wc-block-components-checkout-place-order-button,.wc-block-cart__submit-container a,.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button,.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt{
- background: #e43315;
+ background: var(--color-primary1);
   color: #fff !important;
   padding: 15px;
   font-family: 'Oswald', sans-serif;
@@ -977,7 +977,7 @@ span.posted_in {
 Posts Numbers
 --------------------------------------------------------------*/
 .page-numbers {
-  background: #e43315;
+  background: var(--color-primary1);
   color: #fff;
   padding: 7px;
   font-weight: bold;
@@ -985,7 +985,7 @@ Posts Numbers
 .prev.page-numbers,
 .next.page-numbers {
   font-size: 15px;
-  background: #e43315;
+  background: var(--color-primary1);
 }
 .prev.page-numbers:focus,
 .prev.page-numbers:hover,
@@ -1034,7 +1034,7 @@ Posts Numbers
 }
 span.meta-nav {
   color: #fff;
-  background: #e43315;
+  background: var(--color-primary1);
   padding: 5px;
 }
 .nav-previous {
@@ -1058,7 +1058,7 @@ span.meta-nav {
 }
 .error-404 [type="submit"] {
   padding: 10px;
-  background: #e43315;
+  background: var(--color-primary1);
   border: solid 1px #1c1c1c;
   cursor: pointer;
   font-weight: 500;
@@ -1073,14 +1073,14 @@ Sidebar
   margin-bottom: 30px;
   padding: 20px;
   background: #fff;
-  border-bottom: 3px solid #e43315;
-  border-right: 3px solid #e43315;
+  border-bottom: 3px solid var(--color-primary1);
+  border-right: 3px solid var(--color-primary1);
   box-shadow: 3px 3px 0 0 #151515;
 }
 #theme-sidebar .wp-block-search .wp-block-search__label,#theme-sidebar h3, #theme-sidebar h1.wp-block-heading, #theme-sidebar h2.wp-block-heading, #theme-sidebar h3.wp-block-heading,#theme-sidebar h4.wp-block-heading, #theme-sidebar h5.wp-block-heading, #theme-sidebar h6.wp-block-heading {
   border-bottom: 1px solid #ebebeb;
   font-size: 16px;
-  color: #e43315;
+  color: var(--color-primary1);
   padding-bottom: 10px;
   letter-spacing: 1px;
   font-weight: bold;
@@ -1096,7 +1096,7 @@ Sidebar
   right: 0;
   left: 0;
   margin: auto;
-  background: #e43315;
+  background: var(--color-primary1);
   width: 77px;
   height: 5px;
   bottom: -5px;
@@ -1119,7 +1119,7 @@ Sidebar
   font-size: 12px;
 }
 #theme-sidebar a:hover {
-  color: #e43315;
+  color: var(--color-primary1);
 }
 #theme-sidebar a,#theme-sidebar .wp-block-latest-comments__comment-author, #theme-sidebar .wp-block-latest-comments__comment-link {
   color: #8f8787;
@@ -1159,7 +1159,7 @@ Sidebar
   margin-bottom: 5px;
 }
 #theme-sidebar .tagcloud a:hover,#sidebar p.wp-block-tag-cloud a:hover, .post_tag a:hover,#theme-sidebar .widget_tag_cloud a:hover{
-  border-color:#e43315;
+  border-color:var(--color-primary1);
 }
 
 #theme-sidebar .tagcloud {
@@ -1185,7 +1185,7 @@ Sidebar
   padding: 8px;
   width: 100%;
   margin-top: 10px;
-  background: #e43315;
+  background: var(--color-primary1);
   border: none;
   cursor: pointer;
   color: #fff;
@@ -1237,6 +1237,7 @@ padding-top: 15px;
 /*--------------------------------------------------------------
 Comments
 --------------------------------------------------------------*/
+
 #comments #respond,.related-post-block{
   border: 1px solid #ebebeb;
   padding: 20px;
@@ -1335,7 +1336,7 @@ Comments
   display: inline;
 }
 #comments input[type="submit"] {
-  background: #e43315;
+  background: var(--color-primary1);
   border: none;
   padding: 10px 50px;
   font-weight: 500;
@@ -1450,11 +1451,11 @@ Footer
   margin-bottom: 5px;
 }
 #footer .tagcloud a:hover,#footer p.wp-block-tag-cloud a:hover{
-  border: 1px dashed #e43315;
-  color: #e43315;
+  border: 1px dashed var(--color-primary1);
+  color: var(--color-primary1);
 }
 .site-info {
-  background: #e43315;
+  background: var(--color-primary1);
   padding: 15px 0;
 }
 .site-info p,.site-info a{

@@ -4,7 +4,7 @@ Tags: wide-blocks, block-styles, one-column, two-columns, right-sidebar, left-si
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 5.6
-Stable tag: 8.8
+Stable tag: 8.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -444,6 +444,20 @@ Installation
 = 8.8 =
     * Resolve errors from customizer.php file.
 
+= 8.9 =
+    * Redesigned sidebar widget layout for improved appearance.
+    * Updated post box design layout.
+    * Enhanced footer widget design.
+    * Updated Font Awesome library to the latest version.
+    * Added an option to align copyright text in the footer.
+    * Added a customizable header banner height option.
+    * Added a customizable header banner position option.
+    * Added a customizable show/ hide Header banner Image Parallax.
+    * Resolved return to top css errors.
+    * Improved accessibility for underline issue in anchor links.
+    * Updated RTL CSS for better compatibility.
+    * Updated the POT file to include the latest strings for translation.
+
 == Resources ==
 
 Automobile Hub WordPress Theme, Copyright 2022 ThemesPride
@@ -473,8 +487,8 @@ License: bootstrap is licensed under the MIT License
 Source: https://github.com/twbs/bootstrap/blob/master/LICENSE
 
 Font Awesome icons, Copyright Dave Gandy
-License: Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License
-Source: http://fontawesome.io/
+License: Icons: CC BY 4.0 License (https://creativecommons.org/licenses/by/4.0/)
+Source: https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt
 
 Google Font
 License: Roboto has a dual nature,These fonts are licensed under the Apache License, Version 2.0.

@@ -7,6 +7,8 @@
     border-left: none !important;
     border-right: none !important;
     line-height: 2;
+    font-size: 15px;
+    font-weight: 700;
 }
 #accordion-section-automobile_hub_section_pro .accordion-section-title::after,
 #accordion-section-automobile_hub_section_pro_demo .accordion-section-title::after,

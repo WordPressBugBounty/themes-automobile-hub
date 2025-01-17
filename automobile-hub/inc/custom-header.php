@@ -13,7 +13,7 @@ function automobile_hub_custom_header_setup() {
         'default-text-color' => 'fff',
         'header-text'        => false,
         'width'              => 1600,
-        'height'             => 400,
+        'height'             => 350,
         'flex-width'         => true,
         'flex-height'        => true,
         'wp-head-callback'   => 'automobile_hub_header_style',
@@ -30,32 +30,35 @@ function automobile_hub_custom_header_setup() {
 }
 add_action( 'after_setup_theme', 'automobile_hub_custom_header_setup' );
 
-if ( ! function_exists( 'automobile_hub_header_style' ) ) :
 /**
- * Styles the header image and text displayed on the blog.
+ * Styles the header image based on Customizer settings.
  */
 function automobile_hub_header_style() {
-    $header_image = get_header_image() ? get_header_image() : get_template_directory_uri() . '/assets/images/sliderimage.png';
+    $automobile_hub_header_image = get_header_image() ? get_header_image() : get_template_directory_uri() . '/assets/images/sliderimage.png';
 
-    // Custom CSS for the header
+    $automobile_hub_height     = get_theme_mod( 'automobile_hub_header_image_height', 350 );
+    $automobile_hub_position   = get_theme_mod( 'automobile_hub_header_background_position', 'center' );
+    $automobile_hub_attachment = get_theme_mod( 'automobile_hub_header_background_attachment', 1 ) ? 'fixed' : 'scroll';
+
     $automobile_hub_custom_css = "
-        .header-img, .single-page-img, .external-div .box-image img {
-            background-image: url('".esc_url( $header_image )."') !important;
-            background-position: center top !important;
-            background-size: cover !important;
-            height: 350px;
+        .header-img, .single-page-img, .external-div .box-image img, .external-div {
+            background-image: url('" . esc_url( $automobile_hub_header_image ) . "');
+            background-size: cover;
+            height: " . esc_attr( $automobile_hub_height ) . "px;
+            background-position: " . esc_attr( $automobile_hub_position ) . ";
+            background-attachment: " . esc_attr( $automobile_hub_attachment ) . ";
         }
+
         @media (max-width: 1000px) {
-            .header-img, .single-page-img, .external-div .box-image img, .external-div {
+            .header-img, .single-page-img, .external-div .box-image img,.external-div {
                 height: 200px;
             }
-        }";
-    
-    // Add inline styles
+        }
+    ";
+
     wp_add_inline_style( 'automobile-hub-style', $automobile_hub_custom_css );
 }
 add_action( 'wp_enqueue_scripts', 'automobile_hub_header_style' );
-endif;
 
 /**
  * Enqueue the main theme stylesheet.

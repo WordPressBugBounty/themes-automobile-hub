@@ -1050,7 +1050,7 @@ function automobile_hub_customize_register( $wp_customize ) {
 	));
 
 	$wp_customize->add_setting('automobile_hub_footer_text',array(
-		'default'	=> '',
+		'default'	=> 'Automobile WordPress Theme',
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('automobile_hub_footer_text',array(
@@ -1101,6 +1101,24 @@ function automobile_hub_customize_register( $wp_customize ) {
 			'max'              => 50,
 		),
 	));
+
+	// Add Settings and Controls for Scroll top
+	$wp_customize->add_setting('automobile_hub_copyright_text_position',array(
+        'default' => 'Center',
+        'sanitize_callback' => 'automobile_hub_sanitize_choices'
+	));
+	$wp_customize->add_control('automobile_hub_copyright_text_position',array(
+        'type' => 'radio',
+        'label'     => __('Copyright Text Position', 'automobile-hub'),
+        'description'   => __('This option work for Copyright', 'automobile-hub'),
+        'section' => 'automobile_hub_footer_section',
+        'choices' => array(
+            'Right' => __('Right','automobile-hub'),
+            'Left' => __('Left','automobile-hub'),
+            'Center' => __('Center','automobile-hub')
+        ),
+	) );
+
 	// footer columns
 	$wp_customize->add_setting('automobile_hub_footer_columns',array(
 		'default'	=> 4,
@@ -1175,6 +1193,7 @@ function automobile_hub_customize_register( $wp_customize ) {
 		'type'        => 'toggle',
 		'settings'    => 'automobile_hub_return_to_header',
 	) ) );
+
 	$wp_customize->add_setting('automobile_hub_return_icon',array(
 		'default'	=> 'fas fa-arrow-up',
 		'sanitize_callback'	=> 'sanitize_text_field'
@@ -1490,6 +1509,70 @@ function automobile_hub_customize_register( $wp_customize ) {
 		'section'=> 'automobile_hub_no_result_section',
 		'type'=> 'text'
 	));
+
+	 // Header Image Height
+    $wp_customize->add_setting(
+        'automobile_hub_header_image_height',
+        array(
+            'default'           => 350,
+            'sanitize_callback' => 'absint',
+        )
+    );
+    $wp_customize->add_control(
+        'automobile_hub_header_image_height',
+        array(
+            'label'       => esc_html__( 'Header Image Height', 'automobile-hub' ),
+            'section'     => 'header_image',
+            'type'        => 'number',
+            'description' => esc_html__( 'Control the height of the header image. Default is 350px.', 'automobile-hub' ),
+            'input_attrs' => array(
+                'min'  => 220,
+                'max'  => 1000,
+                'step' => 1,
+            ),
+        )
+    );
+
+    // Header Background Position
+    $wp_customize->add_setting(
+        'automobile_hub_header_background_position',
+        array(
+            'default'           => 'center',
+            'sanitize_callback' => 'sanitize_text_field',
+        )
+    );
+    $wp_customize->add_control(
+        'automobile_hub_header_background_position',
+        array(
+            'label'       => esc_html__( 'Header Background Position', 'automobile-hub' ),
+            'section'     => 'header_image',
+            'type'        => 'select',
+            'choices'     => array(
+                'top'    => esc_html__( 'Top', 'automobile-hub' ),
+                'center' => esc_html__( 'Center', 'automobile-hub' ),
+                'bottom' => esc_html__( 'Bottom', 'automobile-hub' ),
+            ),
+            'description' => esc_html__( 'Choose how you want to position the header image.', 'automobile-hub' ),
+        )
+    );
+
+    // Header Image Parallax Effect
+    $wp_customize->add_setting(
+        'automobile_hub_header_background_attachment',
+        array(
+            'default'           => 1,
+            'sanitize_callback' => 'absint',
+        )
+    );
+    $wp_customize->add_control(
+        'automobile_hub_header_background_attachment',
+        array(
+            'label'       => esc_html__( 'Header Image Parallax', 'automobile-hub' ),
+            'section'     => 'header_image',
+            'type'        => 'checkbox',
+            'description' => esc_html__( 'Add a parallax effect on page scroll.', 'automobile-hub' ),
+        )
+    );
 
 }
 add_action( 'customize_register', 'automobile_hub_customize_register' );

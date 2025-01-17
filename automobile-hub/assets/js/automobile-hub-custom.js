@@ -92,3 +92,11 @@ function automobile_hub_menu_open_nav() {
 function automobile_hub_menu_close_nav() {
     jQuery(".sidenav").removeClass('open');
 }
+
+document.addEventListener('scroll', function() {
+    var scrolled = window.pageYOffset;
+    var parallaxElement = document.querySelector('.box-image');
+
+    // Adjust background position based on scroll
+    parallaxElement.style.backgroundPosition = 'center ' + (scrolled * 0.2) + 'px'; /* Adjust the factor for effect intensity */
+});

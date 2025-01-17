@@ -4,7 +4,7 @@ Theme URI: https://www.themespride.com/products/free-automobile-wordpress-theme
 Author: ThemesPride
 Author URI: https://www.themespride.com/
 Description: Automobile Hub is a stylish, modern, dynamic, resourceful and feature-rich automobile WordPress theme for car and bike showrooms, automobile garage, car dealership, cab services, car rentals, ATV bikes, RV bikes and cycles, car wash, farming vehicles, wheels, clunker, Food Truck, Jet Ski Rental Services, rustbucket, electric vehicle, off road vehicles, wheel dealers, auto parts dealer, tyre repair services, Battery Reconditioning, Taxi, Bus Shuttle Services, Dump Truck, Tow Trucking Service, Spare Parts Distribution, Wheel allignment services, car booking, Oil Change Service Business, Service Station, Panel Beating Services, Tire Store, Heavy Vehicle rental, aircrafts manufacturing company, helicopter services, car lifters, cargo hubs, auto, mechanic, autoparts, driving school, Auto Wash, buses, car service, truck, Car AMC automobile, booking, business, car, car rental rent, rental, travel, vacation, van, vehicle car washing centres and all the websites dealing in automobile industry. It is a responsive theme with 100% fluid layout and cross-browser compatible to load seamlessly on all browsers. It is multilingual to give services in all international languages and retina ready to show sharp and crisp images of automobiles to make the website look beautiful. This automobile WordPress theme is optimized for search engines and all its pages load with super-fast speed. It is compatible with the latest WordPress version and many customization options are provided which eliminates the need for any professional coder. There are so many social media icons embedded that your website and its content are sure to reach target audience easily. The interface of this automobile theme is extremely easy to use; sliders are provided for smooth navigation. It has a gallery where you can post gorgeous pictures of cars, bikes and other vehicles to allure visitors and testimonial section is to get customers’ feedback to improve services.
-Version: 8.8
+Version: 8.9
 Tested up to: 6.7
 Requires PHP: 5.6
 Requires at least: 5.0
@@ -17,7 +17,10 @@ Automobile Hub WordPress Theme, Copyright 2022 ThemesPride
 Automobile Hub is distributed under the terms of the GNU GPL
 
 */
-
+:root {
+    --color-primary1:#e43315;
+    --font-awesome:'FontAwesome';
+}
 html {
 	line-height: 1.15;
 	-ms-text-size-adjust: 100%;
@@ -40,20 +43,18 @@ body.custom-background{
 h1,h2,h3,h4,h5,h6{
   color: #151515;
   font-family: 'Oswald', sans-serif;
-  text-wrap:balance;
 }
 p{
   font-size: 15px;
   letter-spacing: 1px;
-  text-wrap:balance;
 }
 a{
   text-decoration:none;
-  color:#e43315;
+  color:var(--color-primary1);
 }
 a:hover{
   text-decoration:none;
-  color:#b91b00;
+  color:var(--color-primary1);
 }
 input[type="search"] {
   padding: 10px;
@@ -62,10 +63,10 @@ input[type="search"] {
 }
 button[type="submit"] {
   padding: 11px;
-  background: #e43315;
+  background: var(--color-primary1);
   cursor: pointer;
   color: #fff;
-  border: 1px solid #e43315;
+  border: 1px solid var(--color-primary1);
 }
 img {
   height: auto;
@@ -82,7 +83,7 @@ textarea{
 .entry-summary a,
 #main-content p a{
   text-decoration: underline;
-  color: #e43315;
+  color: var(--color-primary1);
 }
 
 a.page-numbers{
@@ -146,15 +147,15 @@ Accessibility CSS
 .center1{
   width: 200px;
   height: 200px;
-  border-left-color: #e43315;
-  border-top-color: #e43315;
+  border-left-color: var(--color-primary1);
+  border-top-color: var(--color-primary1);
   animation: animateCenter1 2s infinite linear;
 }
 .center2{
   width: 100px;
   height: 100px;
-  border-left-color: #e43315;
-  border-top-color: #e43315;
+  border-left-color: var(--color-primary1);
+  border-top-color: var(--color-primary1);
   animation: animateCenter2 2s infinite linear;
 }
 .ring{
@@ -184,10 +185,10 @@ Accessibility CSS
   border-radius: 50%;
 }
 .center1 .ring::before {
-  background: #e43315;
+  background: var(--color-primary1);
 }
 .center2 .ring::before{
-  background: #e43315;
+  background: var(--color-primary1);
 }
 @keyframes animateCenter1{
   0%{
@@ -218,7 +219,7 @@ Header
   padding: 14px 0;
 }
 .social-media i:hover{
-  color: #e43315;
+  color: var(--color-primary1);
 }
 .headerbox {
   padding: 15px 0;
@@ -229,7 +230,7 @@ Header
   color: #fff;
   border-radius: 50%;
   padding: 18px;
-  background: #e43315;
+  background: var(--color-primary1);
   position:relative;
 }
 .headerbox i:after{
@@ -237,7 +238,7 @@ Header
   display: block;
   width: 10px;
   height: 10px;
-  background: #e43315;
+  background: var(--color-primary1);
   margin: auto 0;
   position: absolute;
   top: -3px;
@@ -249,10 +250,10 @@ Header
 .headerbox i:hover,
 .headerbox i:hover:after {
   background: #fff;
-  color: #e43315;
+  color: var(--color-primary1);
 }
 p.infotext {
-  color: #e43315;
+  color: var(--color-primary1);
   font-size: 12px;
   letter-spacing: 1px;
   font-weight: 900;
@@ -265,7 +266,7 @@ p.simplep a{
   letter-spacing: 0;
 }
 p.simplep a:hover, #slider .inner_carousel h1 a:hover, .more-btn a:hover, #about h3 a:hover, #about .more-btn a:hover{
-  color: #e43315;
+  color: var(--color-primary1);
 }
 .logo h1, .logo p.site-title {
   font-weight: bold;
@@ -277,7 +278,7 @@ p.simplep a:hover, #slider .inner_carousel h1 a:hover, .more-btn a:hover, #about
     text-decoration: none;
 }
 .logo h1 a:hover, .logo p.site-title a:hover{
-    color: #e43315;
+    color: var(--color-primary1);
 }
 .logo p {
   margin-bottom: 0;
@@ -355,7 +356,7 @@ ul.list_nav {
   letter-spacing: 1px;
 }
 .main-navigation a:hover{
-  color: #e43315;
+  color: var(--color-primary1);
 }
 .main-navigation ul ul{
   opacity: 0;
@@ -394,10 +395,10 @@ ul.list_nav {
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a{
-  color: #e43315;
+  color: var(--color-primary1);
 }
 .main-navigation .menu > ul > li.highlight{
-  background-color: #e43315;
+  background-color: var(--color-primary1);
 }
 .main-navigation .menu > ul > li.highlight:hover{
   background: transparent;
@@ -411,7 +412,7 @@ ul.list_nav {
   background: transparent !important;
 }
 .main-navigation ul ul li:hover > a{
-  color: #e43315;
+  color: var(--color-primary1);
 }
 .toggle-nav, a.closebtn{
   display: none;
@@ -543,7 +544,7 @@ button.search-close:focus{
 }
 .search-bar i {
   font-size: 22px;
-  color: #e43315;
+  color: var(--color-primary1);
   border-radius: 0;
   display: inline-block;
   text-align: center;
@@ -553,7 +554,7 @@ button.search-close:focus{
   border:none;
 }
 .inner_searchbox button[type="submit"]{
-  background-color: #e43315;
+  background-color: var(--color-primary1);
   color: #fff;
   padding: 12px 24px;
   text-align: center;
@@ -600,37 +601,44 @@ body.admin-bar .closepop{
   text-decoration: underline;
 }
 #footer .wp-calendar-table th{
-  background-color: #e43315;
+  background-color: var(--color-primary1);
   color: #fff;
-  border-color: #e43315;
+  border-color: var(--color-primary1);
 }
 #footer .tagcloud a, #footer p.wp-block-tag-cloud a{
   text-decoration: none;
 }
 /*block widget for sidebar*/
-#secondary .wp-calendar-table th{
-  background-color: #e43315;
+#secondary .wp-calendar-table th, #theme-sidebar .wp-calendar-table th{
+  background-color: var(--color-primary1);
   color: #fff;
-  border-color: #e43315;
+  border-color: var(--color-primary1);
 }
-#secondary .widget.widget_block.widget_text p a{
+#secondary .widget.widget_block.widget_text p a,
+#theme-sidebar .widget.widget_block.widget_text p a{
   text-decoration: underline;
 }
-#secondary li a,#secondary .widget.widget_block.widget_tag_cloud a, #theme-sidebar li a{
+#secondary li a,#secondary .widget.widget_block.widget_tag_cloud a, #theme-sidebar li a,
+#theme-sidebar .widget.widget_block.widget_tag_cloud a{
   text-decoration: none;
 }
-
+#theme-sidebar li.recentcomments a:before {
+    content: none;
+}
 /*--------------------------------------------------------------
 Post Pages
 --------------------------------------------------------------*/
 
 .page-box {
-  border: 3px solid #ebebeb;
-  padding: 20px;
-  margin-bottom: 30px;
-  border-bottom: 3px solid #e43315;
-  border-left: 3px solid #e43315;
-  text-align: center;
+  margin: 0 0 4em 0px;
+  padding: 45px 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 2px #aaa;
+  border-bottom: 3px solid var(--color-primary1);
+}
+.page-box:hover{
+  box-shadow: 0 0 20px #cfcfcf;
 }
 #category-post .entry-video, #category-post .entry-audio{
   padding-bottom: 7px;
@@ -678,7 +686,7 @@ Post Pages
 }
 .box-info i {
   margin-right: 5px;
-  color: #e43315;
+  color: var(--color-primary1);
   font-size: 14px;
 }
 .box-info {
@@ -686,18 +694,25 @@ Post Pages
 }
 .content-area .box-info a {
   margin-right: 10px;
-  color: #8f8787;
+  color: #001837;
   font-size: 15px;
+}
+.content-area .box-info a:hover{
+  color: var(--color-primary1);
 }
 .page-box p {
   color: #8f8787;
   font-size: 15px;
   margin: 15px 0;
 }
+.page-box h4 a:hover{
+  color: var(--color-primary1);
+}
 .page-box h4 a {
   font-size: 25px;
   font-weight: bold;
   letter-spacing: 1px;
+  color: #121212;
 }
 .page-box h4 {
   padding-bottom: 10px;
@@ -707,13 +722,17 @@ Post Pages
 .page-box a,.nav-links a {
   text-decoration: none;
 }
-.readmore-btn a {
-  border: 1px solid #e43315;
+.page-box .readmore-btn a {
+  background-color: var(--color-primary1);
   font-weight: 600;
-  padding: 5px;
+  padding: 10px 14px;
   letter-spacing: 1px;
   font-size: 15px;
-  color: #e43315
+  color: #fff;
+  display: inline-block;
+}
+.page-box .readmore-btn a:hover{
+  background-color: #000;
 }
 /*--------------------------------------------------------------
 SLIDER
@@ -744,7 +763,7 @@ SLIDER
   font-weight: 800;
   letter-spacing: 1px;
   padding: 15px 22px;
-  background: #e43315;
+  background: var(--color-primary1);
   color: #fff;
   border-radius: 50%;
 }
@@ -785,7 +804,7 @@ SLIDER
   border-radius: 50%;
   padding: 18px;
   font-size: 18px;
-  background: #e43315
+  background: var(--color-primary1)
 }
 .more-btn a {
   color: #fff;
@@ -805,7 +824,7 @@ SLIDER
     display: block;
     width: 10px;
     height: 10px;
-    background: #e43315;
+    background: var(--color-primary1);
     margin: auto 0;
     position: absolute;
     top: -3px;
@@ -829,7 +848,7 @@ ABOUT US
 }
 #about h2 {
   padding: 0;
-  color: #e43315;
+  color: var(--color-primary1);
   font-size: 15px;
   letter-spacing: 1px;
 }
@@ -878,7 +897,7 @@ a.checkout-button.button.alt.wc-forward {
   margin: 0 auto 10px !important;
 }
 .woocommerce ul.products li.product .onsale,.woocommerce span.onsale{
-  background: #e43315;
+  background: var(--color-primary1);
   padding: 0;
   top: 25px !important;
   right: 25px !important;
@@ -895,7 +914,7 @@ a.checkout-button.button.alt.wc-forward {
 a.added_to_cart.wc-forward{
    padding: 15px;
    background: none;
-   color: #e43315;
+   color: var(--color-primary1);
 }
 h2.woocommerce-loop-product__title,
 .woocommerce div.product .product_title {
@@ -914,7 +933,7 @@ h2.woocommerce-loop-product__title,
   font-size: 15px
 }
 .wc-block-checkout__actions_row .wc-block-components-checkout-place-order-button,.wc-block-cart__submit-container a,.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button,.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt{
- background: #e43315;
+ background: var(--color-primary1);
   color: #fff !important;
   padding: 15px;
   font-family: 'Oswald', sans-serif;
@@ -1030,7 +1049,7 @@ span.posted_in {
 Posts Numbers
 --------------------------------------------------------------*/
 .page-numbers {
-  background: #e43315;
+  background: var(--color-primary1);
   color: #fff;
   padding: 7px;
   font-weight: bold;
@@ -1038,7 +1057,7 @@ Posts Numbers
 .prev.page-numbers,
 .next.page-numbers {
   font-size: 15px;
-  background: #e43315;
+  background: var(--color-primary1);
 }
 .prev.page-numbers:focus,
 .prev.page-numbers:hover,
@@ -1087,7 +1106,7 @@ Posts Numbers
 }
 span.meta-nav {
   color: #fff;
-  background: #e43315;
+  background: var(--color-primary1);
   padding: 5px;
 }
 .nav-previous {
@@ -1113,8 +1132,8 @@ p.cart-value.simplep{
 }
 .error-404 [type="submit"] {
   padding: 10px;
-  background: #e43315;
-  border: solid 1px #e43315;
+  background: var(--color-primary1);
+  border: solid 1px var(--color-primary1);
   cursor: pointer;
   font-weight: 500;
 }
@@ -1124,25 +1143,49 @@ Sidebar
 --------------------------------------------------------------*/
 
 #theme-sidebar section {
-  border: 3px solid #ebebeb;
-  margin-bottom: 30px;
-  padding: 20px;
+  margin: 0 0 2em 20px;
+  border-bottom: 3px solid var(--color-primary1);
+  padding: 30px 35px;
   background: #fff;
-  border-bottom: 3px solid #e43315;
-  border-left: 3px solid #e43315;
+  border-radius: 12px;
+  box-shadow: 0 0 2px #aaa;
+  border-bottom: 3px solid var(--color-primary1);
+}
+#theme-sidebar section:hover {
+    box-shadow: 0 0 20px #cfcfcf;
+}
+#theme-sidebar ul li a{
+  position: relative;
+  z-index: 99;
+}
+#theme-sidebar ul li a::before {
+    color: var(--color-primary1);
+    content: "\f192";
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 12px;
+    left: -25px;
+    position: absolute;
+    top: 0;
+    margin-left: 2px;
+}
+#theme-sidebar a,#theme-sidebar .wp-block-latest-comments__comment-author, #theme-sidebar .wp-block-latest-comments__comment-link {
+  color: #001837;
+  font-size: 16px;
 }
 #theme-sidebar .wp-block-search .wp-block-search__label,#theme-sidebar h3, #theme-sidebar h1.wp-block-heading, #theme-sidebar h2.wp-block-heading, #theme-sidebar h3.wp-block-heading,#theme-sidebar h4.wp-block-heading, #theme-sidebar h5.wp-block-heading, #theme-sidebar h6.wp-block-heading {
   border-bottom: 1px solid #ebebeb;
-  font-size: 16px;
-  color: #e43315;
+  font-size: 23px;
+  color: #121212;
   padding-bottom: 10px;
   letter-spacing: 1px;
   font-weight: bold;
   text-align: center;
-  border-bottom: 5px solid #f1f1f1;
+  border-bottom: 2px solid #f1f1f1;
   position: relative;
   margin-bottom: 20px;
   padding-bottom: 20px;
+  text-transform: uppercase;
 }
 #theme-sidebar .wp-block-search .wp-block-search__label:before,#theme-sidebar h3:before, #theme-sidebar h1.wp-block-heading:before, #theme-sidebar h2.wp-block-heading:before, #theme-sidebar h3.wp-block-heading:before,#theme-sidebar h4.wp-block-heading:before, #theme-sidebar h5.wp-block-heading:before, #theme-sidebar h6.wp-block-heading:before {
   position: absolute;
@@ -1150,13 +1193,12 @@ Sidebar
   left: 0;
   right: 0;
   margin: auto;
-  background: #e43315;
+  background: var(--color-primary1);
   width: 77px;
-  height: 5px;
-  bottom: -5px;
+  height: 3px;
+  bottom: -3px;
   border-radius: 0;
 }
-
 #theme-sidebar ul,#footer ul {
   list-style: none;
   padding: 0;
@@ -1165,19 +1207,18 @@ Sidebar
   border: none;
 }
 #theme-sidebar li {
-  border-bottom: 1px dashed #ebebeb;
-  color: #8f8787;
+  color: #001837;
   line-height: 20px;
   padding: 10px 5px;
   margin-left: 10px;
-  font-size: 12px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+#theme-sidebar ul li a{
+  margin-bottom: 10px;
 }
 #theme-sidebar a:hover {
-  color: #e43315;
-}
-#theme-sidebar a,#theme-sidebar .wp-block-latest-comments__comment-author, #theme-sidebar .wp-block-latest-comments__comment-link {
-  color: #8f8787;
-  font-size: 16px;
+  color: var(--color-primary1);
 }
 #footer .wp-block-latest-comments article,
 #theme-sidebar .wp-block-latest-comments article {
@@ -1201,19 +1242,21 @@ Sidebar
   background: transparent;
   font-size: 14px;
   width: 100%;
-  color: #8f8787;
+  color: #001837;
 }
 #theme-sidebar .tagcloud a, #sidebar p.wp-block-tag-cloud a ,.post_tag a, #theme-sidebar .widget_tag_cloud a {
-  border: 1px solid #ebebeb;
-  color: #8f8787 !important;
+  border: 1px solid #cecece;
+  color: #001837;
   line-height: 20px;
-  padding: 5px 10px;
-  font-size: 12px !important;
+  padding: 7px 13px;
+  font-size: 15px !important;
   display: inline-block;
-  margin-bottom: 5px;
+  margin: 3px;
 }
 #theme-sidebar .tagcloud a:hover,#sidebar p.wp-block-tag-cloud a:hover, .post_tag a:hover,#theme-sidebar .widget_tag_cloud a:hover{
-  border-color:#e43315;
+  background-color:var(--color-primary1);
+  color: #fff;
+  border-color: var(--color-primary1);
 }
 
 #theme-sidebar .tagcloud {
@@ -1239,7 +1282,7 @@ Sidebar
   padding: 8px;
   width: 100%;
   margin-top: 10px;
-  background: #e43315;
+  background: var(--color-primary1);
   border: none;
   cursor: pointer;
   color: #fff;
@@ -1291,6 +1334,10 @@ padding-top: 15px;
 /*--------------------------------------------------------------
 Comments
 --------------------------------------------------------------*/
+#comments p a, .woocommerce-MyAccount-content p a, .content-area figure a, .content-area .right-sidebar p a, .content-area table a,
+.content-area dd a, .box-content p a, .content-area li a, .wp-block-heading a{
+  text-decoration: underline;
+}
 #comments #respond,.related-post-block{
   border: 1px solid #ebebeb;
   padding: 20px;
@@ -1389,7 +1436,7 @@ Comments
 	display: inline;
 }
 #comments input[type="submit"] {
-  background: #e43315;
+  background: var(--color-primary1);
   border: none;
   padding: 10px 50px;
   font-weight: 500;
@@ -1449,8 +1496,15 @@ Footer
   letter-spacing: 1px;
   clear: both;
 }
+#footer section{
+  margin-bottom: 28px;
+}
+#footer .site-info p{
+  font-size: 17px;
+  font-weight: 600;
+}
 #footer h2,#footer h3,#footer h1.wp-block-heading, #footer h2.wp-block-heading, #footer h3.wp-block-heading,#footer h4.wp-block-heading, #footer h5.wp-block-heading, #footer h6.wp-block-heading {
-  font-size: 20px;
+  font-size: 30px;
   padding: 10px 0;
   color: #fff;
   border-bottom: dashed 1px #fff;
@@ -1460,11 +1514,11 @@ Footer
   color: #fff;
 }
 #footer li a:hover{
-    color: rgb(215, 35, 35);
+    color: var(--color-primary1);
 }
 #footer li {
   color: #fff;
-  font-size: 13px;
+  font-size: 15px;
   padding: 5px 0;
 }
 #footer table#wp-calendar {
@@ -1507,11 +1561,11 @@ Footer
   margin-bottom: 5px;
 }
 #footer .tagcloud a:hover,#footer p.wp-block-tag-cloud a:hover{
-  border: 1px dashed #e43315;
-  color: #e43315;
+  border: 1px dashed var(--color-primary1);
+  color: var(--color-primary1);
 }
 .site-info {
-  background: #e43315;
+  background: var(--color-primary1);
   padding: 15px 0;
 }
 .site-info p,.site-info a{
@@ -1549,8 +1603,9 @@ Scroll Top
   color: #fff;
   margin: 0;
   position: relative;
-  left: 16px;
-  top: 13px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   font-size: 19px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -1664,6 +1719,9 @@ a img.aligncenter {
 Media Queries
 --------------------------------------------------------------*/
 @media screen and (min-width: 768px) and (max-width: 1000px){
+  #slider img{
+    height: 500px;
+  }
   .menubar.login-user.stick_head{
 	 margin-top: 46px;
   }
@@ -1857,6 +1915,9 @@ Media Queries
     text-align: center !important;
     left: 15% !important;
     right: 15% !important;
+  }
+  #slider img{
+    height: 350px;
   }
 }
 @media screen and (max-width: 575px){
