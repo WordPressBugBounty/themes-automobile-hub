@@ -13,7 +13,7 @@ $automobile_hub_sticky = get_theme_mod('automobile_hub_sticky');
 <div class="menubar <?php if( is_user_logged_in() && !isset( $wp_customize ) ){ echo "login-user";} ?>" data-sticky="<?php echo esc_attr($automobile_hub_data_sticky); ?>">
   	<div class="container right_menu">
   		<div class="row">
-	    	<div class="menubox col-lg-8 col-md-2 col-3 align-self-center">
+	    	<div class="menubox col-lg-8 col-md-2 col-2 align-self-center">
 	      		<div class="innermenubox">
 		      			<div class="toggle-nav mobile-menu">
 	            			<button onclick="automobile_hub_menu_open_nav()" class="responsivetoggle"><i class="fas fa-bars"></i><span class="screen-reader-text"><?php esc_html_e('Open Button','automobile-hub'); ?></span></button>
@@ -35,7 +35,7 @@ $automobile_hub_sticky = get_theme_mod('automobile_hub_sticky');
           			<div class="clearfix"></div>
         		</div>
 	    	</div>
-			<div class="col-lg-3 col-md-8 col-6 social-media align-self-center">
+			<div class="col-lg-3 col-md-8 col-10 social-media align-self-center">
 				<?php						  		
             $automobile_hub_header_fb_new_tab = esc_attr(get_theme_mod('automobile_hub_header_fb_new_tab','true'));
             $automobile_hub_header_twt_new_tab = esc_attr(get_theme_mod('automobile_hub_header_twt_new_tab','true'));
@@ -60,7 +60,7 @@ $automobile_hub_sticky = get_theme_mod('automobile_hub_sticky');
             <a <?php if($automobile_hub_header_pint_new_tab != false ) { ?>target="_blank" <?php } ?>href="<?php echo esc_url( get_theme_mod( 'automobile_hub_pint_url','' ) ); ?>"><i class="<?php echo esc_attr(get_theme_mod('automobile_hub_pint_icon','fab fa-pinterest')); ?>"></i></a>
           <?php } ?>
 			</div>
-	    <div class="col-lg-1 col-md-2 col-5 align-self-center d-flex justify-content-center align-items-center">
+	    <div class="col-lg-1 col-md-2 col-12 align-self-center d-flex justify-content-center align-items-center">
         <span class="search-bar">
             <button type="button" class="open-search"><i class="fas fa-search"></i></button>
         </span>

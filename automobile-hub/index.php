@@ -11,7 +11,12 @@ get_header(); ?>
 <div class="box-image">
   	<div class="single-page-img"></div>
   	 <div class="box-text">
-    	<h2><?php esc_html_e( 'Blog Post', 'automobile-hub' ); ?></h2>  
+    	<h2>
+		    <?php 
+		    $automobile_hub_blog_title = get_theme_mod('automobile_hub_edit_blog_page_title', __('Home', 'automobile-hub')); 
+		    echo esc_html($automobile_hub_blog_title); 
+		    ?>
+		</h2>
     </div> 
 </div>
 

@@ -4,7 +4,7 @@ Theme URI: https://www.themespride.com/products/free-automobile-wordpress-theme
 Author: ThemesPride
 Author URI: https://www.themespride.com/
 Description: Automobile Hub is a stylish, modern, dynamic, resourceful and feature-rich automobile WordPress theme for car and bike showrooms, automobile garage, car dealership, cab services, car rentals, ATV bikes, RV bikes and cycles, car wash, farming vehicles, wheels, clunker, Food Truck, Jet Ski Rental Services, rustbucket, electric vehicle, off road vehicles, wheel dealers, auto parts dealer, tyre repair services, Battery Reconditioning, Taxi, Bus Shuttle Services, Dump Truck, Tow Trucking Service, Spare Parts Distribution, Wheel allignment services, car booking, Oil Change Service Business, Service Station, Panel Beating Services, Tire Store, Heavy Vehicle rental, aircrafts manufacturing company, helicopter services, car lifters, cargo hubs, auto, mechanic, autoparts, driving school, Auto Wash, buses, car service, truck, Car AMC automobile, booking, business, car, car rental rent, rental, travel, vacation, van, vehicle car washing centres and all the websites dealing in automobile industry. It is a responsive theme with 100% fluid layout and cross-browser compatible to load seamlessly on all browsers. It is multilingual to give services in all international languages and retina ready to show sharp and crisp images of automobiles to make the website look beautiful. This automobile WordPress theme is optimized for search engines and all its pages load with super-fast speed. It is compatible with the latest WordPress version and many customization options are provided which eliminates the need for any professional coder. There are so many social media icons embedded that your website and its content are sure to reach target audience easily. The interface of this automobile theme is extremely easy to use; sliders are provided for smooth navigation. It has a gallery where you can post gorgeous pictures of cars, bikes and other vehicles to allure visitors and testimonial section is to get customers’ feedback to improve services.
-Version: 8.9
+Version: 9.0
 Tested up to: 6.7
 Requires PHP: 5.6
 Requires at least: 5.0
@@ -310,6 +310,10 @@ Menu bar
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
 }
+.main-navigation ul ul li.page_item_has_children:after, .main-navigation ul ul li.menu-item-has-children:after{
+  color: #fff;
+  right: 10px;
+}
 .main-navigation ul ul li.page_item_has_children:after{
   color: #fff;
   margin-left: 15px;
@@ -363,7 +367,8 @@ ul.list_nav {
   position: absolute;
   left: 0;
   top: 100% ;
-  background: #1c1c1c;
+  background: var(--color-primary1);
+  color: #fff;
   min-width: 215px;
   z-index: 9999;
 }
@@ -412,7 +417,7 @@ ul.list_nav {
   background: transparent !important;
 }
 .main-navigation ul ul li:hover > a{
-  color: var(--color-primary1);
+  color: #fff;
 }
 .toggle-nav, a.closebtn{
   display: none;
@@ -628,7 +633,6 @@ body.admin-bar .closepop{
 /*--------------------------------------------------------------
 Post Pages
 --------------------------------------------------------------*/
-
 .page-box {
   margin: 0 0 4em 0px;
   padding: 45px 30px;
@@ -1118,7 +1122,13 @@ p.cart-value.simplep{
 /*--------------------------------------------------------------
  404 page
 --------------------------------------------------------------*/
-
+.error-404.not-found h1{
+  font-size: 60px;
+  font-weight: 900;
+}
+.error-404.not-found p{
+  font-size: 17px;
+}
 .error404 .page-content {
 	padding-bottom: 4em;
 }
@@ -1510,6 +1520,12 @@ Footer
   border-bottom: dashed 1px #fff;
   margin-bottom: 10px;
 }
+#footer h3{
+  font-size: 28px;
+}
+#footer section{
+  margin-bottom: 15px;
+}
 #footer .wp-block-latest-comments__comment-date, #footer .wp-block-search .wp-block-search__label,#footer p,#footer li a,#footer .wp-block-latest-comments__comment-author, #footer .wp-block-latest-comments__comment-link {
   color: #fff;
 }
@@ -1612,6 +1628,9 @@ Scroll Top
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #return-to-top:hover {
   background: rgba(0, 0, 0, 0.9);
@@ -1724,11 +1743,6 @@ Media Queries
   }
   .menubar.login-user.stick_head{
 	 margin-top: 46px;
-  }
-  #return-to-top i{
-    position: relative;
-    right: 12px;
-    left: 0px;
   }
 }
 @media screen and (max-width: 1000px){
@@ -1982,11 +1996,11 @@ Media Queries
   #slider .inner_carousel p{
     display: none;
   }
-  #return-to-top i{
-    left: 0;
-  }
 }
 @media screen and (min-width: 320px) and (max-width: 768px){
+  .social-media{
+    text-align: center;
+  }
  .nav-previous{
    padding: 15px;
    text-align: center;
@@ -2016,9 +2030,6 @@ Media Queries
 @media screen and (max-width: 767px) and (min-width: 561px){
   p.infotext,p.simplep a,.call,.email,.basket,#about h2,#about p,#about .more-btn{
     text-align: center;
-  }
-  #return-to-top i{
-    left: 0;
   }
 }
 @media screen and (min-width:1700px) and (max-width:1900px){

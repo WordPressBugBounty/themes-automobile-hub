@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-	<?php while ( have_posts() ) : the_post(); ?>
+<?php while ( have_posts() ) : the_post(); ?>
     <div id="post-<?php the_ID(); ?>" class="external-div">
         <div class="box-image">
             <?php if ( has_post_thumbnail() ) : ?>
@@ -31,7 +31,6 @@ get_header(); ?>
         </div> 
     </div>
 <?php endwhile; ?>
-
 
 	<main id="tp_content" role="main">
 		<div class="container">

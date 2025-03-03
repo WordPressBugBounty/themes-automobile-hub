@@ -555,9 +555,6 @@ function automobile_hub_logo_width(){
 
 add_action( 'wp_head', 'automobile_hub_logo_width' );
 
-add_action( 'admin_notices', 'automobile_hub_activation_notice' );
-
-
 /**
  * Implement the Custom Header feature.
  */

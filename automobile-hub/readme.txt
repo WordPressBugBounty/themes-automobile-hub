@@ -4,7 +4,7 @@ Tags: wide-blocks, block-styles, one-column, two-columns, right-sidebar, left-si
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 5.6
-Stable tag: 8.9
+Stable tag: 9.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -457,6 +457,16 @@ Installation
     * Improved accessibility for underline issue in anchor links.
     * Updated RTL CSS for better compatibility.
     * Updated the POT file to include the latest strings for translation.
+
+= 9.0 =
+    * Added a setting to change the blog page title.
+    * Added a setting to change the banner title color.
+    * Added a setting to change the banner title font size.
+    * Added a banner to the 404 page.
+    * Added a setting to customize the menu color.
+    * Updated 404 page css.
+    * Separated the footer copyright and footer widgets section in the Customizer.
+    * Resolved menu css errors.
 
 == Resources ==
 

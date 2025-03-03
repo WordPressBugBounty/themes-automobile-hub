@@ -298,6 +298,16 @@ function automobile_hub_customize_register( $wp_customize ) {
      'priority' => 1,
      'panel' => 'automobile_hub_panel_id'
     ) );
+
+    $wp_customize->add_setting('automobile_hub_edit_blog_page_title',array(
+		'default'=> 'Home',
+		'sanitize_callback'	=> 'sanitize_text_field'
+	));
+	$wp_customize->add_control('automobile_hub_edit_blog_page_title',array(
+		'label'	=> __('Change Blog Page Title','automobile-hub'),
+		'section'=> 'automobile_hub_blog_option',
+		'type'=> 'text'
+	));
     
 	$wp_customize->add_setting( 'automobile_hub_tp_color_option', array(
 	    'default' => '',
@@ -598,6 +608,16 @@ function automobile_hub_customize_register( $wp_customize ) {
           'step' => 1
     )
 	)));
+
+	$wp_customize->add_setting( 'automobile_hub_menu_color', array(
+	    'default' => '',
+	    'sanitize_callback' => 'sanitize_hex_color'
+  	));
+  	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'automobile_hub_menu_color', array(
+			'label'     => __('Change Menu Color', 'automobile-hub'),
+	    'section' => 'automobile_hub_menu_typography',
+	    'settings' => 'automobile_hub_menu_color',
+  	)));
 
 	// Top Bar
 	$wp_customize->add_section( 'automobile_hub_topbar', array(
@@ -1043,81 +1063,10 @@ function automobile_hub_customize_register( $wp_customize ) {
 
 	//footer
 	$wp_customize->add_section('automobile_hub_footer_section',array(
-		'title'	=> __('Footer Text','automobile-hub'),
-		'description'	=> __('Add copyright text.','automobile-hub'),
+		'title'	=> __('Footer Widget Settings','automobile-hub'),
 		'panel' => 'automobile_hub_panel_id',
 		'priority' => 4,
 	));
-
-	$wp_customize->add_setting('automobile_hub_footer_text',array(
-		'default'	=> 'Automobile WordPress Theme',
-		'sanitize_callback'	=> 'sanitize_text_field'
-	));
-	$wp_customize->add_control('automobile_hub_footer_text',array(
-		'label'	=> __('Copyright Text','automobile-hub'),
-		'section'	=> 'automobile_hub_footer_section',
-		'type'		=> 'text'
-	));
-
-	//footer widget title font size
-	$wp_customize->add_setting('automobile_hub_footer_copyright_font_size',array(
-		'default'	=> '',
-		'sanitize_callback'	=> 'automobile_hub_sanitize_number_absint'
-	));
-	$wp_customize->add_control('automobile_hub_footer_copyright_font_size',array(
-		'label'	=> __('Change Footer Copyright Font Size in PX','automobile-hub'),
-		'section'	=> 'automobile_hub_footer_section',
-	    'setting'	=> 'automobile_hub_footer_copyright_font_size',
-		'type'	=> 'number',
-		'input_attrs' => array(
-			'step'             => 1,
-			'min'              => 0,
-			'max'              => 50,
-		),
-	));
-
-	$wp_customize->add_setting( 'automobile_hub_footer_copyright_text_color', array(
-	    'default' => '',
-	    'sanitize_callback' => 'sanitize_hex_color'
-  	));
-  	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'automobile_hub_footer_copyright_text_color', array(
-			'label'     => __('Change Footer Copyright Text Color', 'automobile-hub'),
-	    'section' => 'automobile_hub_footer_section',
-	    'settings' => 'automobile_hub_footer_copyright_text_color',
-  	)));
-
-  	$wp_customize->add_setting('automobile_hub_footer_copyright_top_bottom_padding',array(
-		'default'	=> '',
-		'sanitize_callback'	=> 'automobile_hub_sanitize_number_absint'
-	));
-	$wp_customize->add_control('automobile_hub_footer_copyright_top_bottom_padding',array(
-		'label'	=> __('Change Footer Copyright Padding in PX','automobile-hub'),
-		'section'	=> 'automobile_hub_footer_section',
-	    'setting'	=> 'automobile_hub_footer_copyright_top_bottom_padding',
-		'type'	=> 'number',
-		'input_attrs' => array(
-			'step'             => 1,
-			'min'              => 0,
-			'max'              => 50,
-		),
-	));
-
-	// Add Settings and Controls for Scroll top
-	$wp_customize->add_setting('automobile_hub_copyright_text_position',array(
-        'default' => 'Center',
-        'sanitize_callback' => 'automobile_hub_sanitize_choices'
-	));
-	$wp_customize->add_control('automobile_hub_copyright_text_position',array(
-        'type' => 'radio',
-        'label'     => __('Copyright Text Position', 'automobile-hub'),
-        'description'   => __('This option work for Copyright', 'automobile-hub'),
-        'section' => 'automobile_hub_footer_section',
-        'choices' => array(
-            'Right' => __('Right','automobile-hub'),
-            'Left' => __('Left','automobile-hub'),
-            'Center' => __('Center','automobile-hub')
-        ),
-	) );
 
 	// footer columns
 	$wp_customize->add_setting('automobile_hub_footer_columns',array(
@@ -1205,6 +1154,84 @@ function automobile_hub_customize_register( $wp_customize ) {
 		'section'	=> 'automobile_hub_footer_section',
 		'type'		=> 'icon'
 	)));
+
+	//footer copyright
+	$wp_customize->add_section('automobile_hub_footer_copyright_section',array(
+		'title'	=> __('Footer Copyright Settings','automobile-hub'),
+		'description'	=> __('Add copyright text.','automobile-hub'),
+		'panel' => 'automobile_hub_panel_id',
+		'priority' => 5,
+	));
+
+	$wp_customize->add_setting('automobile_hub_footer_text',array(
+		'default'	=> 'Automobile WordPress Theme',
+		'sanitize_callback'	=> 'sanitize_text_field'
+	));
+	$wp_customize->add_control('automobile_hub_footer_text',array(
+		'label'	=> __('Copyright Text','automobile-hub'),
+		'section'	=> 'automobile_hub_footer_copyright_section',
+		'type'		=> 'text'
+	));
+
+	//footer widget title font size
+	$wp_customize->add_setting('automobile_hub_footer_copyright_font_size',array(
+		'default'	=> '',
+		'sanitize_callback'	=> 'automobile_hub_sanitize_number_absint'
+	));
+	$wp_customize->add_control('automobile_hub_footer_copyright_font_size',array(
+		'label'	=> __('Change Footer Copyright Font Size in PX','automobile-hub'),
+		'section'	=> 'automobile_hub_footer_copyright_section',
+	    'setting'	=> 'automobile_hub_footer_copyright_font_size',
+		'type'	=> 'number',
+		'input_attrs' => array(
+			'step'             => 1,
+			'min'              => 0,
+			'max'              => 50,
+		),
+	));
+
+	$wp_customize->add_setting( 'automobile_hub_footer_copyright_text_color', array(
+	    'default' => '',
+	    'sanitize_callback' => 'sanitize_hex_color'
+  	));
+  	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'automobile_hub_footer_copyright_text_color', array(
+			'label'     => __('Change Footer Copyright Text Color', 'automobile-hub'),
+	    'section' => 'automobile_hub_footer_copyright_section',
+	    'settings' => 'automobile_hub_footer_copyright_text_color',
+  	)));
+
+  	$wp_customize->add_setting('automobile_hub_footer_copyright_top_bottom_padding',array(
+		'default'	=> '',
+		'sanitize_callback'	=> 'automobile_hub_sanitize_number_absint'
+	));
+	$wp_customize->add_control('automobile_hub_footer_copyright_top_bottom_padding',array(
+		'label'	=> __('Change Footer Copyright Padding in PX','automobile-hub'),
+		'section'	=> 'automobile_hub_footer_copyright_section',
+	    'setting'	=> 'automobile_hub_footer_copyright_top_bottom_padding',
+		'type'	=> 'number',
+		'input_attrs' => array(
+			'step'             => 1,
+			'min'              => 0,
+			'max'              => 50,
+		),
+	));
+
+	// Add Settings and Controls for copyright
+	$wp_customize->add_setting('automobile_hub_copyright_text_position',array(
+        'default' => 'Center',
+        'sanitize_callback' => 'automobile_hub_sanitize_choices'
+	));
+	$wp_customize->add_control('automobile_hub_copyright_text_position',array(
+        'type' => 'radio',
+        'label'     => __('Copyright Text Position', 'automobile-hub'),
+        'description'   => __('This option work for Copyright', 'automobile-hub'),
+        'section' => 'automobile_hub_footer_copyright_section',
+        'choices' => array(
+            'Right' => __('Right','automobile-hub'),
+            'Left' => __('Left','automobile-hub'),
+            'Center' => __('Center','automobile-hub')
+        ),
+	) );
 
 	//Mobile resposnsive
 	$wp_customize->add_section('automobile_hub_mobile_media_option',array(
@@ -1364,6 +1391,7 @@ function automobile_hub_customize_register( $wp_customize ) {
 		'section'	=> 'title_tagline',
 		'type'		=> 'number'
 	));
+
 	$wp_customize->add_setting('automobile_hub_logo_settings',array(
       'default' => 'Different Line',
       'sanitize_callback' => 'automobile_hub_sanitize_choices'
@@ -1378,6 +1406,7 @@ function automobile_hub_customize_register( $wp_customize ) {
           'Same Line' => __('Same Line','automobile-hub')
       ),
 	) );
+	
 	$wp_customize->add_setting('automobile_hub_per_columns',array(
 		'default'=> 3,
 		'sanitize_callback'	=> 'automobile_hub_sanitize_number_absint'
@@ -1573,6 +1602,38 @@ function automobile_hub_customize_register( $wp_customize ) {
             'description' => esc_html__( 'Add a parallax effect on page scroll.', 'automobile-hub' ),
         )
     );
+
+    $wp_customize->add_setting(
+        'automobile_hub_header_image_title_font_size',
+        array(
+            'default'           => 32,
+            'sanitize_callback' => 'absint',
+        )
+    );
+    $wp_customize->add_control(
+        'automobile_hub_header_image_title_font_size',
+        array(
+            'label'       => esc_html__( 'Change Header Image Title Font Size', 'automobile-hub' ),
+            'section'     => 'header_image',
+            'type'        => 'number',
+            'description' => esc_html__( 'Control the font Size of the header image title. Default is 32px.', 'automobile-hub' ),
+            'input_attrs' => array(
+                'min'  => 10,
+                'max'  => 200,
+                'step' => 1,
+            ),
+        )
+    );
+
+	$wp_customize->add_setting( 'automobile_hub_header_image_title_text_color', array(
+	    'default' => '',
+	    'sanitize_callback' => 'sanitize_hex_color'
+  	));
+  	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'automobile_hub_header_image_title_text_color', array(
+			'label'     => __('Change Header Image Title Color', 'automobile-hub'),
+	    'section' => 'header_image',
+	    'settings' => 'automobile_hub_header_image_title_text_color',
+  	)));
 
 }
 add_action( 'customize_register', 'automobile_hub_customize_register' );

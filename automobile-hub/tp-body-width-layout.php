@@ -277,3 +277,10 @@ $automobile_hub_tp_theme_css .='#footer .site-info p{';
 $automobile_hub_tp_theme_css .='text-align:right;';
 $automobile_hub_tp_theme_css .='}';
 }
+
+// Header Image title font size
+$automobile_hub_header_image_title_font_size = get_theme_mod('automobile_hub_header_image_title_font_size', '32');{
+$automobile_hub_tp_theme_css .='.box-text h2{';
+    $automobile_hub_tp_theme_css .='font-size: '.esc_attr($automobile_hub_header_image_title_font_size).'px;';
+$automobile_hub_tp_theme_css .='}';
+}
