@@ -298,16 +298,6 @@ function automobile_hub_customize_register( $wp_customize ) {
      'priority' => 1,
      'panel' => 'automobile_hub_panel_id'
     ) );
-
-    $wp_customize->add_setting('automobile_hub_edit_blog_page_title',array(
-		'default'=> 'Home',
-		'sanitize_callback'	=> 'sanitize_text_field'
-	));
-	$wp_customize->add_control('automobile_hub_edit_blog_page_title',array(
-		'label'	=> __('Change Blog Page Title','automobile-hub'),
-		'section'=> 'automobile_hub_blog_option',
-		'type'=> 'text'
-	));
     
 	$wp_customize->add_setting( 'automobile_hub_tp_color_option', array(
 	    'default' => '',
@@ -337,6 +327,27 @@ function automobile_hub_customize_register( $wp_customize ) {
         'priority' => 1,
         'panel' => 'automobile_hub_panel_id'
     ) );
+
+    $wp_customize->add_setting('automobile_hub_edit_blog_page_title',array(
+		'default'=> 'Home',
+		'sanitize_callback'	=> 'sanitize_text_field'
+	));
+	$wp_customize->add_control('automobile_hub_edit_blog_page_title',array(
+		'label'	=> __('Change Blog Page Title','automobile-hub'),
+		'section'=> 'automobile_hub_blog_option',
+		'type'=> 'text'
+	));
+
+	$wp_customize->add_setting('automobile_hub_edit_blog_page_description',array(
+		'default'=> '',
+		'sanitize_callback'	=> 'sanitize_text_field'
+	));
+	$wp_customize->add_control('automobile_hub_edit_blog_page_description',array(
+		'label'	=> __('Add Blog Description','automobile-hub'),
+		'section'=> 'automobile_hub_blog_option',
+		'type'=> 'text'
+	));
+
 	/** Meta Order */
     $wp_customize->add_setting('blog_meta_order', array(
         'default' => array('date', 'author', 'comment','category'),
@@ -353,6 +364,7 @@ function automobile_hub_customize_register( $wp_customize ) {
             'category' => __('category', 'automobile-hub') ,
         ) ,
     )));
+
     $wp_customize->add_setting( 'automobile_hub_excerpt_count', array(
 		'default'              => 35,
 		'type'                 => 'theme_mod',
@@ -595,6 +607,7 @@ function automobile_hub_customize_register( $wp_customize ) {
 		   'Capitalize' => __('Capitalize','automobile-hub'),
 		),
 	) );
+	
 	$wp_customize->add_setting('automobile_hub_menu_font_size', array(
 	  'default' => '',
       'sanitize_callback' => 'automobile_hub_sanitize_number_range',
@@ -1240,6 +1253,19 @@ function automobile_hub_customize_register( $wp_customize ) {
 		'priority' => 5,
 		'panel' => 'automobile_hub_panel_id'
 	) );
+
+	$wp_customize->add_setting( 'automobile_hub_mobile_blog_description', array(
+		'default'           => true,
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'automobile_hub_sanitize_checkbox',
+	) );
+	$wp_customize->add_control( new Automobile_Hub_Toggle_Control( $wp_customize, 'automobile_hub_mobile_blog_description', array(
+		'label'       => esc_html__( 'Show / Hide Blog Page Description', 'automobile-hub' ),
+		'section'     => 'automobile_hub_mobile_media_option',
+		'type'        => 'toggle',
+		'settings'    => 'automobile_hub_mobile_blog_description',
+	) ) );
+
 	$wp_customize->add_setting( 'automobile_hub_return_to_header_mob', array(
 		'default'           => true,
 		'transport'         => 'refresh',
@@ -1251,6 +1277,7 @@ function automobile_hub_customize_register( $wp_customize ) {
 		'type'        => 'toggle',
 		'settings'    => 'automobile_hub_return_to_header_mob',
 	) ) );
+
 	$wp_customize->add_setting( 'automobile_hub_slider_buttom_mob', array(
 		'default'           => true,
 		'transport'         => 'refresh',
@@ -1262,6 +1289,7 @@ function automobile_hub_customize_register( $wp_customize ) {
 		'type'        => 'toggle',
 		'settings'    => 'automobile_hub_slider_buttom_mob',
 	) ) );
+	
 	$wp_customize->add_setting( 'automobile_hub_related_post_mob', array(
 		'default'           => true,
 		'transport'         => 'refresh',
@@ -1602,6 +1630,49 @@ function automobile_hub_customize_register( $wp_customize ) {
             'description' => esc_html__( 'Add a parallax effect on page scroll.', 'automobile-hub' ),
         )
     );
+
+    //Opacity
+	$wp_customize->add_setting('automobile_hub_header_banner_opacity_color',array(
+       'default'              => '0.5',
+       'sanitize_callback' => 'automobile_hub_sanitize_choices'
+	));
+    $wp_customize->add_control( 'automobile_hub_header_banner_opacity_color', array(
+		'label'       => esc_html__( 'Header Image Opacity','automobile-hub' ),
+		'section'     => 'header_image',
+		'type'        => 'select',
+		'settings'    => 'automobile_hub_header_banner_opacity_color',
+		'choices' => array(
+           '0' =>  esc_attr(__('0','automobile-hub')),
+           '0.1' =>  esc_attr(__('0.1','automobile-hub')),
+           '0.2' =>  esc_attr(__('0.2','automobile-hub')),
+           '0.3' =>  esc_attr(__('0.3','automobile-hub')),
+           '0.4' =>  esc_attr(__('0.4','automobile-hub')),
+           '0.5' =>  esc_attr(__('0.5','automobile-hub')),
+           '0.6' =>  esc_attr(__('0.6','automobile-hub')),
+           '0.7' =>  esc_attr(__('0.7','automobile-hub')),
+           '0.8' =>  esc_attr(__('0.8','automobile-hub')),
+           '0.9' =>  esc_attr(__('0.9','automobile-hub'))
+		), 
+	) );
+
+   $wp_customize->add_setting( 'automobile_hub_header_banner_image_overlay', array(
+	    'default'   => true,
+	    'transport' => 'refresh',
+	    'sanitize_callback' => 'automobile_hub_sanitize_checkbox',
+	));
+	$wp_customize->add_control( new Automobile_Hub_Toggle_Control( $wp_customize, 'automobile_hub_header_banner_image_overlay', array(
+	    'label'   => esc_html__( 'Show / Hide Header Image Overlay', 'automobile-hub' ),
+	    'section' => 'header_image',
+	)));
+
+    $wp_customize->add_setting('automobile_hub_header_banner_image_ooverlay_color', array(
+		'default'           => '#000',
+		'sanitize_callback' => 'sanitize_hex_color',
+	));
+	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'automobile_hub_header_banner_image_ooverlay_color', array(
+		'label'    => __('Header Image Overlay Color', 'automobile-hub'),
+		'section'  => 'header_image',
+	)));
 
     $wp_customize->add_setting(
         'automobile_hub_header_image_title_font_size',

@@ -89,6 +89,15 @@ if ($automobile_hub_return_to_header == false || $automobile_hub_return_to_heade
 $automobile_hub_tp_theme_css .= '}';
 
 
+//blog description              
+$automobile_hub_mobile_blog_description = get_theme_mod('automobile_hub_mobile_blog_description', true);
+$automobile_hub_tp_theme_css .= '@media screen and (max-width: 575px) {';
+if ($automobile_hub_mobile_blog_description == false) {
+    $automobile_hub_tp_theme_css .= '.blog-description{ display: none; }';
+}
+$automobile_hub_tp_theme_css .= '}';
+
+// footer
 $automobile_hub_footer_widget_image = get_theme_mod('automobile_hub_footer_widget_image');
 if($automobile_hub_footer_widget_image != false){
 $automobile_hub_tp_theme_css .='#footer{';
@@ -284,3 +293,65 @@ $automobile_hub_tp_theme_css .='.box-text h2{';
     $automobile_hub_tp_theme_css .='font-size: '.esc_attr($automobile_hub_header_image_title_font_size).'px;';
 $automobile_hub_tp_theme_css .='}';
 }
+
+/*--------------------------- banner image Opacity -------------------*/
+    $automobile_hub_theme_lay = get_theme_mod( 'automobile_hub_header_banner_opacity_color','0.5');
+        if($automobile_hub_theme_lay == '0'){
+            $automobile_hub_tp_theme_css .='.single-page-img, .featured-image{';
+                $automobile_hub_tp_theme_css .='opacity:0';
+            $automobile_hub_tp_theme_css .='}';
+        }else if($automobile_hub_theme_lay == '0.1'){
+            $automobile_hub_tp_theme_css .='.single-page-img, .featured-image{';
+                $automobile_hub_tp_theme_css .='opacity:0.1';
+            $automobile_hub_tp_theme_css .='}';
+        }else if($automobile_hub_theme_lay == '0.2'){
+            $automobile_hub_tp_theme_css .='.single-page-img, .featured-image{';
+                $automobile_hub_tp_theme_css .='opacity:0.2';
+            $automobile_hub_tp_theme_css .='}';
+        }else if($automobile_hub_theme_lay == '0.3'){
+            $automobile_hub_tp_theme_css .='.single-page-img, .featured-image{';
+                $automobile_hub_tp_theme_css .='opacity:0.3';
+            $automobile_hub_tp_theme_css .='}';
+        }else if($automobile_hub_theme_lay == '0.4'){
+            $automobile_hub_tp_theme_css .='.single-page-img, .featured-image{';
+                $automobile_hub_tp_theme_css .='opacity:0.4';
+            $automobile_hub_tp_theme_css .='}';
+        }else if($automobile_hub_theme_lay == '0.5'){
+            $automobile_hub_tp_theme_css .='.single-page-img, .featured-image{';
+                $automobile_hub_tp_theme_css .='opacity:0.5';
+            $automobile_hub_tp_theme_css .='}';
+        }else if($automobile_hub_theme_lay == '0.6'){
+            $automobile_hub_tp_theme_css .='.single-page-img, .featured-image{';
+                $automobile_hub_tp_theme_css .='opacity:0.6';
+            $automobile_hub_tp_theme_css .='}';
+        }else if($automobile_hub_theme_lay == '0.7'){
+            $automobile_hub_tp_theme_css .='.single-page-img, .featured-image{';
+                $automobile_hub_tp_theme_css .='opacity:0.7';
+            $automobile_hub_tp_theme_css .='}';
+        }else if($automobile_hub_theme_lay == '0.8'){
+            $automobile_hub_tp_theme_css .='.single-page-img, .featured-image{';
+                $automobile_hub_tp_theme_css .='opacity:0.8';
+            $automobile_hub_tp_theme_css .='}';
+        }else if($automobile_hub_theme_lay == '0.9'){
+            $automobile_hub_tp_theme_css .='.single-page-img, .featured-image{';
+                $automobile_hub_tp_theme_css .='opacity:0.9';
+            $automobile_hub_tp_theme_css .='}';
+        }else if($automobile_hub_theme_lay == '1'){
+            $automobile_hub_tp_theme_css .='#slider img{';
+                $automobile_hub_tp_theme_css .='opacity:1';
+            $automobile_hub_tp_theme_css .='}';
+        }
+
+    $automobile_hub_header_banner_image_overlay = get_theme_mod('automobile_hub_header_banner_image_overlay', true);
+    if($automobile_hub_header_banner_image_overlay == false){
+        $automobile_hub_tp_theme_css .='.single-page-img, .featured-image{';
+            $automobile_hub_tp_theme_css .='opacity:1;';
+        $automobile_hub_tp_theme_css .='}';
+    }
+
+    $automobile_hub_header_banner_image_ooverlay_color = get_theme_mod('automobile_hub_header_banner_image_ooverlay_color', true);
+    if($automobile_hub_header_banner_image_ooverlay_color != false){
+        $automobile_hub_tp_theme_css .='.box-image-page{';
+            $automobile_hub_tp_theme_css .='background-color: '.esc_attr($automobile_hub_header_banner_image_ooverlay_color).';';
+        $automobile_hub_tp_theme_css .='}';
+    }

@@ -50,8 +50,11 @@ function automobile_hub_header_style() {
         }
 
         @media (max-width: 1000px) {
-            .header-img, .single-page-img, .external-div .box-image img,.external-div {
-                height: 200px;
+             .header-img, .single-page-img, .external-div .box-image-page img,.external-div,.featured-image{
+                height: 250px !important;
+            }
+            .box-text h2{
+                font-size: 27px;
             }
         }
     ";

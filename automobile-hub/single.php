@@ -10,7 +10,7 @@ get_header(); ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
 	    <div id="post-<?php the_ID(); ?>" class="external-div">
-	        <div class="box-image">
+	        <div class="box-image-page">
 	            <?php if ( has_post_thumbnail() ) : ?>
 	                <!-- If post has thumbnail, apply parallax background with header settings -->
 	                <div class="featured-image" 

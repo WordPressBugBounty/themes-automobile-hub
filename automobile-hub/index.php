@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-<div class="box-image">
+<div class="box-image-page">
   	<div class="single-page-img"></div>
   	 <div class="box-text">
     	<h2>
@@ -17,6 +17,12 @@ get_header(); ?>
 		    echo esc_html($automobile_hub_blog_title); 
 		    ?>
 		</h2>
+		<?php 
+		$automobile_hub_edit_blog_page_description = get_theme_mod('automobile_hub_edit_blog_page_description', '');
+
+		if (!empty($automobile_hub_edit_blog_page_description)) : ?>
+		    <p class="blog-description"><?php echo esc_html($automobile_hub_edit_blog_page_description); ?></p>
+		<?php endif; ?>
     </div> 
 </div>
 

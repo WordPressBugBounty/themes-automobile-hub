@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-<div class="box-image">
+<div class="box-image-page">
   	<div class="single-page-img"></div>
   	 <div class="box-text">
     	<?php if ( have_posts() ) : ?>

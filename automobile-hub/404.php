@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-<div class="box-image">
+<div class="box-image-page">
   	<div class="single-page-img"></div>
   	 <div class="box-text">
     	<h2><?php esc_html_e( '404', 'automobile-hub' ); ?></h2>  

@@ -4,7 +4,7 @@ Tags: wide-blocks, block-styles, one-column, two-columns, right-sidebar, left-si
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 5.6
-Stable tag: 9.0
+Stable tag: 9.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -468,6 +468,14 @@ Installation
     * Separated the footer copyright and footer widgets section in the Customizer.
     * Resolved menu css errors.
 
+= 9.1 =
+    * Resolved responsive header banner image error.
+    * Added opacity setting for the header banner.
+    * Added show/hide option for the header image overlay.
+    * Added header image overlay color setting.
+    * Added blog description setting.
+    * Added show/hide option for the blog description on mobile devices.
+
 == Resources ==
 
 Automobile Hub WordPress Theme, Copyright 2022 ThemesPride
@@ -529,7 +537,3 @@ Source: https://stocksnap.io/photo/W63VV8AK4E
 Pxhere Images
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://pxhere.com/en/license
-
-Slider Default Image
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://pxhere.com/en/photo/650710

@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 get_header( 'shop' );
 ?>
 
-<div class="box-image">
+<div class="box-image-page">
   	<div class="single-page-img"></div>
   	 <div class="box-text">
     	<h2><?php woocommerce_page_title(); ?></h2>  
