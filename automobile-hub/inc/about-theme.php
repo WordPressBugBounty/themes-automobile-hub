@@ -122,15 +122,14 @@ function automobile_hub_about_display() {
 	<?php
 }
 
-
 /**
  * Output the Demo Import screen.
  */
 
 function automobile_hub_demo_import() {
-    if ( isset( $_GET['page'] ) && 'automobile-hub-about' === $_GET['page'] && ! isset( $_GET['tab'] ) ) {
+    if (isset($_GET['page']) && 'automobile-hub-about' === $_GET['page'] && !isset($_GET['tab'])) {
 
-         // Path to whizzie.php in child theme
+    	 // Path to whizzie.php in child theme
 	    $child_whizzie_path = get_stylesheet_directory() . '/inc/whizzie.php';
 	    
 	    // Path to whizzie.php in parent theme
@@ -152,8 +151,12 @@ function automobile_hub_demo_import() {
                 </a>
             </div>
             <script type="text/javascript">
-                // Immediately redirect to Customizer
-                window.location.href = "<?php echo esc_url(admin_url('customize.php')); ?>";
+                // Redirect after success
+                window.onload = function() {
+                    setTimeout(function() {
+                        window.location.href = "<?php echo esc_url(admin_url('customize.php')); ?>";
+                    }, 1000); // 1 second delay to show success message
+                };
             </script>
         <?php } else { ?>
             <div class="col card demo-btn text-center">
@@ -161,19 +164,33 @@ function automobile_hub_demo_import() {
                     <p class="demo-title"><?php echo esc_html__('Demo Importer', 'automobile-hub'); ?></p>
                     <p class="demo-des"><?php echo esc_html__('This theme supports importing demo content with a single click. Use the button below to quickly set up your site. You can easily customize or deactivate the imported content later through the Customizer.', 'automobile-hub'); ?></p>
                     <i class="fas fa-long-arrow-alt-down"></i>
-                    <input type="submit" name="submit" class="button button-primary with-icon" value="<?php echo esc_attr__('Begin Installation - Import Demo', 'automobile-hub'); ?>">
+
+                    <button type="submit" class="button button-primary with-icon" id="begin-install-btn">
+                        <?php echo esc_html__('Begin Installation - Import Demo', 'automobile-hub'); ?>
+                        <span id="loader" style="display:none;margin-left:10px;">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/loader.png" alt="Loading..." width="20" height="20" />
+                        </span>
+                    </button>
                 </form>
             </div>
+
             <script type="text/javascript">
-                jQuery('#demo-importer-form').on('submit', function (e) {
-                    e.preventDefault();
-                    if(confirm("Are you sure you want to proceed with the demo import?")){
-                        var url = new URL(location.href);
-                        url.searchParams.append('import-demo', true);
-                        location.href = url;
-                    } else {
-                        return false;
-                    }
+                jQuery(document).ready(function($) {
+                    $('#demo-importer-form').on('submit', function (e) {
+                        e.preventDefault();
+
+                        if (confirm("Are you sure you want to proceed with the demo import?")) {
+                            // Show loader inside button
+                            $('#loader').show();
+
+                            // Redirect to import demo (add ?import-demo=true)
+                            var url = new URL(window.location.href);
+                            url.searchParams.append('import-demo', 'true');
+                            window.location.href = url;
+                        } else {
+                            return false;
+                        }
+                    });
                 });
             </script>
         <?php }

@@ -655,7 +655,7 @@ if ( ! class_exists( 'Automobile_Hub_WPTT_WebFont_Loader' ) ) {
 	}
 }
 
-if ( ! function_exists( 'wptt_get_webfont_styles' ) ) {
+if ( ! function_exists( 'automobile_hub_wptt_get_webfont_styles' ) ) {
 	/**
 	 * Get styles for a webfont.
 	 *
@@ -671,14 +671,14 @@ if ( ! function_exists( 'wptt_get_webfont_styles' ) ) {
 	 *
 	 * @return string Returns the CSS.
 	 */
-	function wptt_get_webfont_styles( $url, $format = 'woff2' ) {
+	function automobile_hub_wptt_get_webfont_styles( $url, $format = 'woff2' ) {
 		$font = new Automobile_Hub_WPTT_WebFont_Loader( $url );
 		$font->set_font_format( $format );
 		return $font->get_styles();
 	}
 }
 
-if ( ! function_exists( 'wptt_get_web_automobile_hub_font_url' ) ) {
+if ( ! function_exists( 'automobile_hub_wptt_get_web_font_url' ) ) {
 	/**
 	 * Get a stylesheet URL for a webfont.
 	 *
@@ -689,7 +689,7 @@ if ( ! function_exists( 'wptt_get_web_automobile_hub_font_url' ) ) {
 	 *
 	 * @return string Returns the CSS.
 	 */
-	function wptt_get_web_automobile_hub_font_url( $url, $format = 'woff2' ) {
+	function automobile_hub_wptt_get_web_font_url( $url, $format = 'woff2' ) {
 		$font = new Automobile_Hub_WPTT_WebFont_Loader( $url );
 		$font->set_font_format( $format );
 		return $font->get_url();

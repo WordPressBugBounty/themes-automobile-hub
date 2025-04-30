@@ -56,6 +56,23 @@ function automobile_hub_setup() {
 	 * specifically font, colors, and column width.
  	 */
 	add_editor_style( array( 'assets/css/editor-style.css', automobile_hub_fonts_url() ) );
+
+	add_theme_support( 'custom-header', apply_filters( 'automobile_hub_custom_header_args', array(
+        'default-text-color' => 'fff',
+        'header-text'        => false,
+        'width'              => 1600,
+        'height'             => 350,
+        'flex-width'         => true,
+        'flex-height'        => true,
+        'wp-head-callback'   => 'automobile_hub_header_style',
+        'default-image'      => get_template_directory_uri() . '/assets/images/sliderimage.png',
+    ) ) );
+
+	/**
+	 * Implement the Custom Header feature.
+	 */
+	require get_parent_theme_file_path( '/inc/custom-header.php' );
+
 }
 add_action( 'after_setup_theme', 'automobile_hub_setup' );
 
@@ -178,7 +195,7 @@ function automobile_hub_fonts_url(){
 	);
 	$automobile_hub_font_url = add_query_arg($automobile_hub_query_args,'//fonts.googleapis.com/css');
 	return $automobile_hub_font_url;
-	$contents = wptt_get_webfont_url( esc_url_raw( $automobile_hub_font_url ) );
+	$contents = automobile_hub_wptt_get_web_font_url( esc_url_raw( $automobile_hub_font_url ) );
 }
 
 /**
@@ -480,14 +497,6 @@ function automobile_hub_front_page_template( $template ) {
 }
 add_filter( 'frontpage_template','automobile_hub_front_page_template' );
 
-// footer link
-define('AUTOMOBILE_HUB_CREDIT',__('https://www.themespride.com/products/free-automobile-wordpress-theme','automobile-hub') );
-if ( ! function_exists( 'automobile_hub_credit' ) ) {
-	function automobile_hub_credit(){
-		echo "<a href=".esc_url(AUTOMOBILE_HUB_CREDIT)." target='_blank'>".esc_html__(get_theme_mod('automobile_hub_footer_text',__('Automobile WordPress Theme','automobile-hub')))."</a>";
-	}
-}
-
 // get started
 add_action( 'wp_ajax_automobile_hub_dismissed_notice_handler', 'automobile_hub_ajax_notice_handler' );
 
@@ -555,47 +564,55 @@ function automobile_hub_logo_width(){
 
 add_action( 'wp_head', 'automobile_hub_logo_width' );
 
-/**
- * Implement the Custom Header feature.
- */
-require get_parent_theme_file_path( '/inc/custom-header.php' );
+function automobile_hub_theme_setup() {
 
-/**
- * Custom template tags for this theme.
- */
-require get_parent_theme_file_path( '/inc/template-tags.php' );
+	// footer link
+	define('AUTOMOBILE_HUB_CREDIT',__('https://www.themespride.com/products/free-automobile-wordpress-theme','automobile-hub') );
+	if ( ! function_exists( 'automobile_hub_credit' ) ) {
+		function automobile_hub_credit(){
+			echo "<a href=".esc_url(AUTOMOBILE_HUB_CREDIT)." target='_blank'>".esc_html__(get_theme_mod('automobile_hub_footer_text',__('Automobile WordPress Theme','automobile-hub')))."</a>";
+		}
+	}
 
-/**
- * Additional features to allow styling of the templates.
- */
-require get_parent_theme_file_path( '/inc/template-functions.php' );
+	/**
+	 * Custom template tags for this theme.
+	 */
+	require get_parent_theme_file_path( '/inc/template-tags.php' );
 
-/**
- * Customizer additions.
- */
-require get_parent_theme_file_path( '/inc/customizer.php' );
+	/**
+	 * Additional features to allow styling of the templates.
+	 */
+	require get_parent_theme_file_path( '/inc/template-functions.php' );
 
-/**
- * About Theme Page
- */
-require get_parent_theme_file_path( '/inc/about-theme.php' );
+	/**
+	 * Customizer additions.
+	 */
+	require get_parent_theme_file_path( '/inc/customizer.php' );
 
-/**
- * Load Theme Web File
- */
-require get_parent_theme_file_path('/inc/wptt-webfont-loader.php' );
-/**
- * Load Theme Web File
- */
-require get_parent_theme_file_path( '/inc/controls/customize-control-toggle.php' );
-/**
- * load sortable file
- */
-require get_parent_theme_file_path( '/inc/controls/sortable-control.php' );
+	/**
+	 * About Theme Page
+	 */
+	require get_parent_theme_file_path( '/inc/about-theme.php' );
 
-/**
- * TGM Recommendation
- */
-require get_parent_theme_file_path( '/inc/TGM/tgm.php' );
+	/**
+	 * Load Theme Web File
+	 */
+	require get_parent_theme_file_path('/inc/wptt-webfont-loader.php' );
+	/**
+	 * Load Theme Web File
+	 */
+	require get_parent_theme_file_path( '/inc/controls/customize-control-toggle.php' );
+	/**
+	 * load sortable file
+	 */
+	require get_parent_theme_file_path( '/inc/controls/sortable-control.php' );
+
+	/**
+	 * TGM Recommendation
+	 */
+	require get_parent_theme_file_path( '/inc/TGM/tgm.php' );
+
+}
+add_action( 'after_setup_theme', 'automobile_hub_theme_setup' );
 
 add_filter( 'woocommerce_prevent_automatic_wizard_redirect', '__return_true' );

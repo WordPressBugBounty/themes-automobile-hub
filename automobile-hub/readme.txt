@@ -2,9 +2,9 @@
 Contributors: ThemesPride
 Tags: wide-blocks, block-styles, one-column, two-columns, right-sidebar, left-sidebar, three-columns, four-columns, grid-layout, custom-colors, custom-header, custom-background, custom-menu, custom-logo, editor-style, featured-images, footer-widgets,featured-image-header, full-width-template, rtl-language-support, sticky-post, theme-options, post-formats, threaded-comments, translation-ready, flexible-header, blog, e-commerce, portfolio
 Requires at least: 5.0
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 9.1
+Stable tag: 9.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -473,8 +473,16 @@ Installation
     * Added opacity setting for the header banner.
     * Added show/hide option for the header image overlay.
     * Added header image overlay color setting.
-    * Added blog description setting.
+    * Added blog page description setting.
     * Added show/hide option for the blog description on mobile devices.
+
+= 9.2 =
+    * Updated the WordPress version.
+    * Combined all enqueue scripts and styles into a single function in functions.php.
+    * Made changes in the custom-header.php file.
+    * Prefixed functions properly in the wptt-webfont-loader.php file.
+    * Added a preloader during demo content installation.
+    * Implemented proper translation for default values in customizer.php.
 
 == Resources ==
 

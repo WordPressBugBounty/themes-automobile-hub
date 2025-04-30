@@ -9,17 +9,6 @@
  */
 
 function automobile_hub_custom_header_setup() {
-    add_theme_support( 'custom-header', apply_filters( 'automobile_hub_custom_header_args', array(
-        'default-text-color' => 'fff',
-        'header-text'        => false,
-        'width'              => 1600,
-        'height'             => 350,
-        'flex-width'         => true,
-        'flex-height'        => true,
-        'wp-head-callback'   => 'automobile_hub_header_style',
-        'default-image'      => get_template_directory_uri() . '/assets/images/sliderimage.png',
-    ) ) );
-
     register_default_headers( array(
         'default-image' => array(
             'url'           => get_template_directory_uri() . '/assets/images/sliderimage.png',
@@ -48,9 +37,8 @@ function automobile_hub_header_style() {
             background-position: " . esc_attr( $automobile_hub_position ) . ";
             background-attachment: " . esc_attr( $automobile_hub_attachment ) . ";
         }
-
         @media (max-width: 1000px) {
-             .header-img, .single-page-img, .external-div .box-image-page img,.external-div,.featured-image{
+            .header-img, .single-page-img, .external-div .box-image-page img,.external-div,.featured-image{
                 height: 250px !important;
             }
             .box-text h2{

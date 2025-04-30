@@ -88,7 +88,6 @@ if ($automobile_hub_return_to_header == false || $automobile_hub_return_to_heade
 }
 $automobile_hub_tp_theme_css .= '}';
 
-
 //blog description              
 $automobile_hub_mobile_blog_description = get_theme_mod('automobile_hub_mobile_blog_description', true);
 $automobile_hub_tp_theme_css .= '@media screen and (max-width: 575px) {';
@@ -337,7 +336,7 @@ $automobile_hub_tp_theme_css .='}';
                 $automobile_hub_tp_theme_css .='opacity:0.9';
             $automobile_hub_tp_theme_css .='}';
         }else if($automobile_hub_theme_lay == '1'){
-            $automobile_hub_tp_theme_css .='#slider img{';
+            $automobile_hub_tp_theme_css .='.single-page-img, .featured-image{';
                 $automobile_hub_tp_theme_css .='opacity:1';
             $automobile_hub_tp_theme_css .='}';
         }
