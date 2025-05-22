@@ -1744,9 +1744,6 @@ if ( ! defined( 'AUTOMOBILE_HUB_DOCS_URL' ) ) {
 	define( 'AUTOMOBILE_HUB_DOCS_URL', esc_url('https://page.themespride.com/demo/docs/automobile-hub-lite/'));
 }
 
-if ( ! defined( 'AUTOMOBILE_HUB_DEMO_TITLE' ) ) {
-	define( 'AUTOMOBILE_HUB_DEMO_TITLE', esc_html__( 'Click to View Site', 'automobile-hub' ));
-}
 /**
  * Singleton class for handling the theme's customizer integration.
  *
@@ -1839,20 +1836,6 @@ final class Automobile_Hub_Customize {
 					'title'    => esc_html__( 'Theme Documentation', 'automobile-hub' ),
 					'pro_text' => esc_html__( 'Click Here', 'automobile-hub' ),
 					'pro_url'  => esc_url( AUTOMOBILE_HUB_DOCS_URL, 'automobile-hub'),
-				)
-			)
-		);
-
-		// Register sections.
-		$manager->add_section(
-			new automobile_hub_Customize_Section_Pro(
-				$manager,
-				'automobile_hub_section_pro_demo',
-				array(
-					'priority'   => 9,
-					'title'    => AUTOMOBILE_HUB_DEMO_TITLE,
-					'pro_text' => esc_html__( 'View Site', 'automobile-hub' ),
-					'pro_url'  => esc_url( home_url() ),
 				)
 			)
 		);

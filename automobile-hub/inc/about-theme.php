@@ -122,14 +122,15 @@ function automobile_hub_about_display() {
 	<?php
 }
 
+
 /**
  * Output the Demo Import screen.
  */
 
 function automobile_hub_demo_import() {
-    if (isset($_GET['page']) && 'automobile-hub-about' === $_GET['page'] && !isset($_GET['tab'])) {
+    if ( isset( $_GET['page'] ) && 'automobile-hub-about' === $_GET['page'] && ! isset( $_GET['tab'] ) ) {
 
-    	 // Path to whizzie.php in child theme
+         // Path to whizzie.php in child theme
 	    $child_whizzie_path = get_stylesheet_directory() . '/inc/whizzie.php';
 	    
 	    // Path to whizzie.php in parent theme
@@ -143,19 +144,30 @@ function automobile_hub_demo_import() {
 	        require_once $parent_whizzie_path;
 	    }
 
-        if (isset($_GET['import-demo']) && $_GET['import-demo'] == true) { ?>
-            <div class="col card success-demo">
+        if ( isset( $_GET['import-demo'] ) && $_GET['import-demo'] == true ) { ?>
+            <div class="col card success-demo" style="text-align: center;">
                 <p class="imp-success"><?php echo esc_html__('Imported Successfully', 'automobile-hub'); ?></p><br>
-                <a class="button button-primary" href="<?php echo esc_url(admin_url('customize.php')); ?>" target="_blank">
-                    <?php echo esc_html__('Go to Customizer', 'automobile-hub'); ?>
+                <a class="button" href="<?php echo esc_url(home_url('/')); ?>" target="_blank">
+                    <?php echo esc_html__('View Site', 'automobile-hub'); ?>
                 </a>
             </div>
+
+            <!-- Modal Popup -->
+            <div id="demo-success-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999;">
+                <div style="background: #fff; padding: 30px; max-width: 400px; margin: 15% auto; text-align: center; border-radius: 8px;">
+                    <h2 style="margin-bottom: 15px;"><?php echo esc_html__('Demo import completed successfully. You can now customize your website or view the imported content.', 'automobile-hub'); ?></h2>
+                    <button onclick="document.getElementById('demo-success-modal').style.display='none'">
+                       <a class="view-demo-btn" href="<?php echo esc_url(home_url('/')); ?>" target="_blank">
+                    		<?php echo esc_html__('View Site', 'automobile-hub'); ?>
+                	</a>
+                    </button>
+                </div>
+            </div>
+
             <script type="text/javascript">
-                // Redirect after success
-                window.onload = function() {
-                    setTimeout(function() {
-                        window.location.href = "<?php echo esc_url(admin_url('customize.php')); ?>";
-                    }, 1000); // 1 second delay to show success message
+                window.onload = function () {
+                    // Show the popup modal after load
+                    document.getElementById('demo-success-modal').style.display = 'block';
                 };
             </script>
         <?php } else { ?>
@@ -165,25 +177,27 @@ function automobile_hub_demo_import() {
                     <p class="demo-des"><?php echo esc_html__('This theme supports importing demo content with a single click. Use the button below to quickly set up your site. You can easily customize or deactivate the imported content later through the Customizer.', 'automobile-hub'); ?></p>
                     <i class="fas fa-long-arrow-alt-down"></i>
 
-                    <button type="submit" class="button button-primary with-icon" id="begin-install-btn">
+                    <button type="submit" class="button with-icon" id="begin-install-btn">
                         <?php echo esc_html__('Begin Installation - Import Demo', 'automobile-hub'); ?>
-                        <span id="loader" style="display:none;margin-left:10px;">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/loader.png" alt="Loading..." width="20" height="20" />
-                        </span>
                     </button>
+
+                    <!-- Loader area shown in page content -->
+                    <div id="page-loader" style="display:none; margin-top: 20px; text-align: center;">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/loader.png" alt="Loading..." width="40" height="40" />
+                        <p style="margin-top:10px;"><?php echo esc_html__('Importing demo, please wait...', 'automobile-hub'); ?></p>
+                    </div>
                 </form>
             </div>
 
             <script type="text/javascript">
                 jQuery(document).ready(function($) {
-                    $('#demo-importer-form').on('submit', function (e) {
+                    $('#demo-importer-form').on('submit', function(e) {
                         e.preventDefault();
 
                         if (confirm("Are you sure you want to proceed with the demo import?")) {
-                            // Show loader inside button
-                            $('#loader').show();
-
-                            // Redirect to import demo (add ?import-demo=true)
+                            $('#page-loader').show(); // Show loader
+                            
+                            // Redirect to same page with import-demo param
                             var url = new URL(window.location.href);
                             url.searchParams.append('import-demo', 'true');
                             window.location.href = url;

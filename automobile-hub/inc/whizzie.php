@@ -1,6 +1,74 @@
 <?php 
 if (isset($_GET['import-demo']) && $_GET['import-demo'] == true) {
 
+    // Function to install and activate plugins
+    function automobile_hub_import_demo_content() {
+
+        // Display the preloader only for plugin installation
+        echo '<div id="plugin-loader" style="display: flex; align-items: center; justify-content: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.8); z-index: 9999;">
+                <img src="' . esc_url(get_template_directory_uri()) . '/assets/images/loader.png" alt="Loading..." width="60" height="60" />
+              </div>';
+
+        // Define the plugins you want to install and activate
+        $plugins = array(
+            array(
+                'slug' => 'woocommerce',
+                'file' => 'woocommerce/woocommerce.php',
+                'url'  => 'https://downloads.wordpress.org/plugin/woocommerce.latest-stable.zip'
+            ),
+        );
+
+        // Include required files for plugin installation
+        if (!function_exists('plugins_api')) {
+            include_once(ABSPATH . 'wp-admin/includes/plugin-install.php');
+        }
+        if (!function_exists('activate_plugin')) {
+            include_once(ABSPATH . 'wp-admin/includes/plugin.php');
+        }
+        include_once(ABSPATH . 'wp-admin/includes/file.php');
+        include_once(ABSPATH . 'wp-admin/includes/misc.php');
+        include_once(ABSPATH . 'wp-admin/includes/class-wp-upgrader.php');
+
+        // Loop through each plugin
+        foreach ($plugins as $plugin) {
+            $plugin_file = WP_PLUGIN_DIR . '/' . $plugin['file'];
+
+            // Check if the plugin is installed
+            if (!file_exists($plugin_file)) {
+                // If the plugin is not installed, download and install it
+                $upgrader = new Plugin_Upgrader();
+                $result = $upgrader->install($plugin['url']);
+
+                // Check for installation errors
+                if (is_wp_error($result)) {
+                    error_log('Plugin installation failed: ' . $plugin['slug'] . ' - ' . $result->get_error_message());
+                    continue;
+                }
+            }
+
+            // If the plugin folder exists but the plugin is not active, activate it
+            if (file_exists($plugin_file) && !is_plugin_active($plugin['file'])) {
+                $result = activate_plugin($plugin['file']);
+
+                // Check for activation errors
+                if (is_wp_error($result)) {
+                    error_log('Plugin activation failed: ' . $plugin['slug'] . ' - ' . $result->get_error_message());
+                }
+            }
+        }
+
+        // Hide the preloader after the process is complete
+        echo '<script type="text/javascript">
+                document.getElementById("plugin-loader").style.display = "none";
+              </script>';
+
+        // Add filter to skip WooCommerce setup wizard after activation
+        add_filter('woocommerce_prevent_automatic_wizard_redirect', '__return_true');
+    }
+
+    // Call the import function
+    automobile_hub_import_demo_content();
+
     // ------- Create Nav Menu --------
 $automobile_hub_menuname = 'Main Menus';
 $automobile_hub_bpmenulocation = 'primary-menu';

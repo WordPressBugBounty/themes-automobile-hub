@@ -12,6 +12,12 @@ function automobile_hub_register_recommended_plugins() {
             'required'         => false,
             'force_activation' => false,
         ),
+        array(
+			'name'             => __( 'WooCommerce', 'automobile-hub' ),
+			'slug'             => 'woocommerce',
+			'required'         => false,
+			'force_activation' => false,
+		),
 	);
 	$config = array();
 	tgmpa( $plugins, $config );

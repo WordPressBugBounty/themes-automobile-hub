@@ -233,10 +233,10 @@ pre.changelog {
     box-shadow: 0px 2px 0px #2e6791, 0px 5px 10px rgba(0, 0, 0, 0.3);
     transform: translateY(3px);
 }
-.col.card a, .col .button{
+.col.card a, .col .button, a.view-demo-btn{
      font-weight: 600;
-    font-size: 14px;
-    padding: 5px 20px;
+    font-size: 16px;
+    padding: 10px 20px;
     display: inline-block;
     color: white;
     text-align: center;
@@ -247,11 +247,15 @@ pre.changelog {
     border: 1px solid #357ab8;
     box-shadow: 0px 5px 0px #2e6791, 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
-.col.card a:hover,.col .button:hover {
+#demo-success-modal button{
+    border: none;
+}
+.col.card a:hover,.col .button:hover, a.view-demo-btn:hover {
     background: linear-gradient(145deg, #357ab8, #4a90e2);
     border-color: #2e6791;
     box-shadow: 0px 2px 0px #2e6791, 0px 5px 10px rgba(0, 0, 0, 0.3);
     transform: translateY(3px);
+    color: #fff;
 }
 .wp-core-ui .button-primary.demo{
     background-color: #46b122;
@@ -260,6 +264,8 @@ pre.changelog {
 .wp-core-ui .button-primary.demo:hover{
     background-color: #4f8429;
 }
+
+
 a.wp-bundle.nav-tab:after {
     content: "Offer";
     color: white;
@@ -279,12 +285,14 @@ a.wp-bundle.nav-tab{
 }
 
 /* Loader Spinner inside Button */
-#loader {
-    display: inline-block;
+#demo-success-modal h2{
+    text-align: center;
+}
+#page-loader {
+    display: block;
     vertical-align: middle;
 }
-
-#loader img {
+#page-loader img {
     width: 20px !important;
     height: 20px !important;
     animation: spin 1s linear infinite;
@@ -298,6 +306,7 @@ a.wp-bundle.nav-tab{
         transform: rotate(360deg); 
     }
 }
+
 /* Preloader for plugin installation area */
 #plugin-loader img {
     border: 8px solid #f3f3f3; /* Light grey */
@@ -307,7 +316,6 @@ a.wp-bundle.nav-tab{
     height: 60px !important;
     animation: spin 1s linear infinite;
 }
-
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -323,6 +331,6 @@ a.wp-bundle.nav-tab{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.4); /* Semi-transparent white background */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
     z-index: 9999;
 }

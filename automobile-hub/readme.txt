@@ -4,7 +4,7 @@ Tags: wide-blocks, block-styles, one-column, two-columns, right-sidebar, left-si
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 9.2
+Stable tag: 9.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -483,6 +483,11 @@ Installation
     * Prefixed functions properly in the wptt-webfont-loader.php file.
     * Added a preloader during demo content installation.
     * Implemented proper translation for default values in customizer.php.
+
+= 9.3 =
+    * Resolved errors from demo import code.
+    * Added default footer widget.
+    * Resolved error from home page css.
 
 == Resources ==
 
