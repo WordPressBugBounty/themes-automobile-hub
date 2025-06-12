@@ -10,21 +10,21 @@ $automobile_hub_number_of_post_columns = get_theme_mod('automobile_hub_related_p
 
 $automobile_hub_col_lg_post_class = 'col-lg-' . (12 / $automobile_hub_number_of_post_columns);
 
-$related = wp_get_post_terms( get_the_ID(), 'category' );
+$automobile_hub_related = wp_get_post_terms( get_the_ID(), 'category' );
 $automobile_hub_ids = array();
-foreach( $related as $term ) {
+foreach( $automobile_hub_related as $term ) {
     $automobile_hub_ids[] = $term->term_id;
 }
 
 $automobile_hub_post_args['category__in'] = $automobile_hub_ids; 
 
-$related_posts = new WP_Query( $automobile_hub_post_args );
+$automobile_hub_related_posts = new WP_Query( $automobile_hub_post_args );
 
-if ( $related_posts->have_posts() ) : ?>
+if ( $automobile_hub_related_posts->have_posts() ) : ?>
         <div class="related-post-block">
         <h3 class="text-center mb-3"><?php echo esc_html(get_theme_mod('automobile_hub_related_post_heading',__('Related Posts','automobile-hub')));?></h3>
         <div class="row">
-            <?php while ( $related_posts->have_posts() ) : $related_posts->the_post(); ?>
+            <?php while ( $automobile_hub_related_posts->have_posts() ) : $automobile_hub_related_posts->the_post(); ?>
                 <div class="<?php echo esc_attr($automobile_hub_col_lg_post_class); ?> col-md-6">
                     <div id="category-post">
                         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -33,7 +33,7 @@ if ( $related_posts->have_posts() ) : ?>
                                         <?php the_post_thumbnail();  ?>    
                                 <?php } ?>
                                 <div class="box-content text-start">
-                                    <h4 class="text-left py-2"><a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title_attribute(); ?>"><?php the_title();?></a></h4>
+                                    <h4 class="text-start py-2"><a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title_attribute(); ?>"><?php the_title();?></a></h4>
                                     
                                     <p><?php echo wp_trim_words(get_the_content(), get_theme_mod('automobile_hub_excerpt_count',10) );?></p>
                                     <?php if(get_theme_mod('automobile_hub_remove_read_button',true) != ''){ ?>

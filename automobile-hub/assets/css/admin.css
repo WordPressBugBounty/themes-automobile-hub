@@ -17,11 +17,79 @@ h2.automobile-hub-notice-h2 {
 .automobile-hub-theme-notice-content .plugin-install-notice{
     padding: 10px 0;
 }
-/** Theme about page css */
-.green.button {
-    background: none #5cb85c;
-    border-color: #4cae4c;
-    color: #ffffff;
+/** Theme button css */
+.actions a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 8px 12px 8px 0;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  text-transform: capitalize;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  color: #fff;
+  position: relative;
+}
+/* On hover: lift effect */
+.actions a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.25);
+}
+/* Theme Info – Deep Indigo */
+.theme-info-btn {
+  background-color: #c2185b;
+}
+.theme-info-btn:hover {
+  background-color: #a11248;
+}
+/* View Demo – Teal */
+.view-demo {
+  background-color: #009688;
+}
+.view-demo:hover {
+  background-color: #00796b;
+}
+/* Instructions – Slate Gray */
+.instruction-theme {
+  background-color: #607d8b;
+}
+.instruction-theme:hover {
+  background-color: #4a6572;
+}
+/* Rate Theme – Amber */
+.rate-theme {
+  background-color: #ff9800;
+}
+.rate-theme:hover {
+  background-color: #e68900;
+}
+.pro-btn-theme {
+  background-color: #3f51b5;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(194, 24, 91, 0.5);
+  animation: blinkGlow 1.5s infinite;
+  transition: all 0.3s ease;
+}
+.pro-btn-theme:hover {
+  background-color: #2c3e99;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(161, 18, 72, 0.7);
+}
+/* Blinking Glow Animation */
+@keyframes blinkGlow {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(194, 24, 91, 0.5);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(0, 0, 0, 0.8); /* Black shadow with 50% opacity */
+    opacity: 0.8; /* Optional overall element opacity */
+  }
 }
 .about-wrap.full-width-layout {
     max-width: 100%;

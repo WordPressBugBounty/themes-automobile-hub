@@ -38,8 +38,12 @@
           <div class="carousel-caption">
             <div class="inner_carousel">
                <p class="slidertop-title mb-1"><?php echo esc_html( get_theme_mod('automobile_hub_slider_text','') ); ?></p>
-              <h1 class="mt-2"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-              <p><?php echo wp_trim_words( get_the_content(),15 );?></p>
+              <?php if (get_theme_mod('automobile_hub_show_slider_title', true)) : ?>
+                <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+              <?php endif; ?>
+              <?php if (get_theme_mod('automobile_hub_show_slider_content', true)) : ?>
+                <p><?php echo wp_trim_words( get_the_content(),15 );?></p>
+              <?php endif; ?>
               <div class="more-btn">
                 <i class="<?php echo esc_attr(get_theme_mod('automobile_hub_slider_icon','fas fa-hand-point-right')); ?>"></i><a href="<?php the_permalink(); ?>"><?php esc_html_e('BOOK NOW','automobile-hub'); ?></a>
               </div>

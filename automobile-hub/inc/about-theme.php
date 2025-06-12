@@ -65,15 +65,15 @@ function automobile_hub_about_display() {
 					echo esc_html( $automobile_hub_description . '.' );
 				?></p>
 				<p class="actions">
-					<a target="_blank" href="<?php echo esc_url( AUTOMOBILE_HUB_FREE_THEME_URL ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Theme Info', 'automobile-hub' ); ?></a>
+					<a target="_blank" href="<?php echo esc_url( AUTOMOBILE_HUB_FREE_THEME_URL ); ?>" class="theme-info-btn" target="_blank"><?php esc_html_e( 'Theme Info', 'automobile-hub' ); ?></a>
 
-					<a target="_blank" href="<?php echo esc_url( AUTOMOBILE_HUB_DEMO_THEME_URL ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'View Demo', 'automobile-hub' ); ?></a>
+					<a target="_blank" href="<?php echo esc_url( AUTOMOBILE_HUB_DEMO_THEME_URL ); ?>" class="view-demo" target="_blank"><?php esc_html_e( 'View Demo', 'automobile-hub' ); ?></a>
 
-					<a target="_blank" href="<?php echo esc_url( AUTOMOBILE_HUB_DOCS_THEME_URL ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Theme Instructions', 'automobile-hub' ); ?></a>
+					<a target="_blank" href="<?php echo esc_url( AUTOMOBILE_HUB_DOCS_THEME_URL ); ?>" class="instruction-theme" target="_blank"><?php esc_html_e( 'Theme Instructions', 'automobile-hub' ); ?></a>
 
-					<a target="_blank" href="<?php echo esc_url( AUTOMOBILE_HUB_RATE_THEME_URL ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Rate this theme', 'automobile-hub' ); ?></a>
+					<a target="_blank" href="<?php echo esc_url( AUTOMOBILE_HUB_RATE_THEME_URL ); ?>" class="rate-theme" target="_blank"><?php esc_html_e( 'Rate this theme', 'automobile-hub' ); ?></a>
 
-					<a target="_blank" href="<?php echo esc_url( AUTOMOBILE_HUB_PRO_THEME_URL ); ?>" class="green button button-secondary" target="_blank"><?php esc_html_e( 'Upgrade to pro', 'automobile-hub' ); ?></a>
+					<a target="_blank" href="<?php echo esc_url( AUTOMOBILE_HUB_PRO_THEME_URL ); ?>" class="pro-btn-theme" target="_blank"><?php esc_html_e( 'Upgrade to pro', 'automobile-hub' ); ?></a>
 				</p>
 			</div>
 

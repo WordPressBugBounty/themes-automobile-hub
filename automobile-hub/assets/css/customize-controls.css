@@ -132,3 +132,123 @@ span.customize-control-title, .customize-control-title {
 #accordion-section-automobile_hub_section_pro_demo a.button.button-secondary.alignright{
   background-color: #0d6efd;
 }
+
+
+/*---------- Pro Version ---------------*/
+#customize-control-pro_version_ a.button-primary {
+  text-align: center;
+}
+
+li[id*="pro_version"] {
+  position: relative;
+  padding: 0 !important;
+  margin-top: 30px;
+  background: transparent;
+}
+
+li[id*="pro_version"] .dashicons {
+  float: left;
+  font-size: 20px;
+  margin-top: -1px;
+  margin-right: 8px;
+  font-size: 17px !important;
+}
+
+li[id*="pro_version"] a {
+  color: #0085ba;
+  text-decoration: none;
+  outline: none !important;
+}
+
+#accordion-section-pastry_bakers_pro h3 {
+  color: #fff !important;
+  background-color: #008EC2 !important;
+}
+
+#accordion-section-pastry_bakers_pro h3:after {
+  color: #fff !important;
+}
+
+.customize-control-pro_options .control-lock {
+  display: none !important;
+}
+
+#customize-control-pro_version_ ul li p a {
+  padding: 0 !important;
+  background-color: transparent !important;
+  color: #0073aa !important;
+  box-shadow: none !important;
+}
+
+#customize-control-pro_version_ h3 span {
+  color: red;
+  font-weight: bold;
+}
+
+#customize-control-pro_version_logo {
+  margin-bottom: 30px !important;
+}
+#customize-control-header_textcolor {
+  display: block !important;
+}
+#accordion-section-automobile_hub_feature_request_section {
+  display: block !important;
+}
+li[id*="pro_version"] a {
+    color: #ffff00;
+    font-size: 15px;
+}
+button.button.wp-color-result{
+  margin-bottom: 15px !important;
+}
+li#customize-control-automobile_hub_slider_pro_version_logo,
+li#customize-control-automobile_hub_about_pro_version_logo,
+li#customize-control-auto_car_care_services_pro_version_logo,
+li#customize-control-automobile_hub_social_media_pro_version_logo,
+li#customize-control-automobile_hub_header_pro_version_logo,
+li#customize-control-automobile_hub_menu_pro_version_logo,
+li#customize-control-automobile_hub_preloader_pro_version_logo,
+li#customize-control-automobile_hub_copyright_pro_version_logo,
+li#customize-control-automobile_hub_footer_widget_pro_version_logo,
+li#customize-control-automobile_hub_responsive_pro_version_logo,
+li#customize-control-auto_car_care_top_bar_pro_version_logo,
+li#customize-control-car_repair_product_pro_version_logo,
+li#customize-control-auto_dealer_lite_services_pro_version_logo,
+li#customize-control-auto_motors_services_pro_version_logo,
+li#customize-control-car_mechanic_services_pro_version_logo,
+li#customize-control-car_wash_services_services_pro_version_logo,
+li#customize-control-car_rental_hub_services_pro_version_logo,
+li#customize-control-automotive_charging_station_services_pro_version_logo,
+li#customize-control-car_paint_job_services_pro_version_logo{
+    background: #003f88;
+    display: inline;
+    padding: 10px 12px !important;
+    width: 90%;
+}
+li#customize-control-automobile_hub_slider_pro_version_logo span,
+li#customize-control-automobile_hub_about_pro_version_logo span,
+li#customize-control-auto_car_care_services_pro_version_logo span,
+li#customize-control-automobile_hub_social_media_pro_version_logo span,
+li#customize-control-automobile_hub_header_pro_version_logo span,
+li#customize-control-automobile_hub_menu_pro_version_logo span,
+li#customize-control-automobile_hub_preloader_pro_version_logo span,
+li#customize-control-automobile_hub_copyright_pro_version_logo span,
+li#customize-control-automobile_hub_footer_widget_pro_version_logo span,
+li#customize-control-automobile_hub_responsive_pro_version_logo span,
+li#customize-control-auto_car_care_top_bar_pro_version_logo span,
+li#customize-control-car_repair_product_pro_version_logo span,
+li#customize-control-auto_dealer_lite_services_pro_version_logo span,
+li#customize-control-auto_motors_services_pro_version_logo span,
+li#customize-control-car_mechanic_services_pro_version_logo span,
+li#customize-control-car_wash_services_services_pro_version_logo span,
+li#customize-control-car_rental_hub_services_pro_version_logo span,
+li#customize-control-automotive_charging_station_services_pro_version_logo span,
+li#customize-control-car_paint_job_services_pro_version_logo span{
+    color: #fff;
+    font-size: 15px;
+}
+.customize-control-pro_options{
+  background: #003f88;
+    display: inline;
+    padding: 10px !important;
+}

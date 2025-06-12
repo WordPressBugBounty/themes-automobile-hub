@@ -382,11 +382,11 @@ function automobile_hub_sanitize_sortable( $val, $setting ) {
 function automobile_hub_excerpt_function($excerpt_count = 35) {
     $automobile_hub_excerpt = get_the_excerpt();
 
-    $automobile_hub_text_excerpt = wp_strip_all_tags($automobile_hub_excerpt);
+    $AUTOMOBILE_HUB_TEXT_excerpt = wp_strip_all_tags($automobile_hub_excerpt);
 
     $automobile_hub_excerpt_limit = esc_attr(get_theme_mod('automobile_hub_excerpt_count', $excerpt_count));
 
-    $automobile_hub_theme_excerpt = implode(' ', array_slice(explode(' ', $automobile_hub_text_excerpt), 0, $automobile_hub_excerpt_limit));
+    $automobile_hub_theme_excerpt = implode(' ', array_slice(explode(' ', $AUTOMOBILE_HUB_TEXT_excerpt), 0, $automobile_hub_excerpt_limit));
 
     return $automobile_hub_theme_excerpt;
 }

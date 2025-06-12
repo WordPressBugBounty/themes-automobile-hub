@@ -9,18 +9,29 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="box-info">
-        <?php $automobile_hub_blog_archive_ordering = get_theme_mod('blog_meta_order', array('date', 'author', 'comment', 'category'));
+        <?php 
+        $automobile_hub_blog_archive_ordering = get_theme_mod('blog_meta_order', array('date', 'author', 'comment', 'category'));
+
         foreach ($automobile_hub_blog_archive_ordering as $automobile_hub_blog_data_order) : 
             if ('date' === $automobile_hub_blog_data_order) : ?>
-                <i class="far fa-calendar-alt mb-1 me-2"></i><span class="entry-date me-3"><?php echo get_the_date('j F, Y'); ?></span>
+                <i class="far fa-calendar-alt mb-1 me-2"></i>
+                <span class="entry-date me-3"><?php echo get_the_date('j F, Y'); ?></span>
             <?php elseif ('author' === $automobile_hub_blog_data_order) : ?>
-                <i class="fas fa-user mb-1 me-2"></i><span class="entry-author me-3"><?php the_author(); ?></span>
+                <i class="fas fa-user mb-1 me-2"></i>
+                <span class="entry-author me-3"><?php the_author(); ?></span>
             <?php elseif ('comment' === $automobile_hub_blog_data_order) : ?>
-                <i class="fas fa-comments mb-1 me-2"></i><span class="entry-comments me-3"><?php comments_number(__('0 Comments', 'automobile-hub'), __('0 Comments', 'automobile-hub'), __('% Comments', 'automobile-hub')); ?></span>
-            <?php elseif ('category' === $automobile_hub_blog_data_order) :?>
-                <i class="fas fa-list mb-1 me-2"></i><span class="entry-category me-3"><?php automobile_hub_display_post_category_count(); ?></span>
+                <i class="fas fa-comments mb-1 me-2"></i>
+                <span class="entry-comments me-3"><?php comments_number(__('0 Comments', 'automobile-hub'), __('0 Comments', 'automobile-hub'), __('% Comments', 'automobile-hub')); ?></span>
+            <?php elseif ('category' === $automobile_hub_blog_data_order) : ?>
+                <i class="fas fa-list mb-1 me-2"></i>
+                <span class="entry-category me-3"><?php automobile_hub_display_post_category_count(); ?></span>
+            <?php elseif ('time' === $automobile_hub_blog_data_order) : ?>
+                <i class="fas fa-clock mb-1 me-2"></i>
+                <span class="entry-time me-3"><?php echo get_the_time('g:i a'); ?></span>
+
             <?php endif;
-        endforeach; ?>
+        endforeach; 
+        ?>
     </div>
     <hr>
     <div class="box-content">

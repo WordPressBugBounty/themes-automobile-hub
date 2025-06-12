@@ -14,11 +14,11 @@ if($automobile_hub_column_layout == 'four-column' || $automobile_hub_column_layo
       <div class="page-box box-image">
          <?php
             // Get the post content
-            $post_content = apply_filters('the_content', get_the_content());
+            $automobile_hub_post_content = apply_filters('the_content', get_the_content());
 
             // Create a DOMDocument to parse the HTML content
             $dom = new DOMDocument();
-            @$dom->loadHTML($post_content);
+            @$dom->loadHTML($automobile_hub_post_content);
 
             // Find and display the first image in the post content
             $images = $dom->getElementsByTagName('img');
@@ -31,36 +31,44 @@ if($automobile_hub_column_layout == 'four-column' || $automobile_hub_column_layo
               <h4><a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title_attribute(); ?>"><?php the_title();?></a></h4>
             <div class="box-info">
               <?php 
-              $automobile_hub_blog_archive_ordering = get_theme_mod('blog_meta_order', array('date', 'author', 'comment', 'category'));
+              // Add 'time' to your default meta order array
+              $automobile_hub_blog_archive_ordering = get_theme_mod('blog_meta_order', array('date', 'author', 'comment', 'category', 'time'));
+
               foreach ($automobile_hub_blog_archive_ordering as $automobile_hub_blog_data_order) : 
-                  if ('date' === $automobile_hub_blog_data_order) : ?>
-                      <i class="far fa-calendar-alt mb-1"></i>
-                      <a href="<?php echo esc_url(get_day_link(get_the_date('Y'), get_the_date('m'), get_the_date('d'))); ?>" class="entry-date">
-                          <?php echo esc_html(get_the_date('j F, Y')); ?>
-                      </a>
-                  <?php elseif ('author' === $automobile_hub_blog_data_order) : ?>
-                      <i class="fas fa-user mb-1"></i>
-                      <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" class="entry-author">
-                          <?php the_author(); ?>
-                      </a>
-                  <?php elseif ('comment' === $automobile_hub_blog_data_order) : ?>
-                      <i class="fas fa-comments mb-1"></i>
-                      <a href="<?php comments_link(); ?>" class="entry-comments">
-                          <?php comments_number(__('0 Comments', 'automobile-hub'), __('1 Comment', 'automobile-hub'), __('% Comments', 'automobile-hub')); ?>
-                      </a>
-                  <?php elseif ('category' === $automobile_hub_blog_data_order) : ?>
-                      <i class="fas fa-list mb-1"></i>
-                      <?php
-                      $categories = get_the_category();
-                      if (!empty($categories)) :
-                          foreach ($categories as $category) : ?>
-                              <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>" class="entry-category">
-                                  <?php echo esc_html($category->name); ?>
-                              </a>
-                          <?php endforeach;
-                      endif; ?>
-                  <?php endif;
-              endforeach; ?>
+                if ('date' === $automobile_hub_blog_data_order) : ?>
+                    <i class="far fa-calendar-alt mb-1"></i>
+                    <a href="<?php echo esc_url(get_day_link(get_the_date('Y'), get_the_date('m'), get_the_date('d'))); ?>" class="entry-date">
+                        <?php echo esc_html(get_the_date('j F, Y')); ?>
+                    </a>
+                <?php elseif ('author' === $automobile_hub_blog_data_order) : ?>
+                    <i class="fas fa-user mb-1"></i>
+                    <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" class="entry-author">
+                        <?php the_author(); ?>
+                    </a>
+                <?php elseif ('comment' === $automobile_hub_blog_data_order) : ?>
+                    <i class="fas fa-comments mb-1"></i>
+                    <a href="<?php comments_link(); ?>" class="entry-comments">
+                        <?php comments_number(__('0 Comments', 'automobile-hub'), __('1 Comment', 'automobile-hub'), __('% Comments', 'automobile-hub')); ?>
+                    </a>
+                <?php elseif ('category' === $automobile_hub_blog_data_order) : ?>
+                    <i class="fas fa-list mb-1"></i>
+                    <?php
+                    $categories = get_the_category();
+                    if (!empty($categories)) :
+                        foreach ($categories as $category) : ?>
+                            <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>" class="entry-category">
+                                <?php echo esc_html($category->name); ?>
+                            </a>
+                        <?php endforeach;
+                    endif; 
+                    ?>
+                <?php elseif ('time' === $automobile_hub_blog_data_order) : ?>
+                    <i class="fas fa-clock mb-1"></i>
+                    <span class="entry-time">
+                        <?php echo get_the_time(); ?>
+                    </span>
+                <?php endif;
+            endforeach; ?>
           </div>
             <p><?php echo esc_html(automobile_hub_excerpt_function());?></p>
             <?php if(get_theme_mod('automobile_hub_remove_read_button',true) != ''){ ?>
@@ -82,11 +90,11 @@ if($automobile_hub_column_layout == 'four-column' || $automobile_hub_column_layo
         <div class="box-image col-lg-6 col-md-12 align-self-center">
           <?php
             // Get the post content
-            $post_content = apply_filters('the_content', get_the_content());
+            $automobile_hub_post_content = apply_filters('the_content', get_the_content());
 
             // Create a DOMDocument to parse the HTML content
             $dom = new DOMDocument();
-            @$dom->loadHTML($post_content);
+            @$dom->loadHTML($automobile_hub_post_content);
 
             // Find and display the first image in the post content
             $images = $dom->getElementsByTagName('img');
@@ -100,36 +108,44 @@ if($automobile_hub_column_layout == 'four-column' || $automobile_hub_column_layo
           <h4><a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title_attribute(); ?>"><?php the_title();?></a></h4>
           <div class="box-info">
               <?php 
-              $automobile_hub_blog_archive_ordering = get_theme_mod('blog_meta_order', array('date', 'author', 'comment', 'category'));
+              // Add 'time' to your default meta order array
+              $automobile_hub_blog_archive_ordering = get_theme_mod('blog_meta_order', array('date', 'author', 'comment', 'category', 'time'));
+
               foreach ($automobile_hub_blog_archive_ordering as $automobile_hub_blog_data_order) : 
-                  if ('date' === $automobile_hub_blog_data_order) : ?>
-                      <i class="far fa-calendar-alt mb-1"></i>
-                      <a href="<?php echo esc_url(get_day_link(get_the_date('Y'), get_the_date('m'), get_the_date('d'))); ?>" class="entry-date">
-                          <?php echo esc_html(get_the_date('j F, Y')); ?>
-                      </a>
-                  <?php elseif ('author' === $automobile_hub_blog_data_order) : ?>
-                      <i class="fas fa-user mb-1"></i>
-                      <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" class="entry-author">
-                          <?php the_author(); ?>
-                      </a>
-                  <?php elseif ('comment' === $automobile_hub_blog_data_order) : ?>
-                      <i class="fas fa-comments mb-1"></i>
-                      <a href="<?php comments_link(); ?>" class="entry-comments">
-                          <?php comments_number(__('0 Comments', 'automobile-hub'), __('1 Comment', 'automobile-hub'), __('% Comments', 'automobile-hub')); ?>
-                      </a>
-                  <?php elseif ('category' === $automobile_hub_blog_data_order) : ?>
-                      <i class="fas fa-list mb-1"></i>
-                      <?php
-                      $categories = get_the_category();
-                      if (!empty($categories)) :
-                          foreach ($categories as $category) : ?>
-                              <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>" class="entry-category">
-                                  <?php echo esc_html($category->name); ?>
-                              </a>
-                          <?php endforeach;
-                      endif; ?>
-                  <?php endif;
-              endforeach; ?>
+                if ('date' === $automobile_hub_blog_data_order) : ?>
+                    <i class="far fa-calendar-alt mb-1"></i>
+                    <a href="<?php echo esc_url(get_day_link(get_the_date('Y'), get_the_date('m'), get_the_date('d'))); ?>" class="entry-date">
+                        <?php echo esc_html(get_the_date('j F, Y')); ?>
+                    </a>
+                <?php elseif ('author' === $automobile_hub_blog_data_order) : ?>
+                    <i class="fas fa-user mb-1"></i>
+                    <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" class="entry-author">
+                        <?php the_author(); ?>
+                    </a>
+                <?php elseif ('comment' === $automobile_hub_blog_data_order) : ?>
+                    <i class="fas fa-comments mb-1"></i>
+                    <a href="<?php comments_link(); ?>" class="entry-comments">
+                        <?php comments_number(__('0 Comments', 'automobile-hub'), __('1 Comment', 'automobile-hub'), __('% Comments', 'automobile-hub')); ?>
+                    </a>
+                <?php elseif ('category' === $automobile_hub_blog_data_order) : ?>
+                    <i class="fas fa-list mb-1"></i>
+                    <?php
+                    $categories = get_the_category();
+                    if (!empty($categories)) :
+                        foreach ($categories as $category) : ?>
+                            <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>" class="entry-category">
+                                <?php echo esc_html($category->name); ?>
+                            </a>
+                        <?php endforeach;
+                    endif; 
+                    ?>
+                <?php elseif ('time' === $automobile_hub_blog_data_order) : ?>
+                    <i class="fas fa-clock mb-1"></i>
+                    <span class="entry-time">
+                        <?php echo get_the_time(); ?>
+                    </span>
+                <?php endif;
+            endforeach; ?>
           </div>
           <p><?php echo esc_html(automobile_hub_excerpt_function());?></p>
           <?php if(get_theme_mod('automobile_hub_remove_read_button',true) != ''){ ?>
@@ -144,36 +160,44 @@ if($automobile_hub_column_layout == 'four-column' || $automobile_hub_column_layo
           <h4><a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title_attribute(); ?>"><?php the_title();?></a></h4>
           <div class="box-info">
               <?php 
-              $automobile_hub_blog_archive_ordering = get_theme_mod('blog_meta_order', array('date', 'author', 'comment', 'category'));
+              // Add 'time' to your default meta order array
+              $automobile_hub_blog_archive_ordering = get_theme_mod('blog_meta_order', array('date', 'author', 'comment', 'category', 'time'));
+
               foreach ($automobile_hub_blog_archive_ordering as $automobile_hub_blog_data_order) : 
-                  if ('date' === $automobile_hub_blog_data_order) : ?>
-                      <i class="far fa-calendar-alt mb-1"></i>
-                      <a href="<?php echo esc_url(get_day_link(get_the_date('Y'), get_the_date('m'), get_the_date('d'))); ?>" class="entry-date">
-                          <?php echo esc_html(get_the_date('j F, Y')); ?>
-                      </a>
-                  <?php elseif ('author' === $automobile_hub_blog_data_order) : ?>
-                      <i class="fas fa-user mb-1"></i>
-                      <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" class="entry-author">
-                          <?php the_author(); ?>
-                      </a>
-                  <?php elseif ('comment' === $automobile_hub_blog_data_order) : ?>
-                      <i class="fas fa-comments mb-1"></i>
-                      <a href="<?php comments_link(); ?>" class="entry-comments">
-                          <?php comments_number(__('0 Comments', 'automobile-hub'), __('1 Comment', 'automobile-hub'), __('% Comments', 'automobile-hub')); ?>
-                      </a>
-                  <?php elseif ('category' === $automobile_hub_blog_data_order) : ?>
-                      <i class="fas fa-list mb-1"></i>
-                      <?php
-                      $categories = get_the_category();
-                      if (!empty($categories)) :
-                          foreach ($categories as $category) : ?>
-                              <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>" class="entry-category">
-                                  <?php echo esc_html($category->name); ?>
-                              </a>
-                          <?php endforeach;
-                      endif; ?>
-                  <?php endif;
-              endforeach; ?>
+                if ('date' === $automobile_hub_blog_data_order) : ?>
+                    <i class="far fa-calendar-alt mb-1"></i>
+                    <a href="<?php echo esc_url(get_day_link(get_the_date('Y'), get_the_date('m'), get_the_date('d'))); ?>" class="entry-date">
+                        <?php echo esc_html(get_the_date('j F, Y')); ?>
+                    </a>
+                <?php elseif ('author' === $automobile_hub_blog_data_order) : ?>
+                    <i class="fas fa-user mb-1"></i>
+                    <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" class="entry-author">
+                        <?php the_author(); ?>
+                    </a>
+                <?php elseif ('comment' === $automobile_hub_blog_data_order) : ?>
+                    <i class="fas fa-comments mb-1"></i>
+                    <a href="<?php comments_link(); ?>" class="entry-comments">
+                        <?php comments_number(__('0 Comments', 'automobile-hub'), __('1 Comment', 'automobile-hub'), __('% Comments', 'automobile-hub')); ?>
+                    </a>
+                <?php elseif ('category' === $automobile_hub_blog_data_order) : ?>
+                    <i class="fas fa-list mb-1"></i>
+                    <?php
+                    $categories = get_the_category();
+                    if (!empty($categories)) :
+                        foreach ($categories as $category) : ?>
+                            <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>" class="entry-category">
+                                <?php echo esc_html($category->name); ?>
+                            </a>
+                        <?php endforeach;
+                    endif; 
+                    ?>
+                <?php elseif ('time' === $automobile_hub_blog_data_order) : ?>
+                    <i class="fas fa-clock mb-1"></i>
+                    <span class="entry-time">
+                        <?php echo get_the_time(); ?>
+                    </span>
+                <?php endif;
+            endforeach; ?>
           </div>
           <p><?php echo esc_html(automobile_hub_excerpt_function());?></p>
           <?php if(get_theme_mod('automobile_hub_remove_read_button',true) != ''){ ?>
@@ -185,11 +209,11 @@ if($automobile_hub_column_layout == 'four-column' || $automobile_hub_column_layo
         <div class="box-image col-lg-6 col-md-12 align-self-center pt-lg-0 pt-3">
           <?php
             // Get the post content
-            $post_content = apply_filters('the_content', get_the_content());
+            $automobile_hub_post_content = apply_filters('the_content', get_the_content());
 
             // Create a DOMDocument to parse the HTML content
             $dom = new DOMDocument();
-            @$dom->loadHTML($post_content);
+            @$dom->loadHTML($automobile_hub_post_content);
 
             // Find and display the first image in the post content
             $images = $dom->getElementsByTagName('img');

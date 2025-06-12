@@ -4,7 +4,7 @@ Tags: wide-blocks, block-styles, one-column, two-columns, right-sidebar, left-si
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 9.3
+Stable tag: 9.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -488,6 +488,14 @@ Installation
     * Resolved errors from demo import code.
     * Added default footer widget.
     * Resolved error from home page css.
+
+= 9.4 =
+    * Added "Pro" link in the relevant section.
+    * Improved styling for the "Get Started" button.
+    * Adjusted footer heading font size for 768px screen width.
+    * Added time meta display on the blog post page.
+    * Added show/hide setting for the slider title.
+    * Added show/hide setting for the slider content.
 
 == Resources ==
 
