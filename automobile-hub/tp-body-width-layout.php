@@ -354,3 +354,47 @@ $automobile_hub_tp_theme_css .='}';
             $automobile_hub_tp_theme_css .='background-color: '.esc_attr($automobile_hub_header_banner_image_ooverlay_color).';';
         $automobile_hub_tp_theme_css .='}';
     }
+
+     /*------------------ Slider CSS -------------------*/
+    $automobile_hub_slider_opacity_setting = get_theme_mod('automobile_hub_slider_opacity_setting', true);
+    $automobile_hub_image_opacity_color    = get_theme_mod('automobile_hub_image_opacity_color', '');
+    $automobile_hub_slider_opacity         = get_theme_mod('automobile_hub_slider_opacity', '1');
+
+    if ($automobile_hub_slider_opacity_setting) {
+        // Apply opacity value to slider image
+        if ($automobile_hub_slider_opacity !== '') {
+            $automobile_hub_tp_theme_css .= '#slider img {';
+            $automobile_hub_tp_theme_css .= 'opacity: ' . esc_attr($automobile_hub_slider_opacity) . ';';
+            $automobile_hub_tp_theme_css .= '}';
+        }
+
+        // Apply background color to slider if defined
+        if ($automobile_hub_image_opacity_color !== '') {
+            $automobile_hub_tp_theme_css .= '#slider {';
+            $automobile_hub_tp_theme_css .= 'background-color: ' . esc_attr($automobile_hub_image_opacity_color) . ';';
+            $automobile_hub_tp_theme_css .= '}';
+        }
+    } else {
+        // If setting is disabled, force full opacity
+        $automobile_hub_tp_theme_css .= '#slider img {';
+        $automobile_hub_tp_theme_css .= 'opacity: 1;';
+        $automobile_hub_tp_theme_css .= '}';
+    }
+
+    /*---------------------------Slider Height ------------*/
+    $automobile_hub_slider_img_height       = get_theme_mod('automobile_hub_slider_img_height');
+    $automobile_hub_slider_img_height_resp  = get_theme_mod('automobile_hub_slider_img_height_responsive');
+
+    if ( $automobile_hub_slider_img_height ) {
+        $automobile_hub_tp_theme_css .= '#slider img {';
+        $automobile_hub_tp_theme_css .= 'height: ' . esc_attr( $automobile_hub_slider_img_height ) . ';';
+        $automobile_hub_tp_theme_css .= '}';
+    }
+
+    if ( $automobile_hub_slider_img_height_resp ) {
+        $automobile_hub_tp_theme_css .= '@media only screen and (max-width: 767px) {';
+        $automobile_hub_tp_theme_css .= '#slider img {';
+        $automobile_hub_tp_theme_css .= 'height: ' . esc_attr( $automobile_hub_slider_img_height_resp ) . ';';
+        $automobile_hub_tp_theme_css .= '}';
+        $automobile_hub_tp_theme_css .= '}';
+    }

@@ -1022,13 +1022,14 @@ function automobile_hub_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'automobile_hub_show_slider_title', array(
 		'default'           => true,
+		'priority' => 1,
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'automobile_hub_sanitize_checkbox',
 	) );
 	$wp_customize->add_control( new automobile_hub_Toggle_Control( $wp_customize, 'automobile_hub_show_slider_title', array(
 		'label'       => esc_html__( 'Show / Hide Slider Heading', 'automobile-hub' ),
-		'priority' => 1,
 		'section'     => 'automobile_hub_slider_section',
+		'priority' => 1,
 		'type'        => 'toggle',
 		'settings'    => 'automobile_hub_show_slider_title',
 	) ) );
@@ -1045,7 +1046,6 @@ function automobile_hub_customize_register( $wp_customize ) {
 		'type'        => 'toggle',
 		'settings'    => 'automobile_hub_show_slider_content',
 	) ) );
-
 	
 	$wp_customize->add_setting('automobile_hub_slider_text',array(
 		'default'=> '',
@@ -1098,6 +1098,63 @@ function automobile_hub_customize_register( $wp_customize ) {
 		'section'	=> 'automobile_hub_slider_section',
 		'type'		=> 'icon'
 	)));
+
+	$wp_customize->add_setting( 'automobile_hub_slider_opacity_setting', array(
+		'default'           => true,
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'automobile_hub_sanitize_checkbox',
+	) );
+	$wp_customize->add_control( new automobile_hub_Toggle_Control( $wp_customize, 'automobile_hub_slider_opacity_setting', array(
+		'label'       => esc_html__( 'Show / Hide Image Opacity', 'automobile-hub' ),
+		'section'     => 'automobile_hub_slider_section',
+		'type'        => 'toggle',
+		'settings'    => 'automobile_hub_slider_opacity_setting',
+	) ) );
+
+    $wp_customize->add_setting( 'automobile_hub_image_opacity_color', array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_hex_color'
+    ));
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'automobile_hub_image_opacity_color', array(
+        'label' => __('Slider Image Opacity Color', 'automobile-hub'),
+        'section' => 'automobile_hub_slider_section',
+        'settings' => 'automobile_hub_image_opacity_color',
+    )));
+
+    $wp_customize->add_setting('automobile_hub_slider_opacity',array(
+        'default'=> '',
+        'sanitize_callback' => 'automobile_hub_sanitize_choices'
+    ));
+    $wp_customize->add_control('automobile_hub_slider_opacity',array(
+        'type' => 'select',
+        'label' => esc_html__('Slider Image Opacity','automobile-hub'),
+        'choices' => array(
+            '0'   => '0',
+            '0.1' => '0.1',
+            '0.2' => '0.2',
+            '0.3' => '0.3',
+            '0.4' => '0.4',
+            '0.5' => '0.5',
+            '0.6' => '0.6',
+            '0.7' => '0.7',
+            '0.8' => '0.8',
+            '0.9' => '0.9',
+            '1'   => '1',
+        ),
+        'section'=> 'automobile_hub_slider_section',
+    ));
+
+    //Slider height
+    $wp_customize->add_setting('automobile_hub_slider_img_height',array(
+        'default'=> '',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('automobile_hub_slider_img_height',array(
+        'label' => __('Slider Height','automobile-hub'),
+        'description'   => __('Add slider height in px(eg. 700px).','automobile-hub'),
+        'section'=> 'automobile_hub_slider_section',
+        'type'=> 'text'
+    ));
 
 	$wp_customize->add_setting('automobile_hub_slider_content_layout',array(
         'default' => 'LEFT-ALIGN',
@@ -1443,6 +1500,18 @@ function automobile_hub_customize_register( $wp_customize ) {
 		'type'        => 'toggle',
 		'settings'    => 'automobile_hub_related_post_mob',
 	) ) );
+
+	//Slider height
+    $wp_customize->add_setting('automobile_hub_slider_img_height_responsive',array(
+        'default'=> '',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('automobile_hub_slider_img_height_responsive',array(
+        'label' => __('Slider Height','automobile-hub'),
+        'description'   => __('Add slider height in px(eg. 700px).','automobile-hub'),
+        'section'=> 'automobile_hub_mobile_media_option',
+        'type'=> 'text'
+    ));
 
 	// Pro Version
     $wp_customize->add_setting( 'automobile_hub_responsive_pro_version_logo', array(

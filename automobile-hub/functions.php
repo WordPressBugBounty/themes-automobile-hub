@@ -378,6 +378,7 @@ function automobile_hub_sanitize_sortable( $val, $setting ) {
 	}
 	return $sanitized_value;
 }
+
 /* Excerpt Limit Begin */
 function automobile_hub_excerpt_function($excerpt_count = 35) {
     $automobile_hub_excerpt = get_the_excerpt();

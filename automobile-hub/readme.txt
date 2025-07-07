@@ -4,7 +4,7 @@ Tags: wide-blocks, block-styles, one-column, two-columns, right-sidebar, left-si
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 9.4
+Stable tag: 9.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -496,6 +496,13 @@ Installation
     * Added time meta display on the blog post page.
     * Added show/hide setting for the slider title.
     * Added show/hide setting for the slider content.
+
+= 9.5 =
+    * Added option to set slider height.
+    * Added responsive slider height settings.
+    * Added option to show/hide slider overlay opacity.
+    * Added option to set background color for slider overlay opacity.
+    * Added slider opacity option.
 
 == Resources ==
 
